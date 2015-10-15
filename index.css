@@ -1,0 +1,73 @@
+      *{ margin:0; padding:0; }
+      
+      html{ height:100%; }
+
+      p{ padding:10px 0; }
+
+      body{ 
+        min-height:100%;
+        font-family:arial; 
+        position:relative; 
+      }
+
+      #sideToggle{ display:none; }
+
+      #sideToggle:checked + aside{ left:0; }
+
+      #sideToggle:checked ~ #wrap{ padding-left:210px; }
+
+      body > aside{ 
+        position:absolute; 
+        top:0; bottom:0; 
+        left:-190px; width:200px; 
+        background:#3998D8; 
+        transition:0.2s ease-out; 
+        -webkit-transition:0.2s ease-out; 
+      }
+
+      body > aside > h1 { 
+        color:#FFF; 
+        text-align:center; 
+        font-weight:normal; 
+        padding:30px; 
+      }
+
+      .divborder{
+        color:#FFF; 
+        text-align:center; 
+        font-weight:bold; 
+        padding:10px; 
+        border-bottom-color: #DDDDDD;
+        border-bottom-style: solid;
+        border-bottom-width: 1px
+      }
+
+
+      #wrap{ 
+        margin-left:10px; 
+        padding:10px; 
+        transition:0.25s ease-out; 
+        -webkit-transition:0.25s ease-out; 
+      }
+
+
+      #wrap > label{ 
+        background:#3998D8;
+        border-radius:80px;
+        color: #FFF;
+        cursor: pointer;
+        display: block;
+        font-family: Courier New;
+        font-size: 30px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        line-height: 35px;
+        text-align: center;
+        text-shadow: 0 -4px;
+      }
+
+      #wrap > label:hover{ background:#000; }
+      
+      aside > div:hover{ background:#4682B4; }
+      <!--选择鼠标指针浮动在其上的元素，并设置其样式-->
