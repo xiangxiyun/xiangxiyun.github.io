@@ -5,44 +5,88 @@
     <title>Xiang Xiyun's Blog</title>
     <style>
       *{ margin:0; padding:0; }
+
       html{ height:100%; }
+
       p{ padding:10px 0; }
-      body{ min-height:100%; font-family:arial; position:relative; }
-      body.sideMenu{ margin:0; -webkit-transform:none; transform:none; }
+
+      body{ 
+        min-height:100%;
+        font-family:arial; 
+        position:relative; 
+      }
+
       #sideToggle{ display:none; }
+
       #sideToggle:checked + aside{ left:0; }
-      #sideToggle:checked ~ #wrap{ padding-left:220px; }
-      body > aside{ position:absolute; top:0; bottom:0; left:-200px; width:200px; background:#4682B4; transition:0.2s ease-out; -webkit-transition:0.2s ease-out; }
-      body > aside > h2{ color:#FFF; text-align:center; font-weight:normal; padding:10px; }
-      #wrap{ margin-left:20px; padding:10px; transition:0.25s ease-out; -webkit-transition:0.25s ease-out; }
-      #wrap > label{ display:inline-block; }
+
+      #sideToggle:checked ~ #wrap{ padding-left:210px; }
+
+      body > aside{ 
+        position:absolute; 
+        top:0; bottom:0; 
+        left:-190px; width:200px; 
+        background:#4682B4; 
+        transition:0.2s ease-out; 
+        -webkit-transition:0.2s ease-out; 
+      }
+
+      body > aside > h2, #menu{ 
+        color:#FFF; 
+        text-align:center; 
+        font-weight:normal; 
+        padding:10px; 
+      }
+
+      #wrap{ 
+        margin-left:10px; 
+        padding:10px; 
+        transition:0.25s ease-out; 
+        -webkit-transition:0.25s ease-out; 
+      }
+
+
       #wrap > label{ 
         background:#4682B4;
-        border-radius:50px;
+        border-radius:80px;
         color: #FFF;
         cursor: pointer;
         display: block;
         font-family: Courier New;
-        font-size: 25px;
+        font-size: 30px;
         font-weight: bold;
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         line-height: 35px;
         text-align: center;
         text-shadow: 0 -4px;
       }
+
       #wrap > label:hover{ background:#000; }
+      <!--选择鼠标指针浮动在其上的元素，并设置其样式-->
+
     </style>
   </head>
-<body>
-  <input type='checkbox' id='sideToggle'>
-  <aside><h2>Side Menu</h2></aside>
-  <div id='wrap'>
-     <label id='sideMenuControl' for='sideToggle'>=</label>
-     <p>Menu   </p>
-  </div>
-  <div>
-    <p>content</p>
-  </div>
-</body>
+
+
+  <body>
+    <input type='checkbox' id='sideToggle'>
+    <aside>
+      <h2>Menu</h2>
+      <nav id = 'menu'>
+        <p>article</p>
+        <hr style="height:1px;border:none;border-top:1px dashed #FFF;" />
+        <p>portfolio</p>
+        <hr style="height:1px;border:none;border-top:1px dashed #FFF;" />
+        <p>about</p>
+        <hr style="height:1px;border:none;border-top:1px dashed #FFF;" />
+      </nav>
+    </aside>
+  
+    <div id='wrap'>
+      <label for='sideToggle'>--</label>
+    </div>
+
+    
+  </body>
 </html>
