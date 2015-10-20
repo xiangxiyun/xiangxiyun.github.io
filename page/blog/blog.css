@@ -3,6 +3,7 @@
       html{ height:100%; }
 
       body{ 
+        
         min-height:100%;
         font-family:arial; 
         position:relative; 
@@ -36,10 +37,10 @@
       }
 
       .MenuElement{
-        color:#333333; 
-        text-align:center; 
-        font-weight:bold; 
-        padding:20px; 
+        width: 300px;
+        height: 80px; 
+        line-height: 80px;
+        text-align: center;
         border-bottom-color: #DDDDDD;
         border-bottom-style: dashed;
         border-bottom-width: 1px;
@@ -48,6 +49,15 @@
         border-top-width: 1px
       }
 
+      ul li a{
+        display: inline-block;
+        width: 300px;
+        height: 80px;
+
+        text-decoration: none;
+        color:#333333; 
+        font-weight:bold; 
+      }
 
       #wrap{ 
         margin-left:10px; 
@@ -73,11 +83,19 @@
         text-shadow: 0 -4px;
       }
 
+      <!--选择鼠标指针浮动在其上的元素，并设置其样式-->
       #wrap > label:hover{ background:#4682B4; }
       
-      aside > ul > li:hover{ background:#4682B4; color: #FFF}
-      
-      <!--选择鼠标指针浮动在其上的元素，并设置其样式-->
+      aside > ul > li:hover{ background:#4682B4;}
+      aside > ul > li > a:hover{ color: #FFF}
+
+      div.coverWord p{
+        padding-top: 100px;
+        color:#000; 
+        text-align:center; 
+        font-weight:bold;
+        font-size: 50px;  
+      }
 
 
 
