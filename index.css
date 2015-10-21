@@ -68,10 +68,12 @@
         background-color:#cccccc;  
       }
       ul.MenuList > li > a:hover {
-        background-color:#B0C4DE; 
+        color: #FFF;
+        background-color:#4682B4; 
       }
       ul.MenuList > li > a:active {
-        background-color:#B0C4DE; 
+        color: #FFF;
+        background-color:#4682B4; 
       }
 
       ul.SubMenu {
@@ -146,6 +148,13 @@
         font-size: 50px;  
       }
 
+      .substainColor{
+        background-color: #4682B4 !important; 
+        color: #FFF !important;
+        border-bottom-color: #DDDDDD;
+        border-bottom-style: dashed;
+        border-bottom-width: 1px;
+      }
 
 
 
