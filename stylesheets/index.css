@@ -3,7 +3,6 @@
       html{ height:100%; }
 
       body{ 
-        background-image: url(images/coverImage.jpg);
         background-attachment:fixed;
         min-height:100%;
         font-family:arial; 
