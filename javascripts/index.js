@@ -1,5 +1,13 @@
 $(document).ready(function(){
-	$(".reference").click(function(){	
+
+	$("#about").click(function(){
+    		//alert("hello");
+    		$("#add").load('about.html');
+  	});
+
+
+	$(".reference").click(function(){
+
 			if ($(this).parent().children(".SubMenu").css("display") == "none") {
 				//$(this).children("a").css("background-color", "#4682B4");
 				//$(this).children("a").css("color", "#FFF");
