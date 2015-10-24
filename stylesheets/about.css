@@ -11,8 +11,8 @@
       }
 
       .aboutContent{
-      	padding-top: 50px;
-      	padding-left: 350px;
+      	padding-top: 100px;
+        padding-left: 200px;
       }
 
       h1{
@@ -20,7 +20,7 @@
       }
 
       img{
-        width: 30%;
+        width: 270px;
       	float:left;
         margin-right: 20px;
       }
