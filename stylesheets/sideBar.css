@@ -208,9 +208,13 @@ ul.SubMenu > li > a:active {
 
 .button_column {
 	float: left;
-	height: auto;
-    padding: 20px;
+
+	padding-left: 30px;
+	padding-right: 100%;
+    padding-top: 31px;
+    padding-bottom: 30px;
 	position: fixed;
+	background: #665522;
 }
 
 
@@ -229,6 +233,8 @@ button {
     line-height: 35px;
     text-align: center;
     text-shadow: 0 -6px;
+    -webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
 }
 
 button:hover {
