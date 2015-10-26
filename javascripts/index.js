@@ -1,10 +1,5 @@
 $(document).ready(function(){
 
-	$("#about").click(function(){
-    		//alert("hello");
-    		$("#add").load('about.html');
-  	});
-
 
 	$(".reference").click(function(){
 
