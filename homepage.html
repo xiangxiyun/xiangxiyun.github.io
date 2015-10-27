@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Xiang xiyun's Blog</title>
+
+	</head>
+
+
+	<body>
+    <div class = "container" style = "background: #333333">
+    <ul id = "scene">
+      <li class="layer" data-depth ="0.60"><img style = "padding: 40px" src = "images/star1.png"/></li>
+      <li class="layer" data-origin-x = "10" data-origin-x ="10" data-depth ="0.40"><img style = "padding: 40px"src = "images/star2.png"/></li>
+      <li class="layer" data-depth ="0.00"><img style = "padding: 40px"src = "images/star3.png"/></li>
+      <li class="layer" data-depth ="0.50"><img style = "padding: 40px"src = "images/air.png"/></li>
+        
+    </ul>
+  </div>
+  <script src="javascripts/jquery.js"></script>
+  <script src="deploy/jquery.parallax.js"></script>
+  <script>
+
+  // Yep, that's it!
+  $('#scene').parallax();
+
+  </script>
+
+	</body>
+</html>

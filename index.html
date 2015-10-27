@@ -15,6 +15,7 @@
 		<script src="javascripts/modernizr.custom.js"></script>
 		<script src="javascripts/jquery-1.11.2.min.js"></script>
 		<script src="javascripts/index.js"></script>
+
 	</head>
 
 
@@ -83,15 +84,20 @@
 				<div class="st-content"><!-- this is the wrapper for the content -->
 					<div class="st-content-inner">
 
-						<div id="st-trigger-effects" class="button_column">
-							<button data-effect="st-effect-3"><i class="icon icon-reorder"></i></button>
-						</div>
-							
+						<header id="st-trigger-effects" class="button_column">
+							<button id = "st-trigger-button" data-effect="st-effect-3">
+                <i class="icon icon-reorder"></i>
+              </button>
+						</header>
 					</div><!-- /st-content-inner -->
 				</div><!-- /st-content -->
 			</div><!-- /st-pusher -->
 		</div><!-- /st-container -->
 		<script src="javascripts/classie.js"></script>
 		<script src="javascripts/sidebarEffects.js"></script>
+    <script>
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+    </script>
 	</body>
 </html>
