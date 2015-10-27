@@ -117,6 +117,9 @@ body,
 }
 
 /*sub menu style*/
+.icon{
+	font-size: 20px;
+}
 
 .st-menu ul {
 	margin: 0;
@@ -142,7 +145,7 @@ body,
 	color: #333333;
 	text-transform: uppercase;
 	text-shadow: 0 0 1px rgba(255,255,255,0.1);
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	font-weight: 400;
 	-webkit-transition: background 0.3s, box-shadow 0.3s;
 	transition: background 0.3s, box-shadow 0.3s;
@@ -170,7 +173,7 @@ ul.SubMenu > li > a{
     width: 100%;
     text-decoration: none;
     font-weight:bold;
-    text-indent:3em;
+    text-indent:2em;
 }
 
 ul.SubMenu > li > a:link {
@@ -194,11 +197,11 @@ ul.SubMenu > li > a:active {
 /*button style*/
 
 .button_column {
-
 	padding-left: 30px;
 	padding-right: 100%;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
+    margin-bottom: 40px;
 	position: relative;
 	background: #333333;
 }
@@ -207,21 +210,20 @@ ul.SubMenu > li > a:active {
 button {
 	float: left;
 	border: none;
-	display: block;
     width: 50px;
     height: 50px;
     border-radius:100%;
     background:#333333;
     color: #FFF;
     cursor: pointer;
-    font-size: 35px;
-    font-family:inherit
-    line-height: 0px;
+    font-family:inherit;
     text-align: center;
-    text-shadow: 0 -7px;
-    position: fixed;
+    position: absolute;
     -webkit-transition: -webkit-transform 0.5s;
 	transition: transform 0.5s;
+}
+button .icon{
+	font-size: 25px;
 }
 
 button:hover {
