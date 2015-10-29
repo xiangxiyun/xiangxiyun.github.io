@@ -2,57 +2,57 @@
 
 @-webkit-keyframes swing {
   0% {
-    -webkit-transform: rotateZ(10deg);
-    -moz-transform: rotateZ(10deg);
-    transform: rotateZ(10deg);
+    -webkit-transform: rotateZ(5deg);
+    -moz-transform: rotateZ(5deg);
+    transform: rotateZ(5deg);
   }
 
   100% {
-    -webkit-transform: rotateZ(-1deg);
-    -moz-transform: rotateZ(-1deg);
-    transform: rotateZ(-1deg);
+    -webkit-transform: rotateZ(-5deg);
+    -moz-transform: rotateZ(-5deg);
+    transform: rotateZ(-5deg);
   }
 }
 
 @-moz-keyframes swing {
   0% {
-    -webkit-transform: rotateZ(10deg);
-    -moz-transform: rotateZ(10deg);
-    transform: rotateZ(10deg);
+    -webkit-transform: rotateZ(5deg);
+    -moz-transform: rotateZ(5deg);
+    transform: rotateZ(5deg);
   }
 
   100% {
-    -webkit-transform: rotateZ(-10deg);
-    -moz-transform: rotateZ(-10deg);
-    transform: rotateZ(-10deg);
+    -webkit-transform: rotateZ(-5deg);
+    -moz-transform: rotateZ(-5deg);
+    transform: rotateZ(-5deg);
   }
 }
 
 @-ms-keyframes swing {
   0% {
-    -webkit-transform: rotateZ(10deg);
-    -moz-transform: rotateZ(10deg);
-    transform: rotateZ(10deg);
+    -webkit-transform: rotateZ(5deg);
+    -moz-transform: rotateZ(5deg);
+    transform: rotateZ(5deg);
   }
 
   100% {
-    -webkit-transform: rotateZ(-10deg);
-    -moz-transform: rotateZ(-10deg);
-    transform: rotateZ(-10deg);
+    -webkit-transform: rotateZ(-5deg);
+    -moz-transform: rotateZ(-5deg);
+    transform: rotateZ(-5deg);
   }
 }
 
 @keyframes swing {
   0% {
-    -webkit-transform: rotateZ(10deg);
-    -moz-transform: rotateZ(10deg);
-    transform: rotateZ(10deg);
+    -webkit-transform: rotateZ(5deg);
+    -moz-transform: rotateZ(5deg);
+    transform: rotateZ(5deg);
   }
 
   100% {
-    -webkit-transform: rotateZ(-10deg);
-    -moz-transform: rotateZ(-10deg);
-    transform: rotateZ(-10deg);
+    -webkit-transform: rotateZ(-5deg);
+    -moz-transform: rotateZ(-5deg);
+    transform: rotateZ(-5deg);
   }
 }
 #starsmall {
@@ -84,9 +84,9 @@
 
 @-moz-keyframes paperplane {
   0% {
-    -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
-    -moz-transform: translate3d(15%,0,0) rotateZ(10deg);
-    transform: translate3d(15%,0,0) rotateZ(10deg);
+    -webkit-transform: translate3d(15%,0,0) rotateZ(5deg);
+    -moz-transform: translate3d(15%,0,0) rotateZ(5deg);
+    transform: translate3d(15%,0,0) rotateZ(5deg);
   }
 
   100% {
@@ -98,9 +98,9 @@
 
 @-ms-keyframes paperplane {
   0% {
-    -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
-    -moz-transform: translate3d(15%,0,0) rotateZ(10deg);
-    transform: translate3d(15%,0,0) rotateZ(10deg);
+    -webkit-transform: translate3d(15%,0,0) rotateZ(5deg);
+    -moz-transform: translate3d(15%,0,0) rotateZ(5deg);
+    transform: translate3d(15%,0,0) rotateZ(5deg);
   }
 
   100% {
@@ -128,9 +128,9 @@
   -webkit-transform-origin: 50% 90%;
   -moz-transform-origin: 50% 90%;
   transform-origin: 50% 90%;
-  -webkit-animation: paperplane 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  -moz-animation: paperplane 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  animation: paperplane 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation: paperplane 5s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -moz-animation: paperplane 5s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation: paperplane 5s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 img{

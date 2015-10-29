@@ -177,7 +177,7 @@ ul.SubMenu > li > a{
     text-indent:2em;
 }
 
-ul.SubMenu > li > a:link {
+ul.SubMenu > li > a:link{
     color: #FFF;
     background-color:#4682B4; 
 }
