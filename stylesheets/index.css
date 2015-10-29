@@ -1,27 +1,175 @@
-*{ margin:0; padding:0; }
-      
-html{ height:100%; }
+*{margin: 0;padding: 0;}
 
-body {
-    font-family: 'Lato', Calibri, Arial, sans-serif;
-    background-color: rgb(231,231,231);
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: rotateZ(10deg);
+    -moz-transform: rotateZ(10deg);
+    transform: rotateZ(10deg);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(-1deg);
+    -moz-transform: rotateZ(-1deg);
+    transform: rotateZ(-1deg);
+  }
 }
 
-a {
-    text-decoration: none;
-    outline: none;
+@-moz-keyframes swing {
+  0% {
+    -webkit-transform: rotateZ(10deg);
+    -moz-transform: rotateZ(10deg);
+    transform: rotateZ(10deg);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(-10deg);
+    -moz-transform: rotateZ(-10deg);
+    transform: rotateZ(-10deg);
+  }
 }
 
-#cover-page{
-	margin-top: 100px;
-	margin-left: 50px;
-	border-radius: 1%;
-	width: 1050px;
-	height:650px;
-	background: #333333;
-	position: absolute;
+@-ms-keyframes swing {
+  0% {
+    -webkit-transform: rotateZ(10deg);
+    -moz-transform: rotateZ(10deg);
+    transform: rotateZ(10deg);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(-10deg);
+    -moz-transform: rotateZ(-10deg);
+    transform: rotateZ(-10deg);
+  }
+}
+
+@keyframes swing {
+  0% {
+    -webkit-transform: rotateZ(10deg);
+    -moz-transform: rotateZ(10deg);
+    transform: rotateZ(10deg);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(-10deg);
+    -moz-transform: rotateZ(-10deg);
+    transform: rotateZ(-10deg);
+  }
+}
+#starsmall {
+  -webkit-animation: swing 4s infinite alternate cubic-bezier(0, 0.03, 0.515, 0.955);
+  -moz-animation: swing 4s infinite alternate cubic-bezier(0, 0.03, 0.515, 0.955);
+  animation: swing 4s infinite alternate cubic-bezier(0, 0.03, 0.515, 0.955);
+}
+
+#starmeddle {
+  -webkit-animation: swing 3.5s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -moz-animation: swing 3.5s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation: swing 3.5s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 
+@-webkit-keyframes paperplane {
+  0% {
+    -webkit-transform: translate3d(15%,0,0) rotateZ(5deg);
+    -moz-transform: translate3d(15%,0,0) rotateZ(5deg);
+    transform: translate3d(15%,0,0) rotateZ(5deg);
+  }
 
+  100% {
+    -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    -moz-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    transform: translate3d(-15%,0,0) rotateZ(-10deg);
+  }
+}
 
+@-moz-keyframes paperplane {
+  0% {
+    -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
+    -moz-transform: translate3d(15%,0,0) rotateZ(10deg);
+    transform: translate3d(15%,0,0) rotateZ(10deg);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    -moz-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    transform: translate3d(-15%,0,0) rotateZ(-10deg);
+  }
+}
+
+@-ms-keyframes paperplane {
+  0% {
+    -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
+    -moz-transform: translate3d(15%,0,0) rotateZ(10deg);
+    transform: translate3d(15%,0,0) rotateZ(10deg);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    -moz-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    transform: translate3d(-15%,0,0) rotateZ(-10deg);
+  }
+}
+
+@keyframes paperplane {
+  0% {
+    -webkit-transform: translate3d(15%,0,0) rotateZ(10deg);
+    -moz-transform: translate3d(15%,0,0) rotateZ(10deg);
+    transform: translate3d(15%,0,0) rotateZ(10deg);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    -moz-transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    transform: translate3d(-15%,0,0) rotateZ(-10deg);
+  }
+}
+
+#paperplane {
+  -webkit-transform-origin: 50% 90%;
+  -moz-transform-origin: 50% 90%;
+  transform-origin: 50% 90%;
+  -webkit-animation: paperplane 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -moz-animation: paperplane 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation: paperplane 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+img{
+  padding: 5%;
+  width: 93%;
+}
+
+#toggle{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  right: 50%;
+  bottom: 5%;
+  border: none;
+  background: #fff;
+
+}
+
+a{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  text-decoration: none;
+  color: rgb(10,34,66);
+  font-weight: bold;
+}
+
+#toggle:hover{
+  background: rgb(252,226,0);
+  cursor: pointer;
+  color: #fff;
+}
+
+.icon{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#container{
+  background: rgb(12,36,65);
+}

@@ -4,9 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<title>Xiang xiyun's Blog</title>
 
-    <link rel="stylesheet" type="text/css" href="homepage.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css" />
     <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-ie7.min.css"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.min.css"/>
 
@@ -14,17 +15,17 @@
 
 
 	<body>
-    <div class = "container" style = "background: rgb(12,36,65)">
+    <div id = "container">
     <ul id = "scene">
-      <li class="layer" data-depth ="0.40"><img id = "star1" src = "images/star1.png"/></li>
-      <li class="layer" data-depth ="0.20"><img id = "star2" src = "images/star2.png"/></li>
-      <li class="layer" data-depth ="0.00"><img id = "star3" src = "images/star3.png"/></li>
+      <li class="layer" data-depth ="0.40"><img id = "starmeddle" src = "images/starmeddle.png"/></li>
+      <li class="layer" data-depth ="0.20"><img id = "starsmall" src = "images/starsmall.png"/></li>
+      <li class="layer" data-depth ="0.05"><img id = "starbig" src = "images/starbig.png"/></li>
       <li class="layer" data-depth ="0.50"><img id = "paperplane" src = "images/paperplane.png"/></li>
       <li class="layer" data-depth ="0.10"><img id = "background" src = "images/background.png"/></li>
     </ul>
   </div>
     <button id="toggle" class="toggle i">
-      <a href= "about.html"><i class="icon icon-double-angle-right"></i></a>
+      <a href= "about.html"><i class="icon icon-double-angle-down"></i></a>
     </button>
   <script src="javascripts/jquery.js"></script>
   <script src="deploy/jquery.parallax.js"></script>
