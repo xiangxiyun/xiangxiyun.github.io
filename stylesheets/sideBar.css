@@ -14,6 +14,7 @@ body,
 .st-container,
 .st-pusher,
 .st-content {
+	width: 100%;
 	height: 100%;
 }
 
@@ -46,7 +47,7 @@ body,
 	right: 0;
 	width: 0;
 	height: 0;
-	background: rgba(0,0,0,0.1);
+	background: rgba(0,0,0,0.2);
 	content: '';
 	opacity: 0;
 	z-index: 98;
