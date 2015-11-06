@@ -1,9 +1,11 @@
 $(document).ready(function(){
 	$(".block").mouseenter(function() {
-		$(this).find("#baloon .circle").stop().transition({scale: 1.35},250, "easeOutSine");
-		$(this).find(".block_filter").stop().fadeTo(120, 0); 
+		$(this).children(".pfl-element").stop().fadeTo(120, 0); 
+		$($(this).find(".baloon .circle")).stop().transition({scale: 1.10},250, "easeOutSine");
+		
 	 }).mouseleave(function() {
-		$(this).find("#baloon .circle").stop().transition({scale: 1.0},150, "easeOutSine");
-		$(this).find(".block_filter").stop().fadeTo(120, 0.85); 
-	 });
+	 	$(this).children(".pfl-element").stop().fadeTo(120, 0.65);
+		$($(this).find(".baloon .circle")).stop().transition({scale: 1.0},150, "easeOutSine");
+		 
+	 });	
 });

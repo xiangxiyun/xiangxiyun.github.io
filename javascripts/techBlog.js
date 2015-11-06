@@ -1,19 +1,19 @@
 $(document).ready(function(){
 
 
-	$("#tab li").click(function(){
+	$(".subtab").click(function(){
 		
 		for (var i = 0; i < 3; i++) {
 			if ($($("#tab").children()[i]).hasClass("tabin")) {
 				$($("#tab").children()[i]).removeClass("tabin");
 			};
-			if ($($("#tab-content").children()[i]).hasClass("techBlog-content-first")) {
-				$($("#tab-content").children()[i]).removeClass("techBlog-content-first");
+			if ($($("#tab-content").children()[i]).hasClass("category_front")) {
+				$($("#tab-content").children()[i]).removeClass("category_front");
 			};
 		}
 
 		var n = $(this).index();
 		$($("#tab").children()[n]).addClass("tabin");
-		$($("#tab-content").children()[n]).addClass("techBlog-content-first");
+		$($("#tab-content").children()[n]).addClass("category_front");
   });
 });
