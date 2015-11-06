@@ -10,11 +10,7 @@ body{
 	width: auto;
 }
 
-<<<<<<< HEAD
 /* portfolio comtent */
-=======
->>>>>>> 71ebea70284d70b73731df77b70fdbc3273f2a85
-
 #pfl-content{
 	float: left;
 	width: auto;
@@ -25,10 +21,7 @@ body{
 }
 
 .block{
-<<<<<<< HEAD
 	opacity: 1;
-=======
->>>>>>> 71ebea70284d70b73731df77b70fdbc3273f2a85
 	float: left;
 	width: 300px;
 	height: 700px;
@@ -36,11 +29,6 @@ body{
 
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 71ebea70284d70b73731df77b70fdbc3273f2a85
 .pfl-element{
 	background-position: center ;
     background-repeat: no-repeat;
