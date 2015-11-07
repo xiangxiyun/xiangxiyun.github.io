@@ -133,7 +133,7 @@ body,
 	margin: 0;
 	padding: 1em;
 	color: #FFF;
-	background: #4682B4;
+	background: rgb(137, 40, 100);
 	text-shadow: 0 0 1px rgba(0,0,0,0.1);
 	font-weight: 300;
 	font-size: 2em;
@@ -180,19 +180,19 @@ ul.SubMenu > li > a{
 
 ul.SubMenu > li > a:link{
     color: #FFF;
-    background-color:#4682B4; 
+    background-color:rgb(137, 40, 100); 
 }
 ul.SubMenu > li > a:visited {
     color: #FFF;
-    background-color:#4682B4; 
+    background-color:rgb(137, 40, 100); 
 }
 ul.SubMenu > li > a:hover {
     color: #333333;
-    background-color: #B0C4DE; 
+    background-color: rgb(227, 211, 227); 
 }
 ul.SubMenu > li > a:active {
     color: #333333;
-    background-color: #B0C4DE; 
+    background-color: rgb(227, 211, 227); 
 }
 
 
@@ -229,11 +229,11 @@ button .icon{
 }
 
 button:hover {
-	background: #4682B4;
+	background: rgb(157, 40, 100);
 }
 
 .substainColor{
-    background-color: #4682B4 !important; 
+    background-color: rgb(137, 40, 100) !important; 
     color: #FFF !important;
         
 }

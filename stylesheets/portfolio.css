@@ -3,7 +3,7 @@
 	padding: 0;
 }
 body{
-	background: rgb(31,32,37);
+	background: rgb(21,22,27);
 }
 
 .button_column {
@@ -13,7 +13,7 @@ body{
 /* portfolio comtent */
 #pfl-content{
 	float: left;
-	width: auto;
+	width: 1200px;
 	height: auto;
 	margin-left: 100px;
 	position: relative;
@@ -58,20 +58,6 @@ body{
 a.link{
 	color: #fff;
 }
-/*
-.baloon{
-	width: 150px;
-	height: 150px;
-	margin-left: 10px;
-	border-radius: 100%;
-	background: rgb(0,0,0);
-	position: absolute;
-	top: 50%;
-	left: 25%;
-	z-index: 100;
-
-}
-*/
 
 .baloon .circle {
 	width: 150px;
