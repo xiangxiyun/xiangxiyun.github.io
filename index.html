@@ -8,31 +8,43 @@
 		<title>Xiang xiyun's Blog</title>
 
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-ie7.min.css"/>
-    <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.min.css"/>
+    <!--script src="javascripts/sidebar.js" ></script-->
+    <!--script src="javascripts/index.js"></script-->
+    <!--link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-ie7.min.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.min.css"/-->
 
 	</head>
 
 
 	<body>
+
     <div id = "container">
-    <ul id = "scene">
-      <li class="layer" data-depth ="0.40"><img id = "starmeddle" src = "images/starmeddle.png"/></li>
-      <li class="layer" data-depth ="0.20"><img id = "starsmall" src = "images/starsmall.png"/></li>
-      <li class="layer" data-depth ="0.05"><img id = "starbig" src = "images/starbig.png"/></li>
-      <li class="layer" data-depth ="0.50"><img id = "paperplane" src = "images/paperplane.png"/></li>
-      <li class="layer" data-depth ="0.10"><img id = "background" src = "images/background.png"/></li>
-    </ul>
-  </div>
-    <button id="toggle" class="toggle i">
-      <a href= "portfolio.html"><i class="icon icon-double-angle-down"></i></a>
-    </button>
-  <script src="javascripts/jquery.js"></script>
+      <!--ul id = "scene">
+        <li class="layer" data-depth ="0.40"><img id = "starmeddle" src = "images/starmeddle.png"/></li>
+        <li class="layer" data-depth ="0.20"><img id = "starsmall" src = "images/starsmall.png"/></li>
+        <li class="layer" data-depth ="0.05"><img id = "starbig" src = "images/starbig.png"/></li>
+        <li class="layer" data-depth ="0.50"><img id = "paperplane" src = "images/paperplane.png"/></li>
+        <li class="layer" data-depth ="0.10"><img id = "background" src = "images/background.png"/></li>
+      </ul-->
+
+    </div>
+
+        <div class="toggle" id = "button1">
+          <a href= "about.html">About</a>
+        </div>
+        <div class="toggle" id = "button2">
+          <a href= "portfolio.html">Portfolio</a>
+        </div>
+        <div class="toggle" id = "button3">
+          <a href= "techblog.html">Blog</a>
+        </div>
+
+
   <script src="deploy/jquery.parallax.js"></script>
   <script>
 
   // Yep, that's it!
-  $('#scene').parallax();
+  //$('#scene').parallax();
 
   </script>
 
