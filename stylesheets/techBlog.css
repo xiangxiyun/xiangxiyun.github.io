@@ -16,22 +16,26 @@
         text-align: right;
         padding-left: 130px;
       }
+
       a{
         text-decoration: none;
         color: #333333;
       }
 
 
+      #blog{
+        width: 100%;
+      }
+
 /* section: blog article */
 
     #blog_content{
       float: left;
-      margin-left: 70px;
       margin-top: 120px;
+
     }
 
     .blog_article{
-      width: 750px;
       height: auto;
       margin-bottom: 40px;
       background: rgb(246,246,246);
@@ -67,8 +71,7 @@
     #blog_category{
       float: left;
       margin-top: 120px;
-      margin-left: 65px;
-      width: 240px;
+      margin-left: 50px;
       height: auto;
     }
 
@@ -80,7 +83,6 @@
 
     .subtab{
       float:left;
-      width: 120px;
       height: 30px;
       line-height: 30px;
       text-align: center;
@@ -115,5 +117,65 @@
 
     .category_front{
       display: block;
+    }
+
+    /* width >= 1280px */
+    @media screen and ( min-width: 1280px ){
+      #blog{
+        margin-left: 10%;
+      }
+      #blog_content{
+        width: 60%;
+      }
+      #blog_category{
+        width: 300px;
+      }
+      .subtab{
+        width: 150px;
+      }
+    }
+
+    /* 960px <= width < 1280px */
+    @media screen and ( min-width: 1024px ) and ( max-width: 1280px){
+      #blog{
+        margin-left: 5%;
+      }
+      #blog_category{
+        width: 260px;
+      } 
+      .subtab{
+        width: 130px;
+      }
+      #blog_content{
+        width: 60%;
+      }
+    }
+
+    @media screen and ( min-width: 961px ) and ( max-width: 1023px){
+
+      #blog{
+        margin-left: 3%;
+      }
+      #blog_category{
+        width: 240px;
+      } 
+      .subtab{
+        width: 120px;
+      }
+      #blog_content{
+        width: 55%;
+      }
+
+    }
+
+
+    @media screen and (max-width: 960px){
+      #blog_category{
+        display: none;
+      }
+      #blog_content{
+        margin-left: 5%;
+        width:90%;
+      }
     }
   
