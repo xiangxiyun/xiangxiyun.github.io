@@ -4,7 +4,7 @@
 
       body{ 
         min-height:100%;
-        font-family:arial; 
+        font-family: 'Helvetica', Calibri, Arial, sans-serif;
         position:relative; 
       }
 

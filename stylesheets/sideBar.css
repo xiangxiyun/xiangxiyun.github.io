@@ -16,6 +16,7 @@ body,
 .st-content {
 	width: 100%;
 	height: 100%;
+	font-family: 'Helvetica', Calibri, Arial, sans-serif;
 }
 
 .st-content {
@@ -133,7 +134,7 @@ body,
 	margin: 0;
 	padding: 1em;
 	color: #FFF;
-	background: rgb(137, 40, 100);
+	background: rgb(68, 88, 104);
 	text-shadow: 0 0 1px rgba(0,0,0,0.1);
 	font-weight: 300;
 	font-size: 2em;
@@ -180,19 +181,19 @@ ul.SubMenu > li > a{
 
 ul.SubMenu > li > a:link{
     color: #FFF;
-    background-color:rgb(137, 40, 100); 
+    background-color: rgb(143, 184, 215); 
 }
 ul.SubMenu > li > a:visited {
     color: #FFF;
-    background-color:rgb(137, 40, 100); 
+    background-color: rgb(143, 184, 215); 
 }
 ul.SubMenu > li > a:hover {
-    color: #333333;
-    background-color: rgb(227, 211, 227); 
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2); 
 }
 ul.SubMenu > li > a:active {
-    color: #333333;
-    background-color: rgb(227, 211, 227); 
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2); 
 }
 
 
@@ -229,11 +230,10 @@ button .icon{
 }
 
 button:hover {
-	background: rgb(157, 40, 100);
+	background: rgb(68, 88, 104);
 }
 
 .substainColor{
-    background-color: rgb(137, 40, 100) !important; 
+    background-color: rgb(143, 184, 215) !important; 
     color: #FFF !important;
-        
 }

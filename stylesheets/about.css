@@ -8,14 +8,13 @@
       min-height:100%;
       font-family:arial; 
       position:relative;
-      font-family: 'Lato', Calibri, Arial, sans-serif;
+      font-family: 'Helvetica', Calibri, Arial, sans-serif;
     }
 
     #aboutContent{
 
       width: 80%;
     }
-
 
     a {
       text-decoration: none;
@@ -28,29 +27,29 @@
 
       #aboutContent{
         margin-left: 25%;
-        padding-top: 100px;
+        padding-top: 150px;
       }
 
       #title{
         font-size: 30px;
         font-weight: 20px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
       }
       img{
         float: left;
-        width: 300px;
+        width: 350px;
       }
       #intro{
         float: left;
         margin-left: 8%;
         margin-top: 10px;
-        font-size: 15px;
-        width: 30%;
+        font-size: 20px;
+        width: 350px;
       }
     }
 
     /* 960px <= width < 1280px */
-    @media screen and ( min-width: 801px ) and ( max-width: 1280px){
+    @media screen and ( min-width: 800px ) and ( max-width: 1280px){
 
       #aboutContent{
         margin-left: 15%;
@@ -60,23 +59,22 @@
       #title{
         font-size: 30px;
         font-weight: 20px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
       }
       img{
         float: left;
-        width: 35%;
+        width: 270px;
       }
       #intro{
         float: left;
         margin-left: 10%;
-        margin-top: 10px;
-        font-size: 15px;
-        width: 30%;
+        font-size: 16px;
+        width: 300px;
       }
     }
 
 
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 799px){
       .button_column{
         height: 40px;
       }
