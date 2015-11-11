@@ -12,6 +12,11 @@ body{
 	width: auto;
 }
 
+button:hover {
+	background: rgba(255,255,255,0.95);
+	color: rgb(21,22,27);
+}
+
 /* portfolio comtent */
 #pfl-content{
 	margin-left: 100px;

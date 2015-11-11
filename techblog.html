@@ -75,7 +75,17 @@
             </div>
 
             <div id = "blog">
-              <section id = "blog_content">
+
+            <ul>
+              {% for post in site.posts %}　　　　　　
+              <li>{{ post.date | date_to_string }}
+                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+              </li>　　　　
+              {% endfor %}
+           　</ul>
+
+
+              <!--section id = "blog_content">
                 <a href = "#">
                   <article class = "blog_article">
                     <header class = "article_header">
@@ -126,7 +136,8 @@
                     
                   </div>
                 </div>
-              </section>
+              </section-->
+
             </div>
 
           </div><!-- /st-content-inner -->
