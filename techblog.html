@@ -1,15 +1,19 @@
 ---
 layout: blogTemplate
 ---
-
-<a href = "#">
-  <article class = "blog_article">
-    <header class = "article_header">
-      <h2 class = "ah">
-        <time> 2015-11-11 </time>
-      </h2>
-    </header>
-    <div class = "article_content"></div>      
-    <footer class = "article_tag"></footer>
-  </article>
-</a>
+<section id = "blog_content">        
+	{% for post in site.posts %}
+	<a href = "#">
+	  <article class = "blog_article">
+	    <header class = "article_header">
+	      <h2 class = "ah">
+	      	{{ post.title }}
+	        <time> 2015-11-11 </time>
+	      </h2>
+	    </header>
+	    <div class = "article_content"></div>      
+	    <footer class = "article_tag"></footer>
+	  </article>
+	</a>
+	{% endfor %}
+</section>
