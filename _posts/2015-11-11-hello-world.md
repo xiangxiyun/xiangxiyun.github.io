@@ -4,8 +4,6 @@ title: hello world
 date: 2015-11-11
 ---
 
-## Hello world ##
-
 ----------
 
  - 序
