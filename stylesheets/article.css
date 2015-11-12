@@ -8,8 +8,6 @@
         position:relative; 
       }
 
-
-
       a{
         text-decoration: none;
         color: #333333;
@@ -63,10 +61,13 @@
 
     .article_content {
       margin: 20px;
-      padding-top: 20px;
+      padding-top: 10px;
       color: rgb(105,105,105);
     }
-
+    
+    .article_content h2{
+         padding:10px 0px 10px 0px;
+    }
     .article_content a{
       color: rgb(128, 166, 204);
     }
@@ -77,14 +78,14 @@
 
     .article_content hr{
       padding: 3px;
-      height: 3px;
+      height: 5px;
       color: rgb(128, 166, 204);
     }
 
     .article_content p{
         float: left;
         font-size: 16px;
-        line-height: 10px;
+        line-height: 17px;
         text-align: left;
       }
 
