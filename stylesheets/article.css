@@ -77,14 +77,14 @@
 
     .article_content hr{
       padding: 3px;
-      size: 3px;
+      height: 3px;
       color: rgb(128, 166, 204);
     }
 
     .article_content p{
         float: left;
         font-size: 16px;
-        line-height: 3px;
+        line-height: 10px;
         text-align: left;
       }
 
