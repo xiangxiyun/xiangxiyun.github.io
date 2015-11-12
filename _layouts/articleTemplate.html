@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} | Heidi Xiang's blog</title>
     
     <link rel="stylesheet" type="text/css" href="../../stylesheets/sideBar.css" />
     <link rel="stylesheet" type="text/css" href="../../stylesheets/techBlog.css" />
@@ -80,7 +80,7 @@
             		<article class = "blog_article">
 	    				<header class = "article_header">
 	      					<h2 class = "ah"> {{ page.title }}
-	        					<time> {{ page.date}} </time>
+	        					<time> {{ page.date | date_to_long_string}} </time>
 	      					</h2>
 	    				</header>
 	    				<div class = "article_content">
