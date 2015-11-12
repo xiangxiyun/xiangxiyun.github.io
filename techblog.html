@@ -2,16 +2,17 @@
 layout: blogTemplate
 ---
 <section id = "blog_content">        
-	{% for post in site.posts %}
-	<a href = "{{ post.url }}">
+	{% for article in site.posts %}
+	<a href = "{{ article.url }}">
 	  <article class = "blog_article">
 	    <header class = "article_header">
 	      <h2 class = "ah">
-	      	{{ post.title }} {{ post.url }}
-	        <time> 2015-11-11 </time>
+	      	{{ article.title }}
+	        <time> {{ article.date}} </time>
 	      </h2>
 	    </header>
-	    <div class = "article_content"></div>      
+	    <div class = "article_content">
+	    </div>      
 	    <footer class = "article_tag"></footer>
 	  </article>
 	</a>
