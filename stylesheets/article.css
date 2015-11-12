@@ -77,15 +77,16 @@
     }
 
     .article_content hr{
-      padding: 3px;
       height: 5px;
-      color: rgb(128, 166, 204);
+      border:none;
+      border-top:5px solid rgb(128, 166, 204);
     }
 
     .article_content p{
+        padding-top:5px;
         float: left;
         font-size: 16px;
-        line-height: 17px;
+        line-height: 20px;
         text-align: left;
       }
 
