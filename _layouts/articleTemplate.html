@@ -11,10 +11,10 @@
     <link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome-ie7.min.css"/>
     <link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome.min.css"/>
 
-    <script src="../javascripts/modernizr.custom.js"></script>
-    <script src="../javascripts/jquery-1.11.2.min.js"></script>
-    <script src="../javascripts/techBlog.js"></script>
-    <script src="../javascripts/sidebar.js"></script>
+    <script src="../../javascripts/modernizr.custom.js"></script>
+    <script src="../../javascripts/jquery-1.11.2.min.js"></script>
+    <script src="../../javascripts/techBlog.js"></script>
+    <script src="../../javascripts/sidebar.js"></script>
   </head>
 
 
@@ -28,19 +28,19 @@
 
           <ul class = 'MenuList'>
                   <li class = 'MenuElement'> 
-                    <a class="reference" href="index.html">
+                    <a class="reference" href="../../index.html">
                       <i class="icon icon-home"></i> Home
                     </a>  
                   </li>
 
                   <li class = 'MenuElement'> 
-                    <a class="reference" href="techblog.html">
+                    <a class="reference" href="../../techblog.html">
                       <i class="icon icon-pencil"></i> Blog
                     </a> 
                   </li>
         
                   <li class = 'MenuElement'> 
-                    <a class="reference" id = "portfolio" href="portfolio.html">
+                    <a class="reference" id = "portfolio" href="../../portfolio.html">
                       <i class="icon icon-lightbulb"></i> Portfolio
                     </a> 
                   </li>
@@ -51,12 +51,12 @@
                     </a> 
                       <ul class = 'SubMenu'>
                         <li id = "about"> 
-                          <a href = "about.html" >
+                          <a href = "../../about.html" >
                             <i class="icon icon-user"></i> Me
                           </a>
                         </li> 
                         <li id = "resume"> 
-                          <a href = "resume.pdf" target="_blank" name = "xiyun xiang's resume"> 
+                          <a href = "../../resume.pdf" target="_blank" name = "xiyun xiang's resume"> 
                             <i class="icon icon-file-alt"></i> Resume
                           </a>
                         </li> 
@@ -75,25 +75,38 @@
             </div>
 
             <div id = "blog">
-            	{{page.path}}
-              {{ content }}
 
-              <section id = "blog_category">
+            	<section id = "blog_content">
+            		<article class = "blog_article">
+	    				<header class = "article_header">
+	      					<h2 class = "ah"> {{ article.title }}
+	        					<time> {{ article.date}} </time>
+	      					</h2>
+	    				</header>
+	    				<div class = "article_content">
+	    					{{ content }}
+	              			{{page.path}}
+	    				</div>      
+	    				<footer class = "article_tag"></footer>
+	  				</article>
 
-                <ul id = "tab">
-                  <li class = "tabin subtab">CATEGORY</li>
-                  <!--li class = "subtab">TOPIC</li-->
-                </ul>
+          		</section>
+              	<section id = "blog_category">
 
-                <div id = "tab-content">
-                  <div class = "category_front category_content">
-                    
-                  </div>
-                  <!--div class = "category_content">
-                    
-                  </div-->
-                </div>
-              </section>
+	                <ul id = "tab">
+	                  <li class = "tabin subtab">CATEGORY</li>
+	                  <!--li class = "subtab">TOPIC</li-->
+	                </ul>
+
+	                <div id = "tab-content">
+	                  <div class = "category_front category_content">
+	                    
+	                  </div>
+	                  <!--div class = "category_content">
+	                    
+	                  </div-->
+	                </div>
+              	</section>
 
             </div>
 
