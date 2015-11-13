@@ -1,0 +1,110 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: rgb(21,22,27);
+	font-family: 'Helvetica', Calibri, Arial, sans-serif;
+}
+
+.button_column {
+	width: auto;
+}
+
+button:hover {
+	background: rgba(255,255,255,0.95);
+	color: rgb(21,22,27);
+}
+
+/* portfolio comtent */
+#pfl-content{
+	margin-left: 100px;
+	position: relative;
+	float: left;
+}
+
+.block{
+	width: 250px;
+	float: left;
+	margin: 1px;
+	position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#pfl-element1{
+	background-image:url(../images/ImagePortfolio/1.jpg);
+}
+#pfl-element2{
+	background-image:url(../images/ImagePortfolio/2.jpg);
+}
+#pfl-element3{
+	background-image:url(../images/ImagePortfolio/3.jpg);
+}
+#pfl-element4{
+	background-image:url(../images/ImagePortfolio/4.jpg);
+}
+
+.pfl-element{
+	width: 100%;
+	height: 100%;
+	background: rgb(31,32,37);
+	opacity: 0.65;
+	position: absolute;
+	z-index: 50;
+}
+
+
+.link{
+	color: #fff;
+}
+
+.circle {
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	background: rgb(14,14,14);
+	position: absolute;
+	text-align: center;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+    cursor: pointer;
+    z-index: 60;
+}
+
+time{
+	font-size: 12px;
+}
+
+.pfl-title{
+	padding-top: 65px;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px){
+	button {
+		width: 40px;
+    	height: 40px;
+		margin-top: 20px;
+    	margin-left: 5px;
+	}
+	#pfl-content{
+		margin-left: 50px;
+	}
+	.circle {
+		width: 110px;
+		height: 110px;
+	}
+	.pfl-title{
+		font-size: 12px;
+		padding-top: 45px;
+		text-transform: uppercase;
+	}
+
+}
+
+

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Hello World | Heidi Xiang's blog</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/sideBar.css" />
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/article.css" />
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome-ie7.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome.min.css"/>
+
+    <script src="../../javascripts/modernizr.custom.js"></script>
+    <script src="../../javascripts/jquery-1.11.2.min.js"></script>
+    <script src="../../javascripts/techBlog.js"></script>
+    <script src="../../javascripts/sidebar.js"></script>
+  </head>
+
+
+  <body>
+    <div id="st-container" class="st-container">
+      
+      <div class="st-pusher">
+
+        <nav class="st-menu st-effect-3" id="menu-3">
+          <h2 >Index</h2>
+
+          <ul class = 'MenuList'>
+                  <li class = 'MenuElement'> 
+                    <a class="reference" href="../../index.html">
+                      <i class="icon icon-home"></i> Home
+                    </a>  
+                  </li>
+
+                  <li class = 'MenuElement'> 
+                    <a class="reference" href="../../techblog.html">
+                      <i class="icon icon-pencil"></i> Blog
+                    </a> 
+                  </li>
+        
+                  <li class = 'MenuElement'> 
+                    <a class="reference" id = "portfolio" href="../../portfolio.html">
+                      <i class="icon icon-lightbulb"></i> Portfolio
+                    </a> 
+                  </li>
+
+                  <li class = 'MenuElement'> 
+                    <a class="reference" href="#"> 
+                      <i class="icon icon-plus"></i> About
+                    </a> 
+                      <ul class = 'SubMenu'>
+                        <li id = "about"> 
+                          <a href = "../../about.html" >
+                            <i class="icon icon-user"></i> Me
+                          </a>
+                        </li> 
+                        <li id = "resume"> 
+                          <a href = "../../resume.pdf" target="_blank" name = "xiyun xiang's resume"> 
+                            <i class="icon icon-file-alt"></i> Resume
+                          </a>
+                        </li> 
+                      </ul>
+                  </li>
+
+              </ul>
+        </nav>
+        
+
+        <div class="st-content"><!-- this is the wrapper for the content -->
+          <div class="st-content-inner">
+
+            <div id="st-trigger-effects" class="button_column">
+              <button data-effect="st-effect-3"><i class="icon icon-reorder"></i></button>
+            </div>
+
+            <div id = "blog">
+
+            	<section id = "blog_content">
+            		<article class = "blog_article">
+    	    				<header class = "article_header">
+    	      					<h2 class = "ah"> Hello World
+    	        					<time> 11 November 2015 </time>
+    	      					</h2>
+    	    				</header>
+    	    				<div class = "article_content">
+    	    					<h1 id="hello-world">Hello World</h1>
+
+<h2 id="section">写在前面</h2>
+
+<hr />
+
+<p>“hello world” 应该是每个准程序员和程序员与PC交流的第一句话吧。还记得高中稀里糊涂地开始学C语言，当我看到屏幕上弹出我敲进去的这么一句话时，真的觉得自己进入了一个新的世界。所以，从一开始我就毫不犹豫地决定了，一旦博客搭好，我第一篇文章的名字一定要是“hello world”。</p>
+
+<h2 id="section-1">起</h2>
+
+<hr />
+
+<p>如果你有兴趣看看我的Github commit记录，就会发现，在今年的三月份我就试着在Github上搭博客了。其实可以追溯到更早。好像是在去年，我就开始小打小闹地搭博客了。当时偶然百度到了这个老师提过的程序员界十分火的代码托管平台，然后又看到了<strong>阮一峰</strong>这篇有名的博文《<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">搭建一个免费的，无限流量的Blog—-github Pages和Jekyll入门</a>》，心中就萌发了做一个酷炫技术博客的想法。可是对于我这个只是略懂C和C++，学业又紧张的技术小白来说，什么html，css，javascript还有ruby简直是天书！所以我只能简单地跟随教程盲目地打字，点击了一遍，然后生成了一个最最简单的页面，最后我自己都看不下去这么丑的blog，只好注销掉了自己的Github账号（因为当时傻傻的我连怎么删除repositary都不知道……），强制把这个念头遗忘。后来，今年三月份，我心中搭blog的欲望又重燃了，可是再次因为技术的限制和暑假的来到而惨淡收场，又搁置了一段很长的时间。</p>
+
+<h2 id="section-2">承</h2>
+
+<hr />
+<p>十一过完，我终于从家里回到了学校，强迫自己开始准备申请。当我打开一个个学校的官网查询心仪的专业时，发现居然都要准备一个portfolio并在提交材料时附上URL。当时我就有点晕了－－我并没有学过如何建网站啊。但是毕竟申请要求死死写在那，要么放弃出国读书的梦想，要么乖乖建个网站出来。由于没钱买服务器，于是我又重新打开废弃已久的Github帐号，再一次开始折腾。</p>
+
+<h2 id="section-3">转</h2>
+
+<hr />
+<p>我回到学校后，很快找了个实习，主要负责写网页爬虫。实习的时候要分析html网页——帮我快速学会了HTML和CSS；用casperjs爬一些信息控制严格的网站——帮我入门了javascript；boss要求我顺带写写后台——帮我学了点后端。这感觉真是天助我也，所以我用空闲的时间参考各种国外的blog和portfolio以提高我的美感，然后自己在Github上试试试试试。</p>
+
+<p>一开始调个CSS都让我头痛，各个div更是不服我的管教，随意出现在页面上或着干脆不出现！一起实习的童鞋看到我这么痛苦地搭博客语重心长地劝我找个模版fork一下得了。但是我就是一根筋，希望能自己从头到尾自己一砖一瓦地搭起来。不仅仅是因为这样子自由——想用什么样式就写什么样式，更是想借机锻炼技能——毕竟作为一个即将踏入社会的小程序猿我不能总是稀里糊涂的啊。</p>
+
+<p>慢慢的，首页出来了，个人简介也成了，portfolio长成了我希望的模样，响应式布局也调好了，但是唯独blog让我又陷入了困境。我把界面样式设置好了之后突然想到：Github上只能托管静态网页，要是我开始写文章了，那么多的文章难道要我手动写好HTML在发布吗？想想就觉得可怕……后来想起了好像原来看过一个叫jekyll的东西能管理博客文章，于是百度之。果然又跳出来阮一峰的那篇文章，我又跟着教程打字，点击了一遍，可是一旦加上自己的页面就出不来效果！在双十一前夜，我的舍友都在疯狂剁手的时候，我看着邮箱里一连六封Github通知page创建失败的邮件，真是郁闷至极。最后只先好洗洗睡了，告诉自己明天会更好……</p>
+
+<p>果然，今天在11.11号这个特殊的日子，我换用google搜索了一下，发现了雁起平沙的这篇《<a href="http://yanping.me/cn/blog/2011/12/15/building-static-sites-with-jekyll/">【译文】用Jekyll构建静态网站
+</a>》（不得不感叹百度和Google的差别），又重新看了一遍<a href="http://jekyll.bootcss.com/docs/home/">jekyll的文档</a>，终于调好了我的blog。</p>
+
+<h2 id="section-4">合</h2>
+
+<hr />
+<p>虽然到了结尾，但是我的Github page依然没有完全完工，还有许许多多的功能我想要添加，比如评论和统计，和很多界面细节我想改善。不过这些都是时间的事啦。到这里我也算完成了人生的一大心愿，作为一个小程序猿能有一个酷炫的个人博客真是一种很棒的感觉。
+今后，我会在这里记录下我学习过程中的发现和问题，望伴随着不断的进步！</p>
+
+    	    				</div>      
+    	    				<footer class = "article_tag"></footer>
+    	  				</article>
+
+          		</section>
+              	<section id = "blog_category">
+
+	                <ul id = "tab">
+	                  <li class = "tabin subtab">CATEGORY</li>
+	                  <!--li class = "subtab">TOPIC</li-->
+	                </ul>
+
+	                <div id = "tab-content">
+	                  <div class = "category_front category_content">
+	                    
+	                  </div>
+	                  <!--div class = "category_content">
+	                    
+	                  </div-->
+	                </div>
+              	</section>
+
+            </div>
+
+          </div><!-- /st-content-inner -->
+        </div><!-- /st-content -->
+      </div><!-- /st-pusher -->
+    </div><!-- /st-container -->
+    <script src="../../javascripts/classie.js"></script>
+    <script src="../../javascripts/sidebarEffects.js"></script>
+  </body>
+</html>
