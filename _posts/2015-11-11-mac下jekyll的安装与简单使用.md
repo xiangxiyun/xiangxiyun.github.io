@@ -1,3 +1,10 @@
+---
+layout: aritcleTemplate
+title: mac下jekyll的安装与简单使用
+date: 2015-11-13
+category: tech
+---
+
 
 # mac下jekyll的安装与简单使用 #
 
