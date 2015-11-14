@@ -1,6 +1,6 @@
 ---
 layout: articleTemplate
-title: 2015-11-13-mac下jekyll的安装
+title: mac下jekyll的安装
 date: 2015-11-13
 ---
 
@@ -33,15 +33,20 @@ Xcode就直接在App Store下载吧，时间可能会比较久。mac 如无意�
 
 命令行检查Ruby版本：
 
+
     $ ruby -v
 
 我这显示
 
+
     ruby 2.0.0p481 (2014-05-08 revision 45883) [universal.x86_64-darwin14]
+
 
 命令行检查RubyGems版本：
 
+
     $ gem -v
+
 
 我这显示
 

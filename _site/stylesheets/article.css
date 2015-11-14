@@ -89,15 +89,26 @@
     }
 
     .article_content p{
-        text-indent: 2em;
         padding-top:10px;
         padding-bottom: 10px;
         float: left;
-        font-size: 17px;
-        line-height: 25px;
+        font-size: 16px;
+        line-height: 30px;
         text-align: left;
-      }
+    }
 
+    .article_content ul{
+        font-size: 16px;
+        line-height: 30px;
+        margin-left: 10px;
+        padding: 10px;
+    }
+    .article_content ol{
+        font-size: 16px;
+        line-height: 30px;
+        margin-left: 15px;
+        padding: 10px;
+    }
 /* section: blog category */
 
     #blog_category{

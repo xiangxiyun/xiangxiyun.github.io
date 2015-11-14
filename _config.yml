@@ -1,2 +1,5 @@
 baseurl: /xiangxiyun.github.io
 permalink: /blog/:title
+markdown: kramdown
+highlighter: pygments
+safe: true
