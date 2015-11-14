@@ -116,7 +116,7 @@ Xcode就直接在App Store下载吧，时间可能会比较久。mac 如无意�
 这里请注意！淘宝镜像已经停止基于 HTTP 协议的镜像服务, 请在配置中使用 HTTPS 协议代替。我之前一直用
 
 {% highlight ruby %}
-$ gem source -a http://ruby.taobao.org
+    $ gem source -a http://ruby.taobao.org
 {% endhighlight %}
 
 结果总是连接不上。
@@ -127,14 +127,16 @@ $ gem source -a http://ruby.taobao.org
     $ sudo gem install jekyll
     Fetching: liquid-3.0.6.gem (100%)
     Successfully installed liquid-3.0.6 
-     ……省略……
+    /* ……省略…… */
     Fetching: ffi-1.9.10.gem (100%) 
     Building native extensions.  This could take a while... 
     ERROR:  Error installing jekyll: 
 		    ERROR: Failed to build gem native extension.
 		    /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby extconf.rb checking for ffi.h... *** extconf.rb failed ***  
 	Could not create Makefile due to some reason, probably lack of necessary libraries and/or headers.  Check the mkmf.log file for more details.  You may need configuration options.
-	 ……省略…… /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:434:in `try_do': The compiler failed to generate an executable file. (RuntimeError)
+	
+    /* ……省略…… */ 
+    /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:434:in `try_do': The compiler failed to generate an executable file. (RuntimeError)
 	You have to install development tools first.
  {% endhighlight %}
 
@@ -179,8 +181,8 @@ $ gem source -a http://ruby.taobao.org
 现在在Documents文件夹下就有一个blog了。然后我们进入这个文件夹让它run起来：
 
 {% highlight ruby %}
-     $ cd blog/
-     $ jekyll server
+    $ cd blog/
+    $ jekyll server
 {% endhighlight %}
 
 如无报错，输出的最后两行是：

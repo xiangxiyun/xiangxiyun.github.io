@@ -180,7 +180,7 @@
 
 <p>这里请注意！淘宝镜像已经停止基于 HTTP 协议的镜像服务, 请在配置中使用 HTTPS 协议代替。我之前一直用</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">gem</span> <span class="n">source</span> <span class="o">-</span><span class="n">a</span> <span class="ss">http</span><span class="p">:</span><span class="sr">//</span><span class="n">ruby</span><span class="o">.</span><span class="n">taobao</span><span class="o">.</span><span class="n">org</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="err">$</span> <span class="n">gem</span> <span class="n">source</span> <span class="o">-</span><span class="n">a</span> <span class="ss">http</span><span class="p">:</span><span class="sr">//</span><span class="n">ruby</span><span class="o">.</span><span class="n">taobao</span><span class="o">.</span><span class="n">org</span></code></pre></figure>
 
 <p>结果总是连接不上。</p>
 
@@ -189,14 +189,16 @@
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="err">$</span> <span class="n">sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span>
     <span class="ss">Fetching</span><span class="p">:</span> <span class="n">liquid</span><span class="o">-</span><span class="mi">3</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">6</span><span class="o">.</span><span class="n">gem</span> <span class="p">(</span><span class="mi">100</span><span class="sx">%)</span>
 <span class="sx">    Successfully installed liquid-3.0.6 </span>
-<span class="sx">     ……省略……</span>
+<span class="sx">    /* ……省略…… */</span>
 <span class="sx">    Fetching: ffi-1.9.10.gem (100%)</span> 
     <span class="no">Building</span> <span class="n">native</span> <span class="n">extensions</span><span class="o">.</span>  <span class="no">This</span> <span class="n">could</span> <span class="n">take</span> <span class="n">a</span> <span class="k">while</span><span class="o">.</span><span class="n">.</span><span class="o">.</span> 
     <span class="ss">ERROR</span><span class="p">:</span>  <span class="no">Error</span> <span class="n">installing</span> <span class="ss">jekyll</span><span class="p">:</span> 
 		    <span class="ss">ERROR</span><span class="p">:</span> <span class="no">Failed</span> <span class="n">to</span> <span class="n">build</span> <span class="n">gem</span> <span class="n">native</span> <span class="n">extension</span><span class="o">.</span>
 		    <span class="sr">/System/</span><span class="no">Library</span><span class="o">/</span><span class="no">Frameworks</span><span class="o">/</span><span class="no">Ruby</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="no">Versions</span><span class="o">/</span><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">ruby</span> <span class="n">extconf</span><span class="o">.</span><span class="n">rb</span> <span class="n">checking</span> <span class="k">for</span> <span class="n">ffi</span><span class="o">.</span><span class="n">h</span><span class="o">.</span><span class="n">.</span><span class="o">.</span> <span class="o">***</span> <span class="n">extconf</span><span class="o">.</span><span class="n">rb</span> <span class="n">failed</span> <span class="o">***</span>  
 	<span class="no">Could</span> <span class="ow">not</span> <span class="n">create</span> <span class="no">Makefile</span> <span class="n">due</span> <span class="n">to</span> <span class="n">some</span> <span class="n">reason</span><span class="p">,</span> <span class="n">probably</span> <span class="n">lack</span> <span class="n">of</span> <span class="n">necessary</span> <span class="n">libraries</span> <span class="ow">and</span><span class="o">/</span><span class="ow">or</span> <span class="n">headers</span><span class="o">.</span>  <span class="no">Check</span> <span class="n">the</span> <span class="n">mkmf</span><span class="o">.</span><span class="n">log</span> <span class="n">file</span> <span class="k">for</span> <span class="n">more</span> <span class="n">details</span><span class="o">.</span>  <span class="no">You</span> <span class="n">may</span> <span class="n">need</span> <span class="n">configuration</span> <span class="n">options</span><span class="o">.</span>
-	 <span class="err">……省略……</span> <span class="sr">/System/</span><span class="no">Library</span><span class="o">/</span><span class="no">Frameworks</span><span class="o">/</span><span class="no">Ruby</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="no">Versions</span><span class="o">/</span><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">ruby</span><span class="o">/</span><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">mkmf</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">434</span><span class="ss">:in</span> <span class="sb">`try_do&#39;: The compiler failed to generate an executable file. (RuntimeError)</span>
+	
+    <span class="sr">/* ……省略…… */</span> 
+    <span class="sr">/System/</span><span class="no">Library</span><span class="o">/</span><span class="no">Frameworks</span><span class="o">/</span><span class="no">Ruby</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="no">Versions</span><span class="o">/</span><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">ruby</span><span class="o">/</span><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">mkmf</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">434</span><span class="ss">:in</span> <span class="sb">`try_do&#39;: The compiler failed to generate an executable file. (RuntimeError)</span>
 <span class="sb">	You have to install development tools first.</span>
 <span class="sb"> </span></code></pre></figure>
 
@@ -231,8 +233,8 @@
 
 <p>现在在Documents文件夹下就有一个blog了。然后我们进入这个文件夹让它run起来：</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">     <span class="err">$</span> <span class="n">cd</span> <span class="n">blog</span><span class="o">/</span>
-     <span class="err">$</span> <span class="n">jekyll</span> <span class="n">server</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="err">$</span> <span class="n">cd</span> <span class="n">blog</span><span class="o">/</span>
+    <span class="err">$</span> <span class="n">jekyll</span> <span class="n">server</span></code></pre></figure>
 
 <p>如无报错，输出的最后两行是：</p>
 
