@@ -2,6 +2,8 @@
 layout: articleTemplate
 title: mac下jekyll的安装
 date: 2015-11-13
+category: jekyll
+description: 前天调通blog在了github上的jekyll设置，然后我一直傻傻的用提交刷新网页的方式来调试……直到今天到了办公室才醒悟过来应该在本机上搭一个jekyll。于是我先在办公室的iMac上按照教程轻松搭好了，然后回到宿舍又准备再搭一次，结果就遇到很多问题。这篇文章记录了我在安装过程中遇到的一系列问题，供大家参考。
 ---
 
 

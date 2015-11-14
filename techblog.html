@@ -3,7 +3,7 @@ layout: blogTemplate
 ---
 <section id = "blog_content">        
 	{% for article in site.posts %}
-	<a href = "{{ article.url }}">
+	<a class = "blog_reference" href = "{{ article.url }}">
 	  <article class = "blog_article">
 	    <header class = "article_header">
 	      <h2 class = "ah">
@@ -11,10 +11,31 @@ layout: blogTemplate
 	        <time> {{ article.date | date_to_long_string}} </time>
 	      </h2>
 	    </header>
-	    <div class = "article_content">
+	    <div class = "article_description">
+	    	<p> {{ article.description}} </p>
 	    </div>      
-	    <footer class = "article_tag"></footer>
+	    <footer class = "article_tag">
+	    	<i class = "icon icon-tags"></i>
+	    	{{ article.category}}
+	    </footer>
 	  </article>
 	</a>
 	{% endfor %}
+</section>
+
+<section id = "blog_category">
+
+	<ul id = "tab">
+		<li class = "tabin subtab">TIME</li>
+		<li class = "subtab">TOPIC</li>
+	</ul>
+
+    <div id = "tab-content">
+    	<div class = "category_front category_content">
+                    
+        </div>
+        <div class = "category_content">
+                    
+        </div>
+    </div>
 </section>
