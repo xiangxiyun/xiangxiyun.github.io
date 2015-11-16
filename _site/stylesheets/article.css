@@ -45,6 +45,7 @@
       height: 70px;
       line-height: 70px;
       font-size: 30px;
+      font-weight: 200;
     }
 
     time{
@@ -67,6 +68,7 @@
     }
     
     .article_content h2, h3, h4, h5, h6{
+      font-weight: 500;
       margin: 20px 0 10px 0;
     }
 
@@ -100,7 +102,8 @@
     .article_content p{
         padding-top:10px;
         font-size: 16px;
-        line-height: 30px;
+        font-weight: 100;
+        line-height: 34px;
     }
 
     .article_content pre{
@@ -158,11 +161,14 @@
     }
 
     #blog_category p{
-      font-size: 16px;
-      margin:10px 20px 10px 20px;
+      font-size: 20px;
+      font-weight: 400;
+      margin:10px 10px 10px 20px;
       color: rgb(105,105,105);
       text-align: left;
       padding: 10px;
+      font-family: 'Futura';
+      border-bottom: 1px solid rgb(105,105,105);
     }
 
     #toc{
@@ -171,6 +177,8 @@
     }
 
     #toc a{
+      font-weight: 250;
+      font-size: 15px;
       display: block;
       color: rgb(128, 166, 204);
     }
