@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>jekyll的代码高亮设置 | Heidi Xiang's blog</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/sideBar.css" />
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/article.css" />
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome-ie7.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/bootstrap.min.css">
+    
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="../../javascripts/modernizr.custom.js"></script>
+    <script src="../../javascripts/jquery-1.11.2.min.js"></script>
+    <script src="../../javascripts/article.js"></script>
+    <script src="../../javascripts/sidebar.js"></script>
+  </head>
+
+
+  <body data-spy="scroll" data-target="#toc">
+    <div id="st-container" class="st-container">
+      
+      <div class="st-pusher">
+
+        <nav class="st-menu st-effect-3" id="menu-3">
+          <h2 >Index</h2>
+
+          <ul class = 'MenuList'>
+                  <li class = 'MenuElement'> 
+                    <a class="reference" href="../../index.html">
+                      <i class="icon icon-home"></i> Home
+                    </a>  
+                  </li>
+
+                  <li class = 'MenuElement'> 
+                    <a class="reference" href="../../techblog.html">
+                      <i class="icon icon-pencil"></i> Blog
+                    </a> 
+                  </li>
+        
+                  <li class = 'MenuElement'> 
+                    <a class="reference" id = "portfolio" href="../../portfolio.html">
+                      <i class="icon icon-lightbulb"></i> Portfolio
+                    </a> 
+                  </li>
+
+                  <li class = 'MenuElement'> 
+                    <a class="reference" href="#"> 
+                      <i class="icon icon-plus"></i> About
+                    </a> 
+                      <ul class = 'SubMenu'>
+                        <li id = "about"> 
+                          <a href = "../../about.html" >
+                            <i class="icon icon-user"></i> Me
+                          </a>
+                        </li> 
+                        <li id = "resume"> 
+                          <a href = "../../resume.pdf" target="_blank" name = "xiyun xiang's resume"> 
+                            <i class="icon icon-file-alt"></i> Resume
+                          </a>
+                        </li> 
+                      </ul>
+                  </li>
+
+              </ul>
+        </nav>
+        
+
+        <div class="st-content"><!-- this is the wrapper for the content -->
+          <div class="st-content-inner">
+
+            <div id="st-trigger-effects" class="button_column">
+              <button data-effect="st-effect-3"><i class="icon icon-reorder"></i></button>
+            </div>
+
+            <div id = "blog">
+
+            	<section id = "blog_content">
+            		<article class = "blog_article">
+    	    				<header class = "article_header">
+    	      					<h2 class = "ah"> jekyll的代码高亮设置
+    	        					<time> 15 November 2015 </time>
+    	      					</h2>
+    	    				</header>
+    	    				<div class = "article_content">
+
+    	    					<h1 id="jekyll">2015-11-15-jekyll的代码高亮设置</h1>
+
+<h2 id="section">写在前面</h2>
+
+<hr />
+
+<p>昨天弄了一天，终于将代highlight给搞定了，不过还存留了一个缩进的问题，看看之后能不能解决。网上设置github＋jekyll代码高亮的教程大多说的不是很详细，所以我写下这篇教程主要记录如何设置jekyll中的代码高亮。</p>
+
+<h2 id="section-1">本机配置</h2>
+
+<hr />
+
+<ul>
+  <li>MacBookAir</li>
+  <li>OS X Yosemite 10.10.5</li>
+  <li>Python 2.7.10</li>
+</ul>
+
+<h2 id="section-2">需要安装</h2>
+
+<hr />
+
+<ol>
+  <li>Pygments</li>
+  <li>kramdown</li>
+</ol>
+
+<p><strong>Pygments</strong> 是一个用python写的通用代码高亮器，这是它的官网 <a href="http://pygments.org">http://pygments.org</a>（很难上去，要刷新很多遍才有可能打开）。它能支持300多种编程语言的高亮。重点是github的jekyll自带支持Pygments，所以我用它来做代码高亮。</p>
+
+<p>下面开始安装。首先确认你的Mac有没有python，一般都是自带python 2.7:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>python --version
+    Python 2.7.10
+    </code></pre></figure>
+
+<p>然后用下面的命令行很快就能装好，非常简单</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sudo pip install Pygments</code></pre></figure>
+
+<p><strong>kramdown</strong> 是一个Markdown解析器，Github 采用这个解析器。安装也很简单：</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>sudo gem install kramdown
+    </code></pre></figure>
+
+<h2 id="section-3">设置代码高亮</h2>
+
+<hr />
+
+<h3 id="section-4">设置配置文件</h3>
+
+<p><a href="http://jekyllrb.com/docs/templates/">jekyll</a> 的官网上有写怎么设置代码高亮，但是非常的不清不楚……那么就来看看我怎么操作吧～</p>
+
+<p>首先打开你的blog文件夹中的 _config.yml 文件，改动配置文件，添加下面两项。</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="ss">markdown: </span><span class="n">kramdown</span>
+    <span class="ss">highlighter: </span><span class="n">pygments</span>
+    </code></pre></figure>
+
+<p>注意！很多教程上说要写<code>pygments: true</code> 但是我这样写的时候运行整个博客会报错：</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">		Deprecation: The <span class="s1">'pygments'</span> configuration option has been renamed to <span class="s1">'highlighter'</span>. Please update your config file accordingly. The allowed values are <span class="s1">'rouge'</span>, <span class="s1">'pygments'</span> or null.
+		</code></pre></figure>
+
+<p>jekyll已经不支持这种写法了，所以要换成我上面的写法！</p>
+
+<h3 id="css">生成高亮CSS文件</h3>
+
+<p>接着，通过 <strong>pygments</strong> 生成代码高亮的CSS</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>pygmentize -S default -f html &gt; highlight.css
+    </code></pre></figure>
+
+<p>其中 default 参数可以替换成你想要的高亮风格名字，比如 <strong>friendly</strong>，<strong>native</strong>。这里有个网站 <a href="https://help.farbox.com/pygments.html">https://help.farbox.com/pygments.html</a>（似乎不用翻墙也能上），列出了常用的pygments代码高亮风格实例和它们的名字。当然你也能在你安装的pygments文件夹（路径也许是<strong>/Library/Python/2.7/site-packages/pygments/</strong>）下找到styles文件夹，里面放的都是生成不同的风格的代码，只是没有图来参考。</p>
+
+<p>highlight.css是你生成的CSS文件，如果想要指定CSS文件生成到哪里，可以指定路径。例子</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>pygmentize -S default -f html &gt; /Users/XXX/Desktop/highlight.css
+    </code></pre></figure>
+
+<h3 id="css-1">引用CSS文件</h3>
+
+<p>接着就是引用这个CSS文件啦。先把它放入你的blog 中放CSS的文件夹下，然后在你要用到代码高亮的HTML文件或模版文件中引用进去，例如：</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"../../stylesheets/pygments.css"</span> <span class="nt">/&gt;</span>
+    </code></pre></figure>
+
+<h3 id="jekyll-1">添加jekyll语法标记</h3>
+
+<p>最后最最重要的一步！</p>
+
+<p>在你的markdown文件中，或者HTML文件中，或者说，凡是要写代码的地方，加上jekyll的高亮语法，例子：</p>
+
+<pre><code>{\% highlight cpp \%}
+ 	void example{
+ 		int a = 0;
+ 	}
+ 	{\% endhighlight \%}
+</code></pre>
+
+<p>其中highlight之后跟参数的是你想要的高亮的代码类型名称，常用的有<strong>bash, c, cpp,  python, html ……</strong></p>
+
+<p>这里有一份基本代码类型名称的list可以参考： <a href="List%20of%20supported%20languages%20and%20lexers">List of supported languages and lexers</a></p>
+
+<p>到这里就完成了，运行你的blog，你就能看到高亮的代码了！</p>
+
+<h2 id="section-5">遇到的问题</h2>
+
+<hr />
+
+<h3 id="install-pygmentsrb">1.install pygments.rb</h3>
+
+<p>当我完成上面所有步骤之后run jekyll server 居然报错了：</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    Dependency Error: Yikes! It looks like you don<span class="se">\'</span>t have pygments or one of its dependencies installed. In order to use Jekyll as currently configured, you<span class="s1">'ll need to install this gem. The full error message from Ruby is: \'</span>cannot load such file -- pygments<span class="se">\'</span> If you run into trouble, you can find helpful resources at http://jekyllrb.com/help/! 
+    Liquid Exception: pygments <span class="k">in </span>_layouts/articleTemplate.html
+             ERROR: YOUR SITE COULD NOT BE BUILT:
+                    ------------------------------------
+                    pygments
+    </code></pre></figure>
+
+<p>好在还有google，找到了 <a href="http://stackoverflow.com/questions/33439019/jekyll-serve-didnt-work">解决办法</a>：</p>
+
+<p>用命令行 install pygments.rb:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>gem install pygments.rb
+    </code></pre></figure>
+
+<p>再run一次，果然成功！</p>
+
+<h3 id="pre">2.代码段会超出设定的pre段落宽度</h3>
+
+<p>这个也很好办～一个CSS就能解决！</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nt">pre</span><span class="p">{</span>
+    	<span class="nl">overflow</span><span class="p">:</span><span class="nb">auto</span><span class="p">;</span>
+    <span class="p">}</span>    
+    </code></pre></figure>
+
+<p>css实现div自动添加滚动条比较实用的功能，当图片或文字超出div所规定的宽或高时，会自动出现滚动条，这一点还是比较有利于用户体验的。markdown文件中的code解析之后会包括在<code>&lt;pre&gt;</code> 标签里。</p>
+
+
+
+    	    				</div>      
+    	    				<footer class = "article_tag">
+                    
+                    
+                      <a id = "previous_page" href = "/blog/mac%E4%B8%8Bjekyll%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"> 
+                        mac下jekyll的安装与简单使用 
+                        <i class = "icon icon-hand-right"></i> 
+                      </a>
+                    
+                  </footer>
+    	  				</article>
+
+          		</section>
+              <section id = "blog_category">
+                  <!--header class = "tabin"> CATEGORY </header-->
+                  <!--div class = "category_content"-->
+                  <p>TABLE OF CONTENTS</p>
+                  <div id = "toc"></div>
+                  <!--/div-->
+              </section>
+
+            </div>
+
+          </div><!-- /st-content-inner -->
+        </div><!-- /st-content -->
+      </div><!-- /st-pusher -->
+    </div><!-- /st-container -->
+    <script src="../../javascripts/classie.js"></script>
+    <script src="../../javascripts/sidebarEffects.js"></script>
+  </body>
+</html>

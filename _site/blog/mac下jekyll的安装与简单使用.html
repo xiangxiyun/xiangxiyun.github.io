@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>mac下jekyll的安装与简单使用 | Heidi Xiang's blog</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/sideBar.css" />
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/article.css" />
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome-ie7.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/bootstrap.min.css">
+    
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="../../javascripts/modernizr.custom.js"></script>
+    <script src="../../javascripts/jquery-1.11.2.min.js"></script>
+    <script src="../../javascripts/article.js"></script>
+    <script src="../../javascripts/sidebar.js"></script>
+  </head>
+
+
+  <body data-spy="scroll" data-target="#toc">
+    <div id="st-container" class="st-container">
+      
+      <div class="st-pusher">
+
+        <nav class="st-menu st-effect-3" id="menu-3">
+          <h2 >Index</h2>
+
+          <ul class = 'MenuList'>
+                  <li class = 'MenuElement'> 
+                    <a class="reference" href="../../index.html">
+                      <i class="icon icon-home"></i> Home
+                    </a>  
+                  </li>
+
+                  <li class = 'MenuElement'> 
+                    <a class="reference" href="../../techblog.html">
+                      <i class="icon icon-pencil"></i> Blog
+                    </a> 
+                  </li>
+        
+                  <li class = 'MenuElement'> 
+                    <a class="reference" id = "portfolio" href="../../portfolio.html">
+                      <i class="icon icon-lightbulb"></i> Portfolio
+                    </a> 
+                  </li>
+
+                  <li class = 'MenuElement'> 
+                    <a class="reference" href="#"> 
+                      <i class="icon icon-plus"></i> About
+                    </a> 
+                      <ul class = 'SubMenu'>
+                        <li id = "about"> 
+                          <a href = "../../about.html" >
+                            <i class="icon icon-user"></i> Me
+                          </a>
+                        </li> 
+                        <li id = "resume"> 
+                          <a href = "../../resume.pdf" target="_blank" name = "xiyun xiang's resume"> 
+                            <i class="icon icon-file-alt"></i> Resume
+                          </a>
+                        </li> 
+                      </ul>
+                  </li>
+
+              </ul>
+        </nav>
+        
+
+        <div class="st-content"><!-- this is the wrapper for the content -->
+          <div class="st-content-inner">
+
+            <div id="st-trigger-effects" class="button_column">
+              <button data-effect="st-effect-3"><i class="icon icon-reorder"></i></button>
+            </div>
+
+            <div id = "blog">
+
+            	<section id = "blog_content">
+            		<article class = "blog_article">
+    	    				<header class = "article_header">
+    	      					<h2 class = "ah"> mac下jekyll的安装与简单使用
+    	        					<time> 13 November 2015 </time>
+    	      					</h2>
+    	    				</header>
+    	    				<div class = "article_content">
+
+    	    					<h1 id="macjekyll">mac下jekyll的安装与简单使用</h1>
+
+<h2 id="section">写在前面</h2>
+
+<hr />
+
+<p>前天调通blog在了github上的jekyll设置，然后我一直傻傻的用提交刷新网页的方式来调试……直到今天到了办公室才醒悟过来应该在本机上搭一个jekyll。于是我先在办公室的iMac上按照教程轻松搭好了，然后回到宿舍又准备再搭一次，结果就遇到很多问题。这篇文章记录了我在安装过程中遇到的一系列问题，供大家参考。</p>
+
+<h2 id="section-1">本机配置</h2>
+
+<hr />
+
+<ul>
+  <li>MacBookAir</li>
+  <li>OS X Yosemite 10.10.5</li>
+  <li>Xcode 7.1</li>
+</ul>
+
+<h2 id="section-2">安装前需要</h2>
+
+<hr />
+
+<ol>
+  <li>Xcode</li>
+  <li>Ruby</li>
+  <li>RubyGems</li>
+</ol>
+
+<p>Xcode就直接在App Store下载吧，时间可能会比较久。mac 如无意外应该是自带了Ruby和RubyGems的。</p>
+
+<p>命令行检查Ruby版本：</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>ruby -v
+    </code></pre></figure>
+
+<p>我这显示</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    ruby 2.0.0p481 <span class="o">(</span>2014-05-08 revision 45883<span class="o">)</span> <span class="o">[</span>universal.x86_64-darwin14]
+    </code></pre></figure>
+
+<p>命令行检查RubyGems版本：</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>gem -v
+    </code></pre></figure>
+
+<p>我这显示</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    2.0.14
+    </code></pre></figure>
+
+<p>如果ruby版本过低，比如低于1.9.3，请用RVM升级一下，方便使用，有教程 <a href="http://stackoverflow.com/questions/3696564/how-to-update-ruby-to-1-9-x-on-mac">How to update Ruby to 1.9.x on Mac?</a>。</p>
+
+<p>升级gem可用命令行</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>gem update --system
+    </code></pre></figure>
+
+<p>如遇权限问题，用</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>sudo gem update --system
+    </code></pre></figure>
+
+<p>一切就绪，可以开始装jekyll了</p>
+
+<h2 id="jekyll">安装jekyll</h2>
+
+<hr />
+
+<p>如果你运气好，一条命令行就可以搞定</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>gem install jekyll
+    </code></pre></figure>
+
+<p>但是一般在天朝都会遇到被墙的问题</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>gem install jekyll
+    ERROR:  Could not find a valid gem <span class="s1">'jekyll'</span> <span class="o">(</span>&gt;<span class="o">=</span> 0<span class="o">)</span>, here is why:
+          Unable to download data from https://rubygems.org/ - Errno::ECONNRESET: Connection reset by peer - SSL_connect <span class="o">(</span>https://rubygems.org/latest_specs.4.8.gz<span class="o">)</span>
+    </code></pre></figure>
+
+<p>事实证明翻墙依然不能成功安装。之后，百度参考 <strong>易仁永澄的文章</strong></p>
+
+<p><a href="http://www.jianshu.com/p/1d6c56ea886a">【Mac01】小白教程：6大神器搭建免费无限流量博客方案</a></p>
+
+<p>知道了把资源换成淘宝的RubyGems 镜像就可以啦。</p>
+
+<p>首先我们看看gem 的资源里都有什么</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>gem <span class="nb">source</span>
+    <span class="k">***</span> CURRENT SOURCES <span class="k">***</span>
+    
+    https://rubygems.org/
+    </code></pre></figure>
+
+<p>这个链接是官方的资源，接下来我们加入<a href="https://ruby.taobao.org">淘宝的RubyGems 镜像</a>，删除官方源。</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>gem <span class="nb">source</span> -a https://ruby.taobao.org
+    https://ruby.taobao.org added to sources
+    <span class="nv">$ </span>gem <span class="nb">source</span> -r https://rubygems.org/
+    https://rubygems.org/ removed from sources
+    </code></pre></figure>
+
+<p>这里请注意！淘宝镜像已经停止基于 HTTP 协议的镜像服务, 请在配置中使用 HTTPS 协议代替。我之前一直用</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>gem <span class="nb">source</span> -a http://ruby.taobao.org
+    </code></pre></figure>
+
+<p>结果总是连接不上。</p>
+
+<p>到这里按照一般教程都说可以愉快的安装jekyll了，于是我欢天喜地的敲入了一开始的那个指令，结果……前面欢快的跳了几行之后就出现了ERROR。</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>sudo gem install jekyll
+    Fetching: liquid-3.0.6.gem <span class="o">(</span>100%<span class="o">)</span>
+    Successfully installed liquid-3.0.6 
+    /<span class="k">*</span> ……省略…… <span class="k">*</span>/
+    Fetching: ffi-1.9.10.gem <span class="o">(</span>100%<span class="o">)</span> 
+    Building native extensions.  This could take a <span class="k">while</span>... 
+    ERROR:  Error installing jekyll: 
+		    ERROR: Failed to build gem native extension.
+		    /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby extconf.rb checking <span class="k">for </span>ffi.h... <span class="k">***</span> extconf.rb failed <span class="k">***</span>  
+	Could not create Makefile due to some reason, probably lack of necessary libraries and/or headers.  Check the mkmf.log file <span class="k">for </span>more details.  You may need configuration options.
+	
+    /<span class="k">*</span> ……省略…… <span class="k">*</span>/ 
+    /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:434:in <span class="sb">`</span>try_do<span class="s1">': The compiler failed to generate an executable file. (RuntimeError)
+	You have to install development tools first.
+	</span></code></pre></figure>
+
+<p>我先在百度上搜了一圈，挨个答案试了一遍都没有好。
+ 然后我把ERROR的描述google一下，果然高效地找到了<a href="_layouts_posts_sitedeployfontimagesjavascriptsstylesheetsresume.pdfabout.htmlindex.htmlportfolio.htmltechblog.html">答案</a>，在命令行中输入一下：</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>xcode-select --install
+    xcode-select: note: install requested <span class="k">for </span><span class="nb">command </span>line developer tools
+    </code></pre></figure>
+
+<p>这一步是装命令行开发工具。
+安装成功之后，打开Xcode，再次在命令行输入</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>sudo gem install jekyll
+    </code></pre></figure>
+
+<p>然后就装好啦！</p>
+
+<h2 id="jekyll-1">jekyll的简单使用</h2>
+
+<hr />
+
+<p>来确认一下是否真的已经装好了jekyll：</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>jekyll -v
+    jekyll 3.0.0
+    </code></pre></figure>
+
+<p>不错，诚不欺我。</p>
+
+<p>之后我们可以随便进入一个文件夹建一个自带模版的blog：</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>jekyll new blog  /<span class="k">*</span>blog可以换成你喜欢的名字<span class="k">*</span>/
+    New jekyll site installed <span class="k">in</span> /Users/XXX/Documents/blog.
+    </code></pre></figure>
+
+<p>现在在Documents文件夹下就有一个blog了。然后我们进入这个文件夹让它run起来：</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span><span class="nb">cd </span>blog/
+    <span class="nv">$ </span>jekyll server
+    </code></pre></figure>
+
+<p>如无报错，输出的最后两行是：</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    Server address: http://127.0.0.1:4000/ 
+    Server running... press ctrl-c to stop.
+    </code></pre></figure>
+
+<p>这时我们就已经在本地跑起来了一个服务器了，在浏览器地址栏中输入 http://127.0.0.1:4000/ ，你就能看到一个模版blog啦～</p>
+
+
+    	    				</div>      
+    	    				<footer class = "article_tag">
+                    
+                      <a id = "next_page" href = "/blog/jekyll%E7%9A%84%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E8%AE%BE%E7%BD%AE">
+                        <i class = "icon icon-hand-left"></i> 
+                        jekyll的代码高亮设置
+                      </a>
+                    
+                    
+                      <a id = "previous_page" href = "/blog/hello-world"> 
+                        Hello World 
+                        <i class = "icon icon-hand-right"></i> 
+                      </a>
+                    
+                  </footer>
+    	  				</article>
+
+          		</section>
+              <section id = "blog_category">
+                  <!--header class = "tabin"> CATEGORY </header-->
+                  <!--div class = "category_content"-->
+                  <p>TABLE OF CONTENTS</p>
+                  <div id = "toc"></div>
+                  <!--/div-->
+              </section>
+
+            </div>
+
+          </div><!-- /st-content-inner -->
+        </div><!-- /st-content -->
+      </div><!-- /st-pusher -->
+    </div><!-- /st-container -->
+    <script src="../../javascripts/classie.js"></script>
+    <script src="../../javascripts/sidebarEffects.js"></script>
+  </body>
+</html>

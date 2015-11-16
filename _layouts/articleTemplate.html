@@ -11,15 +11,17 @@
     <link rel="stylesheet" type="text/css" href="../../stylesheets/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome-ie7.min.css"/>
     <link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome.min.css"/>
-
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/bootstrap.min.css">
+    
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="../../javascripts/modernizr.custom.js"></script>
     <script src="../../javascripts/jquery-1.11.2.min.js"></script>
-    <script src="../../javascripts/techBlog.js"></script>
+    <script src="../../javascripts/article.js"></script>
     <script src="../../javascripts/sidebar.js"></script>
   </head>
 
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div id="st-container" class="st-container">
       
       <div class="st-pusher">
@@ -87,27 +89,32 @@
     	    				<div class = "article_content">
 
     	    					{{ content }}
+
     	    				</div>      
-    	    				<footer class = "article_tag"></footer>
+    	    				<footer class = "article_tag">
+                    {% if page.next %}
+                      <a id = "next_page" href = "{{ page.next.url }}">
+                        <i class = "icon icon-hand-left"></i> 
+                        {{ page.next.title }}
+                      </a>
+                    {% endif %}
+                    {% if page.previous %}
+                      <a id = "previous_page" href = "{{ page.previous.url }}"> 
+                        {{ page.previous.title }} 
+                        <i class = "icon icon-hand-right"></i> 
+                      </a>
+                    {% endif %}
+                  </footer>
     	  				</article>
 
           		</section>
-              	<section id = "blog_category">
-
-	                <ul id = "tab">
-	                  <li class = "tabin subtab">CATEGORY</li>
-	                  <!--li class = "subtab">TOPIC</li-->
-	                </ul>
-
-	                <div id = "tab-content">
-	                  <div class = "category_front category_content">
-	                    
-	                  </div>
-	                  <!--div class = "category_content">
-	                    
-	                  </div-->
-	                </div>
-              	</section>
+              <section id = "blog_category">
+                  <!--header class = "tabin"> CATEGORY </header-->
+                  <!--div class = "category_content"-->
+                  <p>TABLE OF CONTENTS</p>
+                  <div id = "toc"></div>
+                  <!--/div-->
+              </section>
 
             </div>
 

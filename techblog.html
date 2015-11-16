@@ -26,16 +26,20 @@ layout: blogTemplate
 <section id = "blog_category">
 
 	<ul id = "tab">
-		<li class = "tabin subtab">TIME</li>
-		<li class = "subtab">TOPIC</li>
+		<li class = "tabin subtab">TOPIC</li>
+		<li class = "subtab">TIME</li>
 	</ul>
 
     <div id = "tab-content">
     	<div class = "category_front category_content">
-                    
-        </div>
+    		<div id = "category_cloud">
+				{% for category in site.categories %} 
+	        	<a href="#">{{ category | first }} ({{ category | last | size }})</a> ,
+	            {% endfor %}
+        	</div>
+    	</div>
         <div class = "category_content">
-                    
+        	 
         </div>
     </div>
 </section>

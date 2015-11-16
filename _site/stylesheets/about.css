@@ -1,0 +1,105 @@
+
+    *{ margin:0; padding:0; }
+          
+    html{ height:100%; }
+
+
+    body{ 
+      min-height:100%;
+      font-family:arial; 
+      position:relative;
+      font-family: 'Helvetica', Calibri, Arial, sans-serif;
+    }
+
+    #aboutContent{
+
+      width: 80%;
+    }
+
+    a {
+      text-decoration: none;
+      outline: none;
+    }
+
+
+    /* width >= 1280px */
+    @media screen and ( min-width: 1280px ){
+
+      #aboutContent{
+        margin-left: 25%;
+        padding-top: 150px;
+      }
+
+      #title{
+        font-size: 30px;
+        font-weight: 20px;
+        margin-bottom: 20px;
+      }
+      img{
+        float: left;
+        width: 350px;
+      }
+      #intro{
+        float: left;
+        margin-left: 8%;
+        margin-top: 10px;
+        font-size: 20px;
+        width: 350px;
+      }
+    }
+
+    /* 960px <= width < 1280px */
+    @media screen and ( min-width: 800px ) and ( max-width: 1280px){
+
+      #aboutContent{
+        margin-left: 15%;
+        padding-top: 100px;
+      }
+
+      #title{
+        font-size: 30px;
+        font-weight: 20px;
+        margin-bottom: 20px;
+      }
+      img{
+        float: left;
+        width: 270px;
+      }
+      #intro{
+        float: left;
+        margin-left: 10%;
+        font-size: 16px;
+        width: 300px;
+      }
+    }
+
+
+    @media screen and (max-width: 799px){
+      .button_column{
+        height: 40px;
+      }
+      button {
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+      #aboutContent{
+        margin-left: 15%;
+        padding-top: 70px;
+      }
+      #title{
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      img{
+        width: 90%;
+      }
+      #intro{
+        margin-top: 10px;
+        font-size: 15px;
+        width: 90%;
+      }
+    }
+  
+   
