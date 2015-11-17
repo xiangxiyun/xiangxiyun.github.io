@@ -7,22 +7,34 @@ $(document).ready(function(){
 		 $($(this).find(".ah")).css("color", "rgb(105,105,105)");
 	});
 
-	$('#toc').toc();
+	$('#toc').toc({
+      title: '', 
+      headers: 'h2, h3, h4, h5, h6', 
+      listType: 'ul'
+  });
+
+  $("#back-to-top").click(function(){
+    $(".st-content").scrollTop(0);
+   });
+
 });
+
+
 
 // https://github.com/ghiculescu/jekyll-table-of-contents
 (function($){
   $.fn.toc = function(options) {
     var defaults = {
       noBackToTopLinks: true,
-      title: '',
+      title: 'title',
       minimumHeaders: 3,
-      headers: 'h2, h3, h4, h5, h6',
-      listType: 'ul', // values: [ol|ul]
+      headers: 'h1, h2, h3, h4, h5, h6',
+      listType: 'ol', // values: [ol|ul]
       showEffect: 'show', // values: [show|slideDown|fadeIn|none]
       showSpeed: 'slow' // set to 0 to deactivate effect
-    },
-    settings = $.extend(defaults, options);
+    };
+
+    var settings = $.extend(defaults, options);
 
     function fixedEncodeURIComponent (str) {
       return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
@@ -37,7 +49,9 @@ $(document).ready(function(){
         this.id = $(this).attr( "id", previousSiblingName.replace(/\./g, "-") );
       }
       return this.id;
-    }), output = $(this);
+    });
+    var output = $(this);
+
     if (!headers.length || headers.length < settings.minimumHeaders || !output.length) {
       $(this).hide();
       return;
@@ -54,20 +68,21 @@ $(document).ready(function(){
       none: function() { output.html(html); }
     };
 
-    var get_level = function(ele) { return parseInt(ele.nodeName.replace("H", ""), 10); }
+    var get_level = function(ele) { return parseInt(ele.nodeName.replace("H", ""), 10); };
     var highest_level = headers.map(function(_, ele) { return get_level(ele); }).get().sort()[0];
     //var return_to_top = '<i class="icon-arrow-up back-to-top"> </i>';
 
-    var level = get_level(headers[0]),
-      this_level,
-      //html = settings.title + " <"+settings.listType+">";
-      html = settings.title + " <" + settings.listType + " class = 'nav nav-pills nav-stacked'>";
+    var level = get_level(headers[0]);
+    var this_level;
+    //html = settings.title + " <"+settings.listType+">";
+    var html = settings.title + " <" + settings.listType + " class = 'nav nav-pills nav-stacked'>";
+    
     headers.on('click', function() {
       if (!settings.noBackToTopLinks) {
         window.location.hash = this.id;
       }
     })
-    .addClass('clickable-header')
+    //.addClass('clickable-header')
     .each(function(_, header) {
       this_level = get_level(header);
       //if (!settings.noBackToTopLinks && this_level === highest_level) {
@@ -89,14 +104,11 @@ $(document).ready(function(){
       }
       level = this_level; // update for the next one
     });
+
     html += "</"+settings.listType+">";
-    
-    if (!settings.noBackToTopLinks) {
-      $(document).on('click', '.back-to-top', function() {
-        $(window).scrollTop(0);
-        window.location.hash = '';
-      });
-    }
+
     render[settings.showEffect]();
+
   };
+
 })(jQuery);
