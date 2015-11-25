@@ -1,0 +1,126 @@
+---
+layout: articleTemplate
+title: HTTP初解
+date: 2015-11-25
+category:  网络协议
+description: 这几天在公司写爬虫，一直都在和bug做斗争，所以停了几天没管blog。今天爬虫终于基本调好了，回头想想，困扰我最多的就是http网络协议了。想要爬数据，必须懂http，而以前学的计算机网络只为了应试，基本都忘光了。这几天实战，慢慢觉得有些理解原来学的那些协议，于是颇有“纸上得来终觉浅，得知此事要躬行”的感慨，所以在这篇博客里面总结一下。
+---
+
+# HTTP初解 #
+
+## 写在前面 ##
+
+这几天在公司写爬虫，一直都在和bug做斗争，所以停了几天没管blog。今天爬虫终于基本调好了，回头想想，困扰我最多的就是http网络协议了。想要爬数据，必须懂http，而以前学的计算机网络只为了应试，基本都忘光了。这几天实战，慢慢觉得有些理解原来学的那些协议了，于是又翻出课本看了一遍，颇有“纸上得来终觉浅，得知此事要躬行”的感慨，所以在这篇博客里面总结一下。
+
+## HTTP报文格式 ##
+
+以下总结自《计算机网络》一书：
+
+HTTP报文格式有两种：请求报文和响应报文。
+
+### HTTP请求报文 ###
+
+下面是一个典型的HTTP请求报文:
+
+    {% highlight bash %}
+    GET /somedr/page.html HTTP1.1
+    Host: www.someschool.edu
+    Connection: close
+    User-agent: Mozilla/4.0
+    Accept-language: fr
+    {% endhighlight %}
+
+该报文含有5行，而实际的请求报文可以有更多行或仅有一行。HTTP请求报文的第一行叫做**请求行**（request line），后继的行叫做**部首行**（header line）。
+
+**请求行**有3个字段：方法字段、URL字段和HTTP协议版本字段。
+
+ - 方法字段可以取值 **GET、POST、HEAD、PUT、DELETE**。
+ - URL字段填写该对象的URL地址，在本例中，浏览器请求对象`/somedr/page.html`。
+ - HTTP协议版本字段填写实现的协议版本，在本例中，浏览器实现的是HTTP/1.1版本。
+
+现在来看看**部首行**。
+
+ - Host: www.someschool.edu 定义了目标所在的主机。
+ - Connection: close 定义服务器不使用持久连接，它要求服务器在发送完被请求的对象之后就关闭连接。
+ - User-agent: Mozilla/4.0 定义用户代理，即向服务器发送请求的浏览器的类型。
+ - Accept-language: fr 表示用户想得到该对象的法语版本。
+
+下面展示的是请求报文的通用格式：
+
+
+
+请求报文可以在各种浏览器的调试模式中看到。
+
+
+#### HTTP请求方法 ####
+
+现在介绍请求行时提到HTTP有四种请求方法：
+
+ 1. GET：请求获取URL字段所标识的对象
+ 2. POST：在URL字段所标识的对象后附加新的数据
+ 3. HEAD：请求获取由URL字段所标识的对象的响应消息报头，不返回对象
+ 4. PUT：请求服务器存储一个对象，并用URL字段作为其标识
+ 5. DELETE：请求服务器删除服务器上URL字段所标识的对象
+
+### HTTP响应报文 ###
+
+下面是一个典型的HTTP响应报文，该报文是对应上面讨论的例子中的请求报文的响应:
+
+    {% highlight bash %}
+    HTTP/1.1 200 OK
+    Connection: close
+    Date: Thu, 03 Jul 2003 12:00:15 GMT
+    Server: Apache/1.3.0 (Unix)
+    Last-Modified: Sun, 6 May 2007 09:23:24 GMT
+    Content-Length: 6821
+    Content-Type: text/html
+
+	(data data data data data ...)
+    {% endhighlight %}
+
+这个响应报文分成三个部分：一个 初始**状态行**（status line）、六个**首部行**（header line），然后是**实体主体**（entity body）。**状态行** 包含三个字段——协议版本、状态码和响应状态信息。 **实体主体**是报文的主体，包含了所请求的对象本身 (data data data data data ...)。
+
+下面来看看**首部行**：
+
+ - Connection: close 告诉客户机在报文发送完成后关闭了该TCP连接。
+ - Date: Thu, 03 Jul 2003 12:00:15 GMT 标明服务器产生并发送该响应报文的日期和时间。
+ - Server: Apache/1.3.0 (Unix) 表明该报文是由一个Apache Web服务器产生的。
+ - Last-Modified: Sun, 6 May 2007 09:23:24 GMT 标明了对象最后修改的日期和时间。
+ - Content-Length: 6821 表明了被发送对象的字节数。
+ - Content-Type: text/html 表明了实体主体的对象是HTML文本
+
+下面展示的是响应报文的通用格式：
+
+#### 响应报文状态码 ####
+
+这部分摘自博客[老李的地下室](http://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html)
+
+状态代码有三位数字组成，第一个数字定义了响应的类别，有五种可能取值：
+
+ - 1xx：指示信息--表示请求已接收，继续处理 
+ - 2xx：成功--表示请求已被成功接收、理解、接受
+ - 3xx：重定向--要完成请求必须进行更进一步的操作 
+ - 4xx：客户端错误--请求有语法错误或请求无法实现
+ - 5xx：服务器端错误--服务器未能实现合法的请求
+
+常见状态代码、状态描述、说明：
+
+200 OK      //客户端请求成功
+
+400 Bad Request  //客户端请求有语法错误，不能被服务器所理解
+
+401 Unauthorized //请求未经授权，这个状态代码必须和WWW-Authenticate报头域一起使用 
+
+403 Forbidden  //服务器收到请求，但是拒绝提供服务
+
+404 Not Found  //请求资源不存在，eg：输入了错误的URL
+
+500 Internal Server Error //服务器发生不可预期的错误
+
+503 Server Unavailable  //服务器当前不能处理客户端的请求，一段时间后可能恢复正常
+
+eg：HTTP/1.1 200 OK （CRLF）
+
+## 结语 ##
+
+因为在写爬虫的过程中我用的是python3，网上的资料相对较少，所以准备之后再写一篇关于python3的http请求操作的文章。
