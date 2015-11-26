@@ -89,9 +89,13 @@
 
 <h2 id="section">写在前面</h2>
 
+<hr />
+
 <p>这几天在公司写爬虫，一直都在和bug做斗争，所以停了几天没管blog。今天爬虫终于基本调好了，回头想想，困扰我最多的就是http网络协议了。想要爬数据，必须懂http，而以前学的计算机网络只为了应试，基本都忘光了。这几天实战，慢慢觉得有些理解原来学的那些协议了，于是又翻出课本看了一遍，颇有“纸上得来终觉浅，得知此事要躬行”的感慨，所以在这篇博客里面总结一下。</p>
 
 <h2 id="http-1">HTTP报文格式</h2>
+
+<hr />
 
 <p>以下总结自《计算机网络》一书：</p>
 
@@ -128,7 +132,7 @@
 </ul>
 
 <p>下面展示的是请求报文的通用格式：
-<img src="../images/articleimage/httprequest.png" alt="http request" /></p>
+<img src="../images/articleimage/httprequest.jpg" alt="http request" /></p>
 
 <p>请求报文可以在各种浏览器的调试模式中看到。</p>
 
@@ -148,11 +152,11 @@
 
 <p>下面是一个典型的HTTP响应报文，该报文是对应上面讨论的例子中的请求报文的响应:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    HTTP/1.1 <span class="m">200</span> OK
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    HTTP/1.1 200 OK
     Connection: close
-    Date: Thu, <span class="m">03</span> Jul <span class="m">2003</span> 12:00:15 GMT
+    Date: Thu, 03 Jul 2003 12:00:15 GMT
     Server: Apache/1.3.0 <span class="o">(</span>Unix<span class="o">)</span>
-    Last-Modified: Sun, <span class="m">6</span> May <span class="m">2007</span> 09:23:24 GMT
+    Last-Modified: Sun, 6 May 2007 09:23:24 GMT
     Content-Length: 6821
     Content-Type: text/html
 
@@ -173,7 +177,7 @@
 </ul>
 
 <p>下面展示的是响应报文的通用格式：
-<img src="../images/articleimage/httpresponse.png" alt="http response" /></p>
+<img src="../images/articleimage/httpresponse.jpg" alt="http response" /></p>
 
 <h4 id="section-1">响应报文状态码</h4>
 
@@ -208,6 +212,8 @@
 <p>eg：HTTP/1.1 200 OK （CRLF）</p>
 
 <h2 id="section-2">结语</h2>
+
+<hr />
 
 <p>因为在写爬虫的过程中我用的是python3，网上的资料相对较少，所以准备之后再写一篇关于python3的http请求操作的文章。</p>
 
