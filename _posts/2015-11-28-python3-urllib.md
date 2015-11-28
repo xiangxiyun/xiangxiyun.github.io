@@ -44,7 +44,7 @@ urllib 中有一共有四个操作URLs的模块：
 
 urllib.request 模块中定义了很多用来打开URLs的函数和类，我只挑了些我已经用到的来介绍。
 
-### urllib.request.urlopen() 函数 ###
+### urllib.request.urlopen() ###
 
 ----------
 
@@ -77,7 +77,7 @@ urllib.request 模块中定义了很多用来打开URLs的函数和类，我只�
 调用这个函数之后会返回一个对象，可以用来操作响应内容（如果没有handler处理这个请求那么会返回None）。常用方法下面在urllib.response中会讲到。
 
 
-### urllib.request.Request 类 ###
+### urllib.request.Request ###
 
 ----------
 
@@ -121,7 +121,7 @@ Request 对象中的公共接口：
  - Request.header_items()：返回头中元组的list，格式为 (header_name, header_value)
 
 
-## urllib.response — Response classes used by urllib ##
+## urllib.response  ##
 
 ----------
 
@@ -152,7 +152,7 @@ urllib.response模块定义了操作响应的一些函数和对象。通常这�
     data = resp.read()
     {% endhighlight %}
 
-## urllib.parse — Parse URLs into components ##
+## urllib.parse ##
 
 ----------
 
@@ -183,7 +183,7 @@ urllib.response模块定义了操作响应的一些函数和对象。通常这�
     {% endhighlight %}
 
 
-## urllib.error — Exception classes raised by urllib.request ##
+## urllib.error  ##
 
 ----------
 
