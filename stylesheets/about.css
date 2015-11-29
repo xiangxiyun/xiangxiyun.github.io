@@ -26,7 +26,7 @@
     @media screen and ( min-width: 1280px ){
 
       #aboutContent{
-        margin-left: 25%;
+        margin-left: 10%;
         padding-top: 150px;
       }
 
@@ -52,7 +52,7 @@
     @media screen and ( min-width: 800px ) and ( max-width: 1280px){
 
       #aboutContent{
-        margin-left: 15%;
+        margin-left: 8%;
         padding-top: 100px;
       }
 
@@ -85,7 +85,7 @@
         margin-left: 20px;
       }
       #aboutContent{
-        margin-left: 15%;
+        margin-left: 5%;
         padding-top: 70px;
       }
       #title{

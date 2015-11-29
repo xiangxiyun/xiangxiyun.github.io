@@ -64,7 +64,7 @@
                       </ul>
                   </li>
 
-              </ul>
+          </ul>
         </nav>
         
 
@@ -122,7 +122,7 @@
 
 <p>我这显示</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    ruby 2.0.0p481 <span class="o">(</span>2014-05-08 revision 45883<span class="o">)</span> <span class="o">[</span>universal.x86_64-darwin14]
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    ruby 2.0.0p481 <span class="o">(</span>2014-05-08 revision 45883<span class="o">)</span> <span class="o">[</span>universal.x86_64-darwin14<span class="o">]</span>
     </code></pre></figure>
 
 <p>命令行检查RubyGems版本：</p>
@@ -161,7 +161,7 @@
 <p>但是一般在天朝都会遇到被墙的问题</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>gem install jekyll
-    ERROR:  Could not find a valid gem <span class="s1">'jekyll'</span> <span class="o">(</span>&gt;<span class="o">=</span> 0<span class="o">)</span>, here is why:
+    ERROR:  Could not find a valid gem <span class="s1">&#39;jekyll&#39;</span> <span class="o">(</span>&gt;<span class="o">=</span> 0<span class="o">)</span>, here is why:
           Unable to download data from https://rubygems.org/ - Errno::ECONNRESET: Connection reset by peer - SSL_connect <span class="o">(</span>https://rubygems.org/latest_specs.4.8.gz<span class="o">)</span>
     </code></pre></figure>
 
@@ -174,7 +174,7 @@
 <p>首先我们看看gem 的资源里都有什么</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>gem <span class="nb">source</span>
-    <span class="k">***</span> CURRENT SOURCES <span class="k">***</span>
+    *** CURRENT SOURCES ***
     
     https://rubygems.org/
     </code></pre></figure>
@@ -199,24 +199,24 @@
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>sudo gem install jekyll
     Fetching: liquid-3.0.6.gem <span class="o">(</span>100%<span class="o">)</span>
     Successfully installed liquid-3.0.6 
-    /<span class="k">*</span> ……省略…… <span class="k">*</span>/
+    /* ……省略…… */
     Fetching: ffi-1.9.10.gem <span class="o">(</span>100%<span class="o">)</span> 
     Building native extensions.  This could take a <span class="k">while</span>... 
     ERROR:  Error installing jekyll: 
 		    ERROR: Failed to build gem native extension.
-		    /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby extconf.rb checking <span class="k">for </span>ffi.h... <span class="k">***</span> extconf.rb failed <span class="k">***</span>  
-	Could not create Makefile due to some reason, probably lack of necessary libraries and/or headers.  Check the mkmf.log file <span class="k">for </span>more details.  You may need configuration options.
+		    /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby extconf.rb checking <span class="k">for</span> ffi.h... *** extconf.rb failed ***  
+	Could not create Makefile due to some reason, probably lack of necessary libraries and/or headers.  Check the mkmf.log file <span class="k">for</span> more details.  You may need configuration options.
 	
-    /<span class="k">*</span> ……省略…… <span class="k">*</span>/ 
-    /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:434:in <span class="sb">`</span>try_do<span class="s1">': The compiler failed to generate an executable file. (RuntimeError)
+    /* ……省略…… */ 
+    /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:434:in <span class="sb">`</span>try_do<span class="err">&#39;</span>: The compiler failed to generate an executable file. <span class="o">(</span>RuntimeError<span class="o">)</span>
 	You have to install development tools first.
-	</span></code></pre></figure>
+	</code></pre></figure>
 
 <p>我先在百度上搜了一圈，挨个答案试了一遍都没有好。
  然后我把ERROR的描述google一下，果然高效地找到了<a href="_layouts_posts_sitedeployfontimagesjavascriptsstylesheetsresume.pdfabout.htmlindex.htmlportfolio.htmltechblog.html">答案</a>，在命令行中输入一下：</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>xcode-select --install
-    xcode-select: note: install requested <span class="k">for </span><span class="nb">command </span>line developer tools
+    xcode-select: note: install requested <span class="k">for</span> <span class="nb">command </span>line developer tools
     </code></pre></figure>
 
 <p>这一步是装命令行开发工具。
@@ -241,8 +241,8 @@
 
 <p>之后我们可以随便进入一个文件夹建一个自带模版的blog：</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>jekyll new blog  /<span class="k">*</span>blog可以换成你喜欢的名字<span class="k">*</span>/
-    New jekyll site installed <span class="k">in</span> /Users/XXX/Documents/blog.
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">$ </span>jekyll new blog  /*blog可以换成你喜欢的名字*/
+    New jekyll site installed in /Users/XXX/Documents/blog.
     </code></pre></figure>
 
 <p>现在在Documents文件夹下就有一个blog了。然后我们进入这个文件夹让它run起来：</p>
@@ -277,7 +277,31 @@
                   </footer>
     	  				</article>
 
+                <div id="disqus_thread"></div>
+                  <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//heidixiang.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                  </script>
+                  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
           		</section>
+
               <section id = "blog_category">
                   <!--header class = "tabin"> CATEGORY </header-->
                   <!--div class = "category_content"-->

@@ -3,3 +3,8 @@ permalink: /blog/:title
 markdown: kramdown
 highlighter: pygments
 safe: true
+
+comments:
+    provider: duoshuo
+    duoshuo:
+    	short_name : xiangxiyun

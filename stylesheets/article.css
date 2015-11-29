@@ -24,6 +24,7 @@
     #blog_content{
       float: left;
       margin-top: 120px;
+      margin-bottom: 100px;
     }
 
     .blog_article{
@@ -53,6 +54,10 @@
         font-size: 20px;
         font-family: 'Futura';
         color: #cccccc;
+    }
+
+    #disqus_thread{
+      margin: 20px;
     }
 
     /* article content */

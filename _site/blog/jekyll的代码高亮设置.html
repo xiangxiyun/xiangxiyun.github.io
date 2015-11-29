@@ -64,7 +64,7 @@
                       </ul>
                   </li>
 
-              </ul>
+          </ul>
         </nav>
         
 
@@ -122,7 +122,7 @@
 
 <p>然后用下面的命令行很快就能装好，非常简单</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sudo pip install Pygments</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo pip install Pygments</code></pre></figure>
 
 <p><strong>kramdown</strong> 是一个Markdown解析器，Github 采用这个解析器。安装也很简单：</p>
 
@@ -139,13 +139,13 @@
 
 <p>首先打开你的blog文件夹中的 _config.yml 文件，改动配置文件，添加下面两项。</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="ss">markdown: </span><span class="n">kramdown</span>
-    <span class="ss">highlighter: </span><span class="n">pygments</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="ss">markdown</span><span class="p">:</span> <span class="n">kramdown</span>
+    <span class="ss">highlighter</span><span class="p">:</span> <span class="n">pygments</span>
     </code></pre></figure>
 
 <p>注意！很多教程上说要写<code>pygments: true</code> 但是我这样写的时候运行整个博客会报错：</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">		Deprecation: The <span class="s1">'pygments'</span> configuration option has been renamed to <span class="s1">'highlighter'</span>. Please update your config file accordingly. The allowed values are <span class="s1">'rouge'</span>, <span class="s1">'pygments'</span> or null.
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">		Deprecation: The <span class="s1">&#39;pygments&#39;</span> configuration option has been renamed to <span class="s1">&#39;highlighter&#39;</span>. Please update your config file accordingly. The allowed values are <span class="s1">&#39;rouge&#39;</span>, <span class="s1">&#39;pygments&#39;</span> or null.
 		</code></pre></figure>
 
 <p>jekyll已经不支持这种写法了，所以要换成我上面的写法！</p>
@@ -168,7 +168,7 @@
 
 <p>接着就是引用这个CSS文件啦。先把它放入你的blog 中放CSS的文件夹下，然后在你要用到代码高亮的HTML文件或模版文件中引用进去，例如：</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"../../stylesheets/pygments.css"</span> <span class="nt">/&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;../../stylesheets/pygments.css&quot;</span> <span class="nt">/&gt;</span>
     </code></pre></figure>
 
 <h3 id="jekyll-1">添加jekyll语法标记</h3>
@@ -198,8 +198,8 @@
 
 <p>当我完成上面所有步骤之后run jekyll server 居然报错了：</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    Dependency Error: Yikes! It looks like you don<span class="se">\'</span>t have pygments or one of its dependencies installed. In order to use Jekyll as currently configured, you<span class="s1">'ll need to install this gem. The full error message from Ruby is: \'</span>cannot load such file -- pygments<span class="se">\'</span> If you run into trouble, you can find helpful resources at http://jekyllrb.com/help/! 
-    Liquid Exception: pygments <span class="k">in </span>_layouts/articleTemplate.html
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    Dependency Error: Yikes! It looks like you don<span class="se">\&#39;</span>t have pygments or one of its dependencies installed. In order to use Jekyll as currently configured, you<span class="err">&#39;</span>ll need to install this gem. The full error message from Ruby is: <span class="se">\&#39;</span>cannot load such file -- pygments<span class="se">\&#39;</span> If you run into trouble, you can find helpful resources at http://jekyllrb.com/help/! 
+    Liquid Exception: pygments in _layouts/articleTemplate.html
              ERROR: YOUR SITE COULD NOT BE BUILT:
                     ------------------------------------
                     pygments
@@ -219,7 +219,7 @@
 <p>这个也很好办～一个CSS就能解决！</p>
 
 <figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nt">pre</span><span class="p">{</span>
-    	<span class="nl">overflow</span><span class="p">:</span><span class="nb">auto</span><span class="p">;</span>
+    	<span class="k">overflow</span><span class="o">:</span><span class="k">auto</span><span class="p">;</span>
     <span class="p">}</span>    
     </code></pre></figure>
 
@@ -244,7 +244,31 @@
                   </footer>
     	  				</article>
 
+                <div id="disqus_thread"></div>
+                  <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//heidixiang.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                  </script>
+                  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
           		</section>
+
               <section id = "blog_category">
                   <!--header class = "tabin"> CATEGORY </header-->
                   <!--div class = "category_content"-->
