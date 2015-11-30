@@ -14,7 +14,6 @@
         color: #333333;
       }
 
-
       #blog{
         width: 100%;
       }
@@ -78,9 +77,11 @@
       margin: 20px 0 10px 0;
     }
 
-
-    .article_content h2:target, h3:target, h4:target, h5:target, h6:target{
-      padding-top:70px;
+    .anchor:before{
+      content:"";
+      display:block;
+      height:70px; /* fixed header height*/
+      margin:-70px 0 0; /* negative fixed header height */
     }
 
     .article_content a{

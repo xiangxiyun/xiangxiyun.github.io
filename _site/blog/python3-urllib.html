@@ -133,10 +133,10 @@
 
 <p>两种写法分别是：</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s">&#39;http://www.baidu.com&#39;</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s">'http://www.baidu.com'</span><span class="p">)</span>
     </code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">request_object</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">&#39;http://www.baidu.com&#39;</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">request_object</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://www.baidu.com'</span><span class="p">)</span>
     <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request_object</span><span class="p">)</span>
     </code></pre></figure>
 
@@ -164,7 +164,7 @@
 
 <p>这个类是对URL请求的抽象，实例化方法如下：</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">&#39;www.baidu.com&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="p">{},</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="s">&#39;GET&#39;</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'www.baidu.com'</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="p">{},</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="s">'GET'</span><span class="p">)</span>
     </code></pre></figure>
 
 <p>使用方法见urlopen函数，来说一下构造函数中的各个参数：</p>
@@ -247,16 +247,16 @@
 <p>使用urllib.parse.urlencode()函数的例子：</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">urllib.parse</span>
-    <span class="o">&gt;&gt;&gt;</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s">&#39;spam&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#39;eggs&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;bacon&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
-    <span class="s">&#39;spam=1&amp;eggs=2&amp;bacon=0&#39;</span>    
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s">'spam'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'eggs'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'bacon'</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
+    <span class="s">'spam=1&amp;eggs=2&amp;bacon=0'</span>    
     </code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">urllib.request</span>
     <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">urllib.parse</span>
-    <span class="o">&gt;&gt;&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s">&#39;spam&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#39;eggs&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;bacon&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
-    <span class="o">&gt;&gt;&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;ascii&#39;</span><span class="p">)</span>
-    <span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s">&quot;http://requestb.in/xrbl82xr&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">))</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s">'spam'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'eggs'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'bacon'</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">'ascii'</span><span class="p">)</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s">"http://requestb.in/xrbl82xr"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">))</span>
     </code></pre></figure>
 
 <h2 id="urlliberror">urllib.error</h2>

@@ -24,6 +24,7 @@
     #blog_content{
         float: left;
         margin-top: 120px;
+        margin-bottom: 50px;
     }
 
     .blog_article{

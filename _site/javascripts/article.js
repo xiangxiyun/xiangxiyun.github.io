@@ -30,6 +30,7 @@ $(document).ready(function(){
       minimumHeaders: 3,
       headers: 'h1, h2, h3, h4, h5, h6',
       listType: 'ol', // values: [ol|ul]
+      classes:'anchor',
       showEffect: 'show', // values: [show|slideDown|fadeIn|none]
       showSpeed: 'slow' // set to 0 to deactivate effect
     };
@@ -37,9 +38,10 @@ $(document).ready(function(){
     var settings = $.extend(defaults, options);
 
     function fixedEncodeURIComponent (str) {
-      return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
-        return '%' + c.charCodeAt(0).toString(16);
-      });
+      // return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
+      //   return '%' + c.charCodeAt(0).toString(16);
+      // });
+      return encodeURI(str);
     }
 
     var headers = $(settings.headers).filter(function() {
@@ -50,6 +52,7 @@ $(document).ready(function(){
       }
       return this.id;
     });
+
     var output = $(this);
 
     if (!headers.length || headers.length < settings.minimumHeaders || !output.length) {
@@ -82,6 +85,7 @@ $(document).ready(function(){
         window.location.hash = this.id;
       }
     })
+    .addClass(settings.classes)
     //.addClass('clickable-header')
     .each(function(_, header) {
       this_level = get_level(header);

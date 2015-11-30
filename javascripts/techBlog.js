@@ -25,5 +25,32 @@ $(document).ready(function(){
 		 $($(this).find(".article_description")).css("color", "rgb(105,105,105)");
 	});
 
+	var jq = jQuery.noConflict();
+
+	function showCategory(tagStr) {
+    jq.getJSON("../post.json",
+    function(data) {
+      jq('#blog').empty(content);
+      var content = "<h2>分类：" + tagStr + "</h2><ul class=\"posts\">";
+      var count = 0;
+      jq.each(data,
+      function(i, item) {
+        jq.each(item.tags,
+        function(j, tag) {
+          if (tag == tagStr) {
+            content += "<li class=\"listing-item\"><time datetime=\"" + item.date + "\">" + item.date + "</time><a href=\"" + item.url + "\">" + item.title + "</a></li>";
+            count++;
+          }
+
+        });
+      });
+      // if (count > 0) {
+      //   content += "</ul>";
+      //   postNumStr = "<span>（" + count + "篇文章）</span>";
+      //   jq('#blog').append(content);
+      //   jq('#show-tag>h2').append(postNumStr);
+      // }
+    });
+  }
 
 });

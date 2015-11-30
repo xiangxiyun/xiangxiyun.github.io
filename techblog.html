@@ -35,7 +35,7 @@ layout: blogTemplate
     		<div id = "category_cloud">
 				{% for category in site.categories %} 
 	        	<div class = "category_element"> 
-	        		<a href="#"> {{ category | first }} ({{ category | last | size }})</a>
+	        		<a href="javascript:;" onclick="showCategory('{{ category | first }}')"> {{ category | first }} ({{ category | last | size }})</a>
 	        	</div>
 	            {% endfor %}
         	</div>
