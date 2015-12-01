@@ -8,6 +8,7 @@ layout: nil
   	"title":"{{post.title}}",
   	"url":"{{post.url}}",
   	"date":"{{ post.date | | date_to_long_string }}",
+    "description" : "{{post.description}}"
   	"categories":[
   			{% for category in post.categories %}
   			"{{category}}" {% if forloop.last == false %} ,{% endif %}
