@@ -56,14 +56,14 @@ urllib.request 模块中定义了很多用来打开URLs的函数和类，我只�
 
 两种写法分别是：
 
-    {% highlight python %}
-    urllib.request.urlopen('http://www.baidu.com')
-    {% endhighlight %}
+{% highlight python %}
+urllib.request.urlopen('http://www.baidu.com')
+{% endhighlight %}
 
-    {% highlight python %}
-    request_object = urllib.request.Request('http://www.baidu.com')
-    urllib.request.urlopen(request_object)
-    {% endhighlight %}
+{% highlight python %}
+request_object = urllib.request.Request('http://www.baidu.com')
+urllib.request.urlopen(request_object)
+{% endhighlight %}
 
 来说一下函数原型中的各个参数：
 
@@ -83,15 +83,15 @@ urllib.request 模块中定义了很多用来打开URLs的函数和类，我只�
 
 构造函数：
 
-    {% highlight python %}
-    urllib.request.Request(url, data=None, headers={}, origin_req_host=None, unverifiable=False, method=None)
-    {% endhighlight %}
+{% highlight python %}
+urllib.request.Request(url, data=None, headers={}, origin_req_host=None, unverifiable=False, method=None)
+{% endhighlight %}
 
 这个类是对URL请求的抽象，实例化方法如下：
 
-    {% highlight python %}
-    req = urllib.request.Request('www.baidu.com', data, {}, None, False, 'GET')
-    {% endhighlight %}
+{% highlight python %}
+req = urllib.request.Request('www.baidu.com', data, {}, None, False, 'GET')
+{% endhighlight %}
 
 使用方法见urlopen函数，来说一下构造函数中的各个参数：
 
@@ -141,16 +141,16 @@ urllib.response模块定义了操作响应的一些函数和对象。通常这�
 
 使用这些方法的方式为
 
-    {% highlight python %}
-    data = urllib.request.urlopen().read()
-    {% endhighlight %}
+{% highlight python %}
+data = urllib.request.urlopen().read()
+{% endhighlight %}
 
 或者写成
 
-    {% highlight python %}
-    resp = urllib.request.urlopen()
-    data = resp.read()
-    {% endhighlight %}
+{% highlight python %}
+resp = urllib.request.urlopen()
+data = resp.read()
+{% endhighlight %}
 
 ## urllib.parse ##
 
@@ -167,20 +167,20 @@ urllib.response模块定义了操作响应的一些函数和对象。通常这�
 
 使用urllib.parse.urlencode()函数的例子：
 
-    {% highlight python %}
-    >>> import urllib.parse
-    >>> urllib.parse.urlencode({'spam': 1, 'eggs': 2, 'bacon': 0})
-    'spam=1&eggs=2&bacon=0'    
-    {% endhighlight %}
+{% highlight python %}
+>>> import urllib.parse
+>>> urllib.parse.urlencode({'spam': 1, 'eggs': 2, 'bacon': 0})
+'spam=1&eggs=2&bacon=0'    
+{% endhighlight %}
 
-    {% highlight python %}
-    >>> import urllib.request
-    >>> import urllib.parse
-    >>> data = urllib.parse.urlencode({'spam': 1, 'eggs': 2, 'bacon': 0})
-    >>> data = data.encode('ascii')
-    >>> with urllib.request.urlopen("http://requestb.in/xrbl82xr", data) as f:
-    ...     print(f.read().decode('utf-8'))
-    {% endhighlight %}
+{% highlight python %}
+>>> import urllib.request
+>>> import urllib.parse
+>>> data = urllib.parse.urlencode({'spam': 1, 'eggs': 2, 'bacon': 0})
+>>> data = data.encode('ascii')
+>>> with urllib.request.urlopen("http://requestb.in/xrbl82xr", data) as f:
+...     print(f.read().decode('utf-8'))
+{% endhighlight %}
 
 
 ## urllib.error  ##
@@ -198,14 +198,14 @@ urllib.response模块定义了操作响应的一些函数和对象。通常这�
 
 由于python3中`try …… except ……` 的语法改了所以大家要注意，下面提供一个例子：
 
-    {% highlight python %}
-    try:
-	    resp = urllib.request.urlopen(request)  
-    except urllib.error.HTTPError as e:
-	    print(e.code)
-	    print(e.reason)
-	    print(e.headers)
-    {% endhighlight %}
+{% highlight python %}
+try:
+	resp = urllib.request.urlopen(request)  
+except urllib.error.HTTPError as e:
+	print(e.code)
+	print(e.reason)
+	print(e.headers)
+{% endhighlight %}
 
 ## 结语 ##
 
