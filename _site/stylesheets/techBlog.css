@@ -72,58 +72,32 @@
 
 /* section: blog category */
 
-    #blog_category{
-      float: left;
-      margin-top: 120px;
-      margin-left: 50px;
+    #right_sider{
+      float: right;
+      top: 130px;
+      right: 6%;
       height: auto;
+      position: fixed;
+      border-left: 1px solid rgb(105,105,105);
     }
 
-    #tab, 
-    .subtab{
-      margin: 0;
-      list-style: none;
+    #blog_category p{
+      font-size: 20px;
+      font-weight: 400;
+      margin:10px 10px 10px 20px;
+      color: rgb(105,105,105);
+      text-align: left;
+      padding: 5px 10px 10px 10px;
+      font-family: 'Futura';
+
     }
 
-    .subtab{
-      float:left;
-      height: 30px;
-      line-height: 30px;
-      text-align: center;
-      font-size: 16px;
-      background-color: #cccccc;
-      color: #fff;
-      cursor: pointer;
-      position: relative;
-    }
-
-    .subtab:hover{
-        background-color: rgb(190, 190, 190);
-    }
-
-    .tabin{
-      background-color: rgb(128, 166, 204) !important;
-      color: #fff !important;
-      border-bottom: 1px solid rgb(128, 166, 204);
-    }
-
-    .category_content{
-      clear: both;
-      background: rgb(255,255,255);
-      width: 100%;
-      min-height: 300px;
-      height: auto;
-      border-top: 2px solid rgb(128, 166, 204);
-      display: none;
-      position: relative;
-    }
-
-    .category_front{
-      display: block;
-    }
 
     #category_cloud{
-      margin: 20px;
+      margin: 20px 20px 20px 30px;
+      overflow: auto;
+      max-height: 500px;
+
     }
 
     .category_element{
@@ -134,6 +108,9 @@
       float: left; 
       background: rgb(128, 166, 204);
 
+    }
+    .category_element:hover{
+      background: rgba(128, 166, 204, 0.8);
     }
 
     .category_element a{

@@ -23,25 +23,21 @@ layout: blogTemplate
 	{% endfor %}
 </section>
 
-<section id = "blog_category">
+<section id = "right_sider">
+	<section id = "blog_category">
+		<p>CATEGORY</p>
+		<div id = "category_cloud">
+	    	<div class = "category_element"> 
+		        <a href="javascript:;" onclick="showCategory('ALL')"> all ({{ site.posts.size }})</a>
+		    </div>
+			{% for category in site.categories %} 
+		       	<div class = "category_element"> 
+		        	<a href="javascript:;" onclick="showCategory('{{ category | first }}')"> {{ category | first }} ({{ category | last | size }})</a>
+		       	</div>
+		    {% endfor %}
+	    </div>
+	</section>
 
-	<ul id = "tab">
-		<li class = "tabin subtab">TOPIC</li>
-		<li class = "subtab">TIME</li>
-	</ul>
-
-    <div id = "tab-content">
-    	<div class = "category_front category_content">
-    		<div id = "category_cloud">
-				{% for category in site.categories %} 
-	        	<div class = "category_element"> 
-	        		<a href="javascript:;" onclick="showCategory('{{ category | first }}')"> {{ category | first }} ({{ category | last | size }})</a>
-	        	</div>
-	            {% endfor %}
-        	</div>
-    	</div>
-        <div class = "category_content">
-        	 
-        </div>
-    </div>
+	<section id = "friends_link">
+	</section>
 </section>
