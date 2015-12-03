@@ -25,32 +25,43 @@ $(document).ready(function(){
 		 $($(this).find(".article_description")).css("color", "rgb(105,105,105)");
 	});
 
-	var jq = jQuery.noConflict();
-
-	function showCategory(tagStr) {
-    jq.getJSON("../post.json",
-    function(data) {
-      jq('#blog').empty(content);
-      var content = "<h2>分类：" + tagStr + "</h2><ul class=\"posts\">";
-      var count = 0;
-      jq.each(data,
-      function(i, item) {
-        jq.each(item.tags,
-        function(j, tag) {
-          if (tag == tagStr) {
-            content += "<li class=\"listing-item\"><time datetime=\"" + item.date + "\">" + item.date + "</time><a href=\"" + item.url + "\">" + item.title + "</a></li>";
-            count++;
-          }
-
-        });
-      });
-      // if (count > 0) {
-      //   content += "</ul>";
-      //   postNumStr = "<span>（" + count + "篇文章）</span>";
-      //   jq('#blog').append(content);
-      //   jq('#show-tag>h2').append(postNumStr);
-      // }
-    });
-  }
 
 });
+
+
+function showCategory(tag){
+	$.getJSON("https://raw.githubusercontent.com/xiangxiyun/xiangxiyun.github.io/master/_site/post.json",
+	function(data){
+		$("#blog_content").empty();
+		var content = "";
+        var count = 0;
+        $.each(data, function(i, article) {
+          $.each(article.categories, function(j, category) {
+            if (category == tag) {
+              content += "<a class = \"blog_reference\" href=" + article.url +">" +
+                            "<article class = \"blog_article\">" + 
+                                "<header class = \"article_header\">" +
+                                    "<h2 class = \"ah\">"+ article.title +"<time>"+ article.date +" </time> </h2>" +
+                                "</header>" + 
+                                "<div class = \"article_description\"> <p> "+ article.description + "</p> </div> "+
+                                "<footer class = \"article_tag\"> <i class = \"icon icon-tags\"></i>"+ article.categories +"</footer>" +
+                            "</article>"+
+                          "</a>"
+              count++;
+            }
+
+          });
+        });
+        
+        if (count > 0) {
+          //content += "</ul>";
+          //postNumStr = "<span>（" + count + "篇文章）</span>";
+          $('#blog_content').append(content);
+          //jq('#show-tag>h2').append(postNumStr);
+        }
+	});
+}
+
+
+
+

@@ -29,5 +29,39 @@ $(document).ready(function(){
 });
 
 
+function showCategory(tag){
+	$.getJSON("https://raw.githubusercontent.com/xiangxiyun/xiangxiyun.github.io/master/_site/post.json",
+	function(data){
+		$("#blog_content").empty();
+		var content = "";
+        var count = 0;
+        $.each(data, function(i, article) {
+          $.each(article.categories, function(j, category) {
+            if (category == tag) {
+              content += "<a class = \"blog_reference\" href=" + article.url +">" +
+                            "<article class = \"blog_article\">" + 
+                                "<header class = \"article_header\">" +
+                                    "<h2 class = \"ah\">"+ article.title +"<time>"+ article.date +" </time> </h2>" +
+                                "</header>" + 
+                                "<div class = \"article_description\"> <p> "+ article.description + "</p> </div> "+
+                                "<footer class = \"article_tag\"> <i class = \"icon icon-tags\"></i>"+ article.categories +"</footer>" +
+                            "</article>"+
+                          "</a>"
+              count++;
+            }
+
+          });
+        });
+        
+        if (count > 0) {
+          //content += "</ul>";
+          //postNumStr = "<span>（" + count + "篇文章）</span>";
+          $('#blog_content').append(content);
+          //jq('#show-tag>h2').append(postNumStr);
+        }
+	});
+}
+
+
 
 

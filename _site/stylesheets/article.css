@@ -118,14 +118,16 @@
         line-height: 34px;
     }
 
-    .article_content pre{
+    .highlight{
+      margin: 10px 0 0px 0;
+    }
+
+    .highlight pre{
         overflow: auto;
-        padding-top:10px;
-        padding-bottom: 10px;
         font-size: 16px;
-        text-align:left;
-        text-indent: 39px;
         line-height: 30px;
+        text-align: left;
+        padding:10px 30px 10px 30px;
     }
 
     .article_tag{

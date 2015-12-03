@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>HTTP初解 | Heidi Xiang's blog</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/sideBar.css" />
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/article.css" />
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome-ie7.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome.min.css"/>
+    
+    <script src="../../javascripts/modernizr.custom.js"></script>
+    <script src="../../javascripts/jquery-1.11.2.min.js"></script>
+    <script src="../../javascripts/article.js"></script>
+    <script src="../../javascripts/sidebar.js"></script>
+  </head>
+
+
+  <body>
+    <div id="st-container" class="st-container">
+      
+      <div class="st-pusher">
+
+        <nav class="st-menu st-effect-3" id="menu-3">
+          <h2 >Index</h2>
+
+          <ul class = 'MenuList'>
+                  <li class = 'MenuElement'> 
+                    <a class="reference" href="../../index.html">
+                      <i class="icon icon-home"></i> Home
+                    </a>  
+                  </li>
+
+                  <li class = 'MenuElement'> 
+                    <a class="reference" href="../../techblog.html">
+                      <i class="icon icon-pencil"></i> Blog
+                    </a> 
+                  </li>
+        
+                  <li class = 'MenuElement'> 
+                    <a class="reference" id = "portfolio" href="../../portfolio.html">
+                      <i class="icon icon-lightbulb"></i> Portfolio
+                    </a> 
+                  </li>
+
+                  <li class = 'MenuElement'> 
+                    <a class="reference" href="#"> 
+                      <i class="icon icon-plus"></i> About
+                    </a> 
+                      <ul class = 'SubMenu'>
+                        <li id = "about"> 
+                          <a href = "../../about.html" >
+                            <i class="icon icon-user"></i> Me
+                          </a>
+                        </li> 
+                        <li id = "resume"> 
+                          <a href = "../../resume.pdf" target="_blank" name = "xiyun xiang's resume"> 
+                            <i class="icon icon-file-alt"></i> Resume
+                          </a>
+                        </li> 
+                      </ul>
+                  </li>
+
+          </ul>
+        </nav>
+        
+
+        <div class="st-content"><!-- this is the wrapper for the content -->
+          <div class="st-content-inner">
+
+            <div id="st-trigger-effects" class="button_column">
+              <button data-effect="st-effect-3"><i class="icon icon-reorder"></i></button>
+            </div>
+
+            <div id = "blog">
+
+            	<section id = "blog_content">
+            		<article class = "blog_article">
+    	    				<header class = "article_header">
+    	      					<h2 class = "ah"> HTTP初解
+    	        					<time> 25 November 2015 </time>
+    	      					</h2>
+    	    				</header>
+    	    				<div class = "article_content">
+    	    					<h1 id="http">HTTP初解</h1>
+
+<h2 id="section">写在前面</h2>
+
+<hr />
+
+<p>这几天在公司写爬虫，一直都在和bug做斗争，所以停了几天没管blog。今天爬虫终于基本调好了，回头想想，困扰我最多的就是http网络协议了。想要爬数据，必须懂http，而以前学的计算机网络只为了应试，基本都忘光了。这几天实战，慢慢觉得有些理解原来学的那些协议了，于是又翻出课本看了一遍，颇有“纸上得来终觉浅，得知此事要躬行”的感慨，所以在这篇博客里面总结一下。</p>
+
+<h2 id="http-1">HTTP报文格式</h2>
+
+<hr />
+
+<p>以下总结自《计算机网络》一书：</p>
+
+<p>HTTP报文格式有两种：请求报文和响应报文。</p>
+
+<h3 id="http-2">HTTP请求报文</h3>
+
+<p>下面是一个典型的HTTP请求报文:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">GET /somedr/page.html HTTP1.1
+Host: www.someschool.edu
+Connection: close
+User-agent: Mozilla/4.0
+Accept-language: fr</code></pre></div>
+
+<p>该报文含有5行，而实际的请求报文可以有更多行或仅有一行。HTTP请求报文的第一行叫做<strong>请求行</strong>（request line），后继的行叫做<strong>部首行</strong>（header line）。</p>
+
+<p><strong>请求行</strong>有3个字段：方法字段、URL字段和HTTP协议版本字段。</p>
+
+<ul>
+  <li>方法字段可以取值 <strong>GET、POST、HEAD、PUT、DELETE</strong>。</li>
+  <li>URL字段填写该对象的URL地址，在本例中，浏览器请求对象<code>/somedr/page.html</code>。</li>
+  <li>HTTP协议版本字段填写实现的协议版本，在本例中，浏览器实现的是HTTP/1.1版本。</li>
+</ul>
+
+<p>现在来看看<strong>部首行</strong>。</p>
+
+<ul>
+  <li>Host: www.someschool.edu 定义了目标所在的主机。</li>
+  <li>Connection: close 定义服务器不使用持久连接，它要求服务器在发送完被请求的对象之后就关闭连接。</li>
+  <li>User-agent: Mozilla/4.0 定义用户代理，即向服务器发送请求的浏览器的类型。</li>
+  <li>Accept-language: fr 表示用户想得到该对象的法语版本。</li>
+</ul>
+
+<p>下面展示的是请求报文的通用格式：
+<img src="https://raw.githubusercontent.com/xiangxiyun/xiangxiyun.github.io/master/images/articleimage/httprequest.jpg" alt="http request" /></p>
+
+<p>请求报文可以在各种浏览器的调试模式中看到。</p>
+
+<h4 id="http-3">HTTP请求方法</h4>
+
+<p>现在介绍请求行时提到HTTP有四种请求方法：</p>
+
+<ol>
+  <li>GET：请求获取URL字段所标识的对象</li>
+  <li>POST：在URL字段所标识的对象后附加新的数据</li>
+  <li>HEAD：请求获取由URL字段所标识的对象的响应消息报头，不返回对象</li>
+  <li>PUT：请求服务器存储一个对象，并用URL字段作为其标识</li>
+  <li>DELETE：请求服务器删除服务器上URL字段所标识的对象</li>
+</ol>
+
+<h3 id="http-4">HTTP响应报文</h3>
+
+<p>下面是一个典型的HTTP响应报文，该报文是对应上面讨论的例子中的请求报文的响应:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">HTTP/1.1 <span class="m">200</span> OK
+Connection: close
+Date: Thu, <span class="m">03</span> Jul <span class="m">2003</span> 12:00:15 GMT
+Server: Apache/1.3.0 <span class="o">(</span>Unix<span class="o">)</span>
+Last-Modified: Sun, <span class="m">6</span> May <span class="m">2007</span> 09:23:24 GMT
+Content-Length: 6821
+Content-Type: text/html
+
+<span class="o">(</span>data data data data data ...<span class="o">)</span></code></pre></div>
+
+<p>这个响应报文分成三个部分：一个 初始<strong>状态行</strong>（status line）、六个<strong>首部行</strong>（header line），然后是<strong>实体主体</strong>（entity body）。<strong>状态行</strong> 包含三个字段——协议版本、状态码和响应状态信息。 <strong>实体主体</strong>是报文的主体，包含了所请求的对象本身 (data data data data data …)。</p>
+
+<p>下面来看看<strong>首部行</strong>：</p>
+
+<ul>
+  <li>Connection: close 告诉客户机在报文发送完成后关闭了该TCP连接。</li>
+  <li>Date: Thu, 03 Jul 2003 12:00:15 GMT 标明服务器产生并发送该响应报文的日期和时间。</li>
+  <li>Server: Apache/1.3.0 (Unix) 表明该报文是由一个Apache Web服务器产生的。</li>
+  <li>Last-Modified: Sun, 6 May 2007 09:23:24 GMT 标明了对象最后修改的日期和时间。</li>
+  <li>Content-Length: 6821 表明了被发送对象的字节数。</li>
+  <li>Content-Type: text/html 表明了实体主体的对象是HTML文本</li>
+</ul>
+
+<p>下面展示的是响应报文的通用格式：
+<img src="https://raw.githubusercontent.com/xiangxiyun/xiangxiyun.github.io/master/images/articleimage/httpresponse.jpg" alt="http response" /></p>
+
+<h4 id="section-1">响应报文状态码</h4>
+
+<p>这部分摘自博客<a href="http://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html">老李的地下室</a></p>
+
+<p>状态代码有三位数字组成，第一个数字定义了响应的类别，有五种可能取值：</p>
+
+<ul>
+  <li>1xx：指示信息–表示请求已接收，继续处理 </li>
+  <li>2xx：成功–表示请求已被成功接收、理解、接受</li>
+  <li>3xx：重定向–要完成请求必须进行更进一步的操作 </li>
+  <li>4xx：客户端错误–请求有语法错误或请求无法实现</li>
+  <li>5xx：服务器端错误–服务器未能实现合法的请求</li>
+</ul>
+
+<p>常见状态代码、状态描述、说明：</p>
+
+<p>200 OK      //客户端请求成功</p>
+
+<p>400 Bad Request  //客户端请求有语法错误，不能被服务器所理解</p>
+
+<p>401 Unauthorized //请求未经授权，这个状态代码必须和WWW-Authenticate报头域一起使用 </p>
+
+<p>403 Forbidden  //服务器收到请求，但是拒绝提供服务</p>
+
+<p>404 Not Found  //请求资源不存在，eg：输入了错误的URL</p>
+
+<p>500 Internal Server Error //服务器发生不可预期的错误</p>
+
+<p>503 Server Unavailable  //服务器当前不能处理客户端的请求，一段时间后可能恢复正常</p>
+
+<p>eg：HTTP/1.1 200 OK （CRLF）</p>
+
+<h2 id="section-2">结语</h2>
+
+<hr />
+
+<p>因为在写爬虫的过程中我用的是python3，网上的资料相对较少，所以准备之后再写一篇关于python3的http请求操作的文章。</p>
+
+
+    	    				</div>      
+    	    				<footer class = "article_tag">
+                    
+                      <a id = "next_page" href = "/blog/python3-urllib">
+                        <i class = "icon icon-hand-left"></i> 
+                        python3 urllib
+                      </a>
+                    
+                    
+                      <a id = "previous_page" href = "/blog/jekyll%E7%9A%84%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E8%AE%BE%E7%BD%AE"> 
+                        jekyll的代码高亮设置 
+                        <i class = "icon icon-hand-right"></i> 
+                      </a>
+                    
+                  </footer>
+    	  				</article>
+
+                <div id="disqus_thread"></div>
+                  <script>
+                  /**
+                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                  */
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+
+                  s.src = '//heidixiang.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                  </script>
+                  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+          		</section>
+
+              <section id = "blog_category">
+                  <!--header class = "tabin"> CATEGORY </header-->
+                  <!--div class = "category_content"-->
+                  <p>TABLE OF CONTENTS</p>
+                  <div id = "toc"></div>
+                  <div id = "back-to-top">
+                    <i class = 'icon icon-circle-arrow-up'></i> 
+                    BACK TO TOP
+                  </div>
+              </section>
+
+
+            </div>
+
+          </div><!-- /st-content-inner -->
+        </div><!-- /st-content -->
+      </div><!-- /st-pusher -->
+    </div><!-- /st-container -->
+    <script src="../../javascripts/classie.js"></script>
+    <script src="../../javascripts/sidebarEffects.js"></script>
+  </body>
+</html>
