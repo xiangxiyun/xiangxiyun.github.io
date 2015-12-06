@@ -19,7 +19,6 @@
 
     .blog_article{
         height: auto;
-
         margin-bottom: 40px;
         background: rgb(255,255,255);
         color: rgb(105,105,105);
@@ -31,7 +30,7 @@
     }
 
     #myphoto{
-      background-image:url(../images/me.png);
+      background-image:url(../images/me.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       height: 150px;
