@@ -2,7 +2,7 @@
 layout: blogTemplate
 ---     
 
-<section id = "about_content">        
+<section id = "blog_content">        
     <article class = "blog_article">
       <header class = "article_header">
         <h2 class = "ah">
@@ -12,7 +12,60 @@ layout: blogTemplate
       </header>
       <div class = "article_description">
         
-        <div id = "myphoto"> </div>
+        <div id = "about_left_side">
+          <div id = "myphoto"> 
+            <img src = "../images/me.png"></img>
+          </div>
+
+          <div id = "skill_list">
+            <div class = 'skill_element'> 
+              <div class = 'name'> SKILL </div> 
+              <div class = 'progress-bar'> </div> 
+            </div>
+            <div class = 'skill_element'> 
+              <div class = 'name'> Python </div> 
+              <div class = 'progress-bar'> 
+                <i class = 'icon icon-star'> </i>
+                <i class = 'icon icon-star'> </i>
+                <i class = 'icon icon-star'> </i>
+                <i class = 'icon icon-star'> </i>
+                <i class = 'icon icon-star-empty'> </i>
+              </div> 
+            </div>
+            <div class = 'skill_element'> 
+              <div class = 'name'> HTML/CSS </div> 
+              <div class = 'progress-bar'> 
+                <i class = 'icon icon-star'> </i>
+                <i class = 'icon icon-star'> </i>
+                <i class = 'icon icon-star'> </i>
+                <i class = 'icon icon-star'> </i>
+                <i class = 'icon icon-star-empty'> </i>
+              </div> 
+            </div>
+            <div class = 'skill_element'> 
+              <div class = 'name'> Javascript </div> 
+              <div class = 'progress-bar'>
+                <i class = 'icon icon-star'> </i>
+                <i class = 'icon icon-star'> </i>
+                <i class = 'icon icon-star'> </i>
+                <i class = 'icon icon-star-empty'> </i>
+                <i class = 'icon icon-star-empty'> </i>
+              </div> 
+            </div>
+            <div class = 'skill_element'> 
+              <div class = 'name'> C++ </div> 
+              <div class = 'progress-bar'>
+                <i class = 'icon icon-star'> </i>
+                <i class = 'icon icon-star'> </i>
+                <i class = 'icon icon-star'> </i>
+                <i class = 'icon icon-star-empty'> </i>
+                <i class = 'icon icon-star-empty'> </i>
+              </div> 
+            </div>
+
+          </div>
+
+        </div>
 
         <div id = "myintro">
           <p>
@@ -28,11 +81,10 @@ layout: blogTemplate
               
           </p>
           <div id = "contact">
-            
-            <i class = "icon icon-github"></i>
-            https://github.com/xiangxiyun
-            <i class = "icon icon-linkedin"></i>
-          </div>
+          <footer class = "article_tag">
+            <i class = "icon icon-tags"></i>
+            about me
+          </footer>
         </div>
 
       </div>      
@@ -63,5 +115,21 @@ layout: blogTemplate
 
 </section>  
 
+<section id = "right_sider">
+  <section id = "like_me">
+    <p>DO YOU LIKE MY BLOG ?</p>
+    <i class = "icon icon-heart"></i>
+    
+  </section>
 
+  <section id = "my_link">
 
+    <div class = "link_element">
+      <i class = "icon icon-github"></i>
+      https://github.com/xiangxiyun
+    </div>
+    <div class = "link_element">
+      <i class = "icon icon-linkedin"></i>
+    </div>
+  </section>
+</section>

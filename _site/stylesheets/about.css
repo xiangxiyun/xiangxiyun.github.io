@@ -1,61 +1,110 @@
 
-    *{ margin:0; padding:0; }
-          
-    html{ height:100%; }
+#about_left_side{
+  float: left;
+  width: 30%;
+  margin: 0px 50px 0px 0px;
+}
+
+#myphoto{
+  width: 100%;
+  text-align: center;
+}
+
+#myphoto img{
+  height: 150px;
+  width: 145px;
+  border-radius: 100%;
+}
+
+#skill_list{
+  margin: 20px 0 0 0;
+  font-size: 16px;
+}
+
+.name{
+  width: 40%;
+  float: left;
+  font-weight: 400;
+  color: rgb(105,105,105);
+  text-align: right;
+  padding: 3px 5px 5px 0;
+  font-family: 'Futura';
+}
+
+.progress-bar{
+  width: 60%;
+  float: left;
+  padding: 5px 10px 5px 10px;
+}
+
+.icon-star{
+  color: rgba(235,198,2,0.8);
+}
+
+.icon-star:hover{
+  color: rgba(235,198,10,1);
+  /*font-size: 22px;*/
+}
+.icon-star-empty{
+  color: rgba(105,105,105,0.8);
+}
 
 
-    body{ 
-      min-height:100%;
-      font-family:arial; 
-      position:relative;
-      font-family: 'Helvetica', Calibri, Arial, sans-serif;
-    }
+#myintro{
+  /*border-right: 1px solid rgb(105,105,105);*/
+}
 
-    #about_content{
-        float: left;
-        margin-top: 120px;
-        margin-right: 10%;
-        margin-left: 40px;
-        margin-bottom: 50px;
-    }
+#disqus_thread{
+  padding: 30px;
+}
 
-    .blog_article{
-        height: auto;
-        
-        padding-bottom: 30px;
-        margin-bottom: 40px;
-        background: rgb(255,255,255);
-        color: rgb(105,105,105);
-    }
 
-    a {
-      text-decoration: none;
-      outline: none;
-    }
+.skill_element{
+  width: 100%;
+  display: block;
+  float: left;
+}
 
-    #myphoto{
-      background-image:url(../images/me.png);
-      float: left;
-      margin: 0px 40px 300px 0;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 130px;
-      width: 130px;
-      border-radius: 100%;
-    }
+#like_me{
+  font-size: 20px;
+  font-weight: 400;
+  margin:5px 10px 10px 20px;
+  color: rgb(105,105,105);
+  text-align: left;
+  padding: 5px 10px 10px 10px;
+  font-family: 'Futura';
+  border-left: 1px solid rgb(105,105,105);
+  
+}
 
-    .icon{
-      font-size: 30px;
-    }
+.icon-heart{
+  font-size: 25px;
+  margin:5px 10px 10px 20px;
+  color: rgb(105,105,105);
+  text-align: left;
+  padding: 5px 10px 10px 10px;
+}
 
-    #myintro{
-      
-      
-    }
+.icon-heart:hover{
+  color: rgb(253,75,75);
+  font-size: 30px;
+}
 
-    #disqus_thread{
-      padding: 40px;
-    }
+#my_link{
+  bottom: 100px;
+  margin-left: 20px;
+  font-size: 15px;
+  font-family: 'Futura';
+  position: fixed;
+}
+
+.link_element{
+  padding: 10px;
+}
+
+.link_element .icon{
+  font-size: 25px;
+}
 
 
    
