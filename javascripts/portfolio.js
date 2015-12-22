@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 	if( width > 1280){
 			$(".block").css("height", $(document.body).height());
-			$(".block").css("width", "350px");
+			$(".block").css("width", "310px");
 			$("#pfl-content").css("width", $(".block").width()*4+50);
 	}
 	else if( width > 600){
@@ -22,7 +22,7 @@ $(document).ready(function(){
 		var width = $(document.body).width();
 		if( width > 1280){
 			$(".block").css("height", $(document.body).height());
-			$(".block").css("width", "350px");
+			$(".block").css("width", "310px");
 			$("#pfl-content").css("width", $(".block").width()*4+50);
 		}
 		else if( width > 600){
