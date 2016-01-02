@@ -165,7 +165,6 @@
 
     #blog_category p{
       font-size: 20px;
-      font-weight: 400;
       margin:10px 10px 10px 20px;
       color: rgb(105,105,105);
       text-align: center;
@@ -181,7 +180,7 @@
 
     #toc a{
       font-weight: 250;
-      font-size: 15px;
+      font-size: 16px;
       display: block;
       color: rgb(128, 166, 204);
     }
