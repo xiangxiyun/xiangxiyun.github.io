@@ -79,13 +79,39 @@
             <div id = 'project'>
 	<section id = 'left_side'>
 		<div id = 'project_title' class = 'p_title'>Xiyun's Blog</div>
-		<div id = 'p_content'>
+		
+		<div id = "gallery_section">
+			<div id = 'gallery'>
+				<img src = "https://raw.githubusercontent.com/xiangxiyun/xiangxiyun.github.io/master/images/projectImage/p2/w1.jpg"> </img>
+				<img src = "https://raw.githubusercontent.com/xiangxiyun/xiangxiyun.github.io/master/images/projectImage/p2/w2.jpg"> </img>
+				<img src = "https://raw.githubusercontent.com/xiangxiyun/xiangxiyun.github.io/master/images/projectImage/p2/w3.jpg"> </img>
+				<img src = "https://raw.githubusercontent.com/xiangxiyun/xiangxiyun.github.io/master/images/projectImage/p2/w4.jpg"> </img>
+			</div>
+			<ul id = 'index'>
+				<li><i class = "icon icon-circle"></i></li>
+				<li><i class = "icon icon-circle"></i></li>
+				<li><i class = "icon icon-circle"></i></li>
+				<li><i class = "icon icon-circle"></i></li>
+			</ul>
+		</div>
 
+		<div id = "p_content">
 			<p class = 'p_title left_title'> description </p>
 			<p class = 'content_text'>
+				XIYUN'S BLOG is a place to post my article and project.
 			</p>
-			<img class = 'project_image' src = "#"> </img>
-			
+
+			<p class = 'p_title left_title'> website structure </p>
+			<p class = 'content_text'>
+				
+			</p>
+
+			<p class = 'p_title left_title'> Prototypes </p>
+			<p class = 'content_text'>
+				
+			</p>
+
+				
 		</div>
 	</section>
 	<section id = 'right_side'>
@@ -109,6 +135,22 @@
 		</div>
 	</section>
 </div>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+	$("#gallery img:not(:first-child)").hide();
+	$("#index li").css("color", "rgba(0,0,0, 1)");
+	$($("#index li").get(0)).css("color", "rgba(0, 0, 0, 0.5)");
+
+	$("#index li").mouseenter(function() {
+		$("#index li").css("color", "rgba(0,0,0, 1)");
+		$(this).css("color", "rgba(0, 0, 0, 0.5)");
+		var n = $(this).index();
+		$("#gallery img").hide();
+		$($("#gallery img").get(n)).fadeIn("slow");
+	 });
+});
+</script>
 
           </div><!-- /st-content -->
 

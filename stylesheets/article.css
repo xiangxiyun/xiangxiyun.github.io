@@ -18,6 +18,16 @@
         width: 100%;
       }
 
+      .headline{
+        color: rgb(255,255,255);
+        float: right;
+        padding: 15px 50px 0 0;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-family: 'Futura';
+      }
+
+
 /* section: blog article */
 
     #blog_content{
