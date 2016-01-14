@@ -5,39 +5,71 @@ layout: projectTemplate
 <div id = 'project'>
 	<section id = 'left_side'>
 		<div id = 'project_title' class = 'p_title'>Xiyun's Blog</div>
-		
-		<div id = "gallery_section">
-			<div id = 'gallery'>
-				<img src = "https://raw.githubusercontent.com/xiangxiyun/xiangxiyun.github.io/master/images/projectImage/p2/w1.jpg"> </img>
-				<img src = "https://raw.githubusercontent.com/xiangxiyun/xiangxiyun.github.io/master/images/projectImage/p2/w2.jpg"> </img>
-				<img src = "https://raw.githubusercontent.com/xiangxiyun/xiangxiyun.github.io/master/images/projectImage/p2/w3.jpg"> </img>
-				<img src = "https://raw.githubusercontent.com/xiangxiyun/xiangxiyun.github.io/master/images/projectImage/p2/w4.jpg"> </img>
-			</div>
-			<ul id = 'index'>
-				<li><i class = "icon icon-circle"></i></li>
-				<li><i class = "icon icon-circle"></i></li>
-				<li><i class = "icon icon-circle"></i></li>
-				<li><i class = "icon icon-circle"></i></li>
-			</ul>
-		</div>
-
 		<div id = "p_content">
-			<p class = 'p_title left_title'> description </p>
-			<p class = 'content_text'>
-				XIYUN'S BLOG is a place to post my article and project.
+			<p class = 'p_title left_title'> 
+				<i class = "icon-quote-left"> </i>
+				description 
+				<i class = "icon-quote-right"> </i>
 			</p>
-
-			<p class = 'p_title left_title'> website structure </p>
 			<p class = 'content_text'>
-				
+				During my internship, I was told by many friends that a personal website would bring help to my job. Thus, I began to construct my website. XIYUN'S BLOG is used to display and show my blogs as well as projects.
 			</p>
+		
+			<div id = "gallery_section">
+				<div id = 'gallery'>
+					<img src = "../images/projectImage/p2/w1.jpg"> </img>
+					<img src = "../images/projectImage/p2/w2.jpg"> </img>
+					<img src = "../images/projectImage/p2/w3.jpg"> </img>
+					<img src = "../images/projectImage/p2/w4.jpg"> </img>
+					<img src = "../images/projectImage/p2/w5.jpg"> </img>
+					<img src = "../images/projectImage/p2/w6.jpg"> </img>
+					<img src = "../images/projectImage/p2/w7.jpg"> </img>
+				</div>
+				<ul id = 'index'>
+					<li><i class = "icon icon-circle"></i></li>
+					<li><i class = "icon icon-circle"></i></li>
+					<li><i class = "icon icon-circle"></i></li>
+					<li><i class = "icon icon-circle"></i></li>
+					<li><i class = "icon icon-circle"></i></li>
+					<li><i class = "icon icon-circle"></i></li>
+					<li><i class = "icon icon-circle"></i></li>
+				</ul>
+			</div>
 
-			<p class = 'p_title left_title'> Prototypes </p>
+
+			<p class = 'p_title left_title'> 
+				<i class = "icon-quote-left"> </i>
+				demand analyse
+				<i class = "icon-quote-right"> </i>
+			</p>
 			<p class = 'content_text'>
-				
+				After figuring out on my own why I want to design a personal website before I do, I listed the functions of my personal website. 
+				<br> I hope that my personal website has three functions:
+				<br> 1. Show my projects.
+				<br> 2. Post my blogs. 
+				<br> 3. Display my resume.
+				<br> And the following picture shows the structure of my website.
 			</p>
+			<img class = "project_image" src = "../images/projectImage/p2/myweb_stru.jpg"> </img>
 
-				
+			<p class = 'p_title left_title'> 
+				<i class = "icon-quote-left"> </i>
+				Prototype Flows 
+				<i class = "icon-quote-right"> </i>
+			</p>
+			<p class = 'content_text'>
+				When the function of my personal website is fixed, I started to design prototypes and flows of my website. And the structure of my website is straightforward: A sidebar contains four top level categories (home, portfolio, blog, about), which is controlled by a bottom on the webpages. Under each of these are some subpages, such as pages shown articles and projects.
+			</p>
+			<img class = "project_image" src = "../images/projectImage/p2/myweb_1.jpg"> </img>
+
+			<p class = 'p_title left_title'> 
+				<i class = "icon-quote-left"> </i>
+				highlight
+				<i class = "icon-quote-right"> </i>
+			</p>
+			<p class = 'content_text'>
+				All website visitors want feedbacks when they are surfing websites, especially when they click a button or move their cursors to a link. A feedback makes them feel that everything is in control. Thus, while designing the website, I emphasized the feedback when visitors have actions.
+			</p>
 		</div>
 	</section>
 	<section id = 'right_side'>
@@ -75,5 +107,6 @@ $(document).ready(function(){
 		$("#gallery img").hide();
 		$($("#gallery img").get(n)).fadeIn("slow");
 	 });
+
 });
 </script>
