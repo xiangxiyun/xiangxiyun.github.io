@@ -118,6 +118,28 @@ body{
 	font-weight: 100;
 }
 
+#back-to-top{
+	color: rgb(0,0,0);
+	cursor: pointer;
+}
+
+#previous_page{
+	color: rgb(27, 96, 146);
+	float: left;
+}
+#previous_page:hover{
+	color: rgb(128, 166, 204);
+}
+
+#next_page{
+	color: rgb(27, 96, 146);
+	float: right;
+}
+
+#next_page:hover{
+	color: rgb(128, 166, 204);
+	
+}
 
 @media screen and (max-width: 1000px){
     #right_side{

@@ -81,38 +81,73 @@
 		<div id = 'project_title' class = 'p_title'>Beauty Diary</div>
 		<div id = 'p_content'>
 
-			<p class = 'p_title left_title'> Problem </p>
+			<p class = 'p_title left_title'> 
+				<i class = "icon-quote-left"> </i>
+				Problem
+				<i class = "icon-quote-right"> </i> 
+			</p>
 			<p class = 'content_text'>
 				Common TO DO LIST APPs are tedious. They only note down the things people plan to do, but can not note down the things people have done. We need an APP to help us write down our happiness and emotion.
 			</p>
-			<p class = 'p_title left_title'> Solution </p>
+			<p class = 'p_title left_title'> 
+				<i class = "icon-quote-left"> </i>
+				Solution 
+				<i class = "icon-quote-right"> </i>
+			</p>
 			<p class = 'content_text'>
 				We delved deeply into case studies of existent projects, analyzing their problems on the basis of my acquired knowledge and starting to design a new APP to improve them.
 			</p>
-			<!-- <img class = 'project_image' src = "#"> </img> -->
+			<img class = 'project_image' src = "../images/projectImage/p3/bd0.jpg"> </img>
 
-			<p class = 'p_title left_title'> Task Analyse </p>
+			<p class = 'p_title left_title'> 
+				<i class = "icon-quote-left"> </i>
+				Task Analyse 
+				<i class = "icon-quote-right"> </i>
+			</p>
 			<p class = 'content_text'>
 				To understand the process of writing diary in cell phone , we analysed the procedure of a potential user's operation firstly.
 			</p>
 			<img class = 'project_image' src = "../images/projectImage/p3/bd1.jpg"> </img>
 
-			<p class = 'p_title left_title'> User Model </p>
+			<p class = 'p_title left_title'> 
+				<i class = "icon-quote-left"> </i>
+				User Research 
+				<i class = "icon-quote-right"> </i>
+			</p>
 			<p class = 'content_text'>
-				Then, we investigated three individuals and generated USER MODEL from them. 
-
-
-				During the investigation we asked them to rank the importance of those tasks listed above. There are three rank: low, med(medium), hi(high)
+				Then, we investigated three individuals to generate user model. During the investigation we asked them to rank the importance of those tasks listed above. 
+				<br>There are three rank: low, med(medium), hi(high)
 			</p>
 
 			<img class = 'project_image' src = "../images/projectImage/p3/bd2.jpg"> </img>
 
-			<p class = 'p_title left_title'> mental model </p>
+			<p class = 'p_title left_title'> 
+				<i class = "icon-quote-left"> </i>
+				mental model 
+				<i class = "icon-quote-right"> </i>
+			</p>
 			<p class = 'content_text'>
-
+				After getting details about potential user's opinions, we write mental model for the APP.
 			</p>
 			<img class = 'project_image' src = "../images/projectImage/p3/bd3.jpg"> </img>
 			
+			<p class = 'p_title left_title'> 
+				<i class = "icon-quote-left"> </i>
+				THE END
+				<i class = "icon-quote-right"> </i>
+			</p>
+
+			<a id = "previous_page" href = "crawlerSystem.html">
+				<i class = "icon icon-hand-left"></i> 
+				PRE: Crawler System
+			</a>
+
+			<a id = "next_page" href = "SpeechRecognition.html">
+				NEXT: Speech Recognition
+				<i class = "icon icon-hand-right"></i> 
+			</a>
+
+
 		</div>
 	</section>
 	<section id = 'right_side'>
@@ -134,8 +169,23 @@
 			<div class = 'p_title right_title'>skills employed</div>
 			<p class = 'right_info'>User Research</p>
 		</div>
+
+		<div id = "back-to-top">
+			<i class = 'icon icon-circle-arrow-up'></i> 
+			BACK TO TOP
+        </div>
 	</section>
 </div>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+
+	$("#back-to-top").click(function(){
+		$(".st-content").scrollTop(0);
+	});
+
+});
+</script>
 
           </div><!-- /st-content -->
 

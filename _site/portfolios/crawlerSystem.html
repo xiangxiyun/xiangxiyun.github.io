@@ -110,6 +110,22 @@
 				
 			</p>
 			<img class = 'project_image' src = "../images/projectImage/p1/crawler_design.png" alt="system design"> </img>
+
+			<p class = 'p_title left_title'> 
+				<i class = "icon-quote-left"> </i>
+				THE END
+				<i class = "icon-quote-right"> </i>
+			</p>
+
+			<a id = "previous_page" href = "myBlog.html">
+				<i class = "icon icon-hand-left"></i> 
+				PRE: Xiyun's Blog
+			</a>
+
+			<a id = "next_page" href = "beautyDiary.html">
+				NEXT: Beauty Diary
+				<i class = "icon icon-hand-right"></i> 
+			</a>
 			
 		</div>
 	</section>
@@ -133,8 +149,24 @@
 			<p class = 'right_info'>HTML/CSS</p>
 			<p class = 'right_info'>Javascript</p>
 		</div>
+
+		<div id = "back-to-top">
+			<i class = 'icon icon-circle-arrow-up'></i> 
+			BACK TO TOP
+        </div>
 	</section>
 </div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+
+	$("#back-to-top").click(function(){
+		$(".st-content").scrollTop(0);
+	});
+
+});
+</script>
 
           </div><!-- /st-content -->
 

@@ -138,12 +138,25 @@
 
 			<p class = 'p_title left_title'> 
 				<i class = "icon-quote-left"> </i>
-				highlight
+				highlights
 				<i class = "icon-quote-right"> </i>
 			</p>
 			<p class = 'content_text'>
 				All website visitors want feedbacks when they are surfing websites, especially when they click a button or move their cursors to a link. A feedback makes them feel that everything is in control. Thus, while designing the website, I emphasized the feedback when visitors have actions.
 			</p>
+			<img class = "project_image" src = "../images/projectImage/p2/h1.jpg"> </img>
+			<img class = "project_image" src = "../images/projectImage/p2/h2.jpg"> </img>
+
+            <p class = 'p_title left_title'> 
+				<i class = "icon-quote-left"> </i>
+				THE END
+				<i class = "icon-quote-right"> </i>
+			</p>
+
+			<a id = "next_page" href = "crawlerSystem.html">
+				NEXT: Crawler System
+				<i class = "icon icon-hand-right"></i> 
+			</a>
 		</div>
 	</section>
 	<section id = 'right_side'>
@@ -165,6 +178,11 @@
 			<p class = 'right_info'>HTML/CSS</p>
 			<p class = 'right_info'>Javascript</p>
 		</div>
+
+		<div id = "back-to-top">
+			<i class = 'icon icon-circle-arrow-up'></i> 
+			BACK TO TOP
+        </div>
 	</section>
 </div>
 
@@ -181,6 +199,10 @@ $(document).ready(function(){
 		$("#gallery img").hide();
 		$($("#gallery img").get(n)).fadeIn("slow");
 	 });
+
+	$("#back-to-top").click(function(){
+		$(".st-content").scrollTop(0);
+	});
 
 });
 </script>

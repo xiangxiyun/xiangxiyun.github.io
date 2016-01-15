@@ -1,13 +1,36 @@
+#about_content{
+  float: left;
+  margin-top: 120px;
+  margin-bottom: 70px;
+  width: 80%;
+  background: rgb(255,255,255);
+}
+
+.about_article{
+  color: rgb(105,105,105);
+}
+
+.about_article:hover{
+  color: rgb(0,0,0);
+}
+
+.blog_description {
+  text-align: left;
+  font-size: 17px;
+  font-weight: 100;
+  line-height: 30px;
+  margin: 20px 40px 10px 40px;
+}
 
 #about_left_side{
   float: left;
   width: 30%;
-  margin: 0px 50px 0px 0px;
 }
 
 #myphoto{
   width: 100%;
   text-align: center;
+  margin-left: 40px;
 }
 
 #myphoto img{
@@ -19,6 +42,7 @@
 #skill_list{
   margin: 20px 0 0 0;
   font-size: 16px;
+  min-width: 300px;
 }
 
 .name{
@@ -43,15 +67,15 @@
 
 .icon-star:hover{
   color: rgba(235,198,10,1);
-  /*font-size: 22px;*/
 }
 .icon-star-empty{
   color: rgba(105,105,105,0.8);
 }
 
-
 #myintro{
-  /*border-right: 1px solid rgb(105,105,105);*/
+  float: left;
+  margin-left: 5%;
+  width: 65%;
 }
 
 #disqus_thread{
@@ -65,30 +89,6 @@
   float: left;
 }
 
-#like_me{
-  font-size: 20px;
-  font-weight: 400;
-  margin:5px 10px 10px 20px;
-  color: rgb(105,105,105);
-  text-align: left;
-  padding: 5px 10px 10px 10px;
-  font-family: 'Futura';
-  border-left: 1px solid rgb(105,105,105);
-  
-}
-
-.icon-heart{
-  font-size: 25px;
-  margin:5px 10px 10px 20px;
-  color: rgb(105,105,105);
-  text-align: left;
-  padding: 5px 10px 10px 10px;
-}
-
-.icon-heart:hover{
-  color: rgb(253,75,75);
-  font-size: 30px;
-}
 
 #my_link{
   bottom: 100px;
@@ -106,5 +106,33 @@
   font-size: 25px;
 }
 
+.blog_tag{
+  height: 60px;
+  margin: 0 40px 10px 0px;
+}
+
+ /* width >= 1280px */
+@media screen and ( min-width: 1280px ){
+
+}
+
+    /* 960px <= width < 1280px */
+@media screen and ( min-width: 1024px ) and ( max-width: 1280px){
+
+}
+
+@media screen and ( min-width: 961px ) and ( max-width: 1023px){
+
+
+}
+
+
+@media screen and (max-width: 960px){
+  #myintro{
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+  
 
    
