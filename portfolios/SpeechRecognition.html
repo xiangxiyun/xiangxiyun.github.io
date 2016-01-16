@@ -4,7 +4,7 @@ layout: projectTemplate
 
 <div id = 'project'>
 	<section id = 'left_side'>
-		<div id = 'project_title' class = 'p_title'>crawler system</div>
+		<div id = 'project_title' class = 'p_title'>speech recognition system</div>
 		<div id = 'p_content'>
 
 			<p class = 'p_title left_title'>
@@ -13,51 +13,76 @@ layout: projectTemplate
 				<i class = "icon-quote-right"> </i>
 			</p>
 			<p class = 'content_text'>
-				The crawler system is a part of the public opinion monitoring system. This system uses the information in websites to analysis people's sentiment. I am responsible for designing crawlers to crawl the information from mainstream medias' websites. 
+				Speech recognition system is a project in course Speech Recognition System. Students who chose this class have to develop a simple speech recognition program according to the knowledge taught in this course.
 			</p>
-			<img class = 'project_image' src = "../images/projectImage/p1/progress.png" alt="system design"> </img>
+			<img class = 'project_image' src = "../images/projectImage/p4/s1.jpg" alt="system structure"> </img>
 
 			<p class = 'p_title left_title'> 
 				<i class = "icon-quote-left"> </i>
-				system architecture 
+				􏰗􏰅􏰓􏰆􏰁􏰉􏰂􏰃􏰘􏰓􏰂􏰂􏰗􏰍􏰃􏰄􏰅􏰆􏰅part 1. capture speech data 
 				<i class = "icon-quote-right"> </i>
 			</p>
 			<p class = 'content_text'>
-				We design and achieve distributed crawler so that it can efficiently and rapidly collect and obtain the corpus of topics .
+				I captured the speech signals in 16-bit resolution, mono channel and a sampling rate of 441000. The speech segments were written to a file in Microsoft PCM wav format. Then, using MATLAB to show the wave of my speech data.
 			</p>
-			<img class = 'project_image' src = "../images/projectImage/p1/system_design.png" alt="system design"> </img>
+			<img class = 'project_image' src = "../images/projectImage/p4/s2.jpg" alt="speech signal wave"> </img>
 
 			<p class = 'p_title left_title'> 
 				<i class = "icon-quote-left"> </i>
-				crawler design 
+				part 2. computing MFCC from audio 
 				<i class = "icon-quote-right"> </i>
 			</p>
 			<p class = 'content_text'>
-				
+				Using the speech data captured in the part 1 to compute power specturm and log spectra of the speech. Then, visualize both spectro graphically with MATELAB.
 			</p>
-			<img class = 'project_image' src = "../images/projectImage/p1/crawler_design.png" alt="system design"> </img>
+			<img class = 'project_image' src = "../images/projectImage/p4/s3.jpg" alt="specturm"> </img>
+			<img class = 'project_image' src = "../images/projectImage/p4/s4.jpg" alt="specturm"> </img>
 			
+			<p class = 'content_text'>
+			The pictures show that although the speeches of same digit may have different wave, the different speeches of same digit have the same power specturm and Log spectra. We can easily recognize with our eyes. Because the pronunciation of different figure has distinct pattern.
+			</p>
+
+			<p class = 'p_title left_title'> 
+				<i class = "icon-quote-left"> </i>
+				part 3. HMM-based recognition 
+				<i class = "icon-quote-right"> </i>
+			</p>
+			<p class = 'content_text'>
+				Use the segmental K-means procedure to train a HMM for each of the digits(0 to 9). Assume each state to have a single Gaussian distribution, and the HMM for each digit to have 5 states. Recognize the 5 test utterances using the HMM models and report recognition accuracy.
+			</p>
+			<img class = 'project_image' src = "../images/projectImage/p4/s5.jpg" alt="recognition accuracy"> </img>
+
+			<p class = 'p_title left_title'> 
+				<i class = "icon-quote-left"> </i>
+				THE END
+				<i class = "icon-quote-right"> </i>
+			</p>
+
+			<a id = "previous_page" href = "beautyDiary.html">
+				<i class = "icon icon-hand-left"></i>
+				PRE: BEAUTY DIARY
+			</a>
 		</div>
 	</section>
 	<section id = 'right_side'>
 		<div class = 'p_information'>
 			<div class = 'p_title right_title'>project info</div>
-			<p class = 'right_info'>Enterprise Project</p>
-			<p class = 'right_info'>Shenzhen Puzhi Technology and Media Co., Ltd</p>
+			<p class = 'right_info'>Class Project</p>
+			<p class = 'right_info'>Speech Recognition System Design</p>
+			<p class = 'right_info'>Sun Yat-sen University</p>
 		</div>
 		<div class = 'p_information'>
 			<div class = 'p_title right_title'>project duration</div>
-			<p class = 'right_info'>2015/10 - 2016/01</p>
+			<p class = 'right_info'>2015/03 - 2015/06</p>
 		</div>
 		<div class = 'p_information'>
 			<div class = 'p_title right_title'>my role</div>
-			<p class = 'right_info'>Python Developer</p>
+			<p class = 'right_info'>program develop</p>
 		</div>
 		<div class = 'p_information'>
 			<div class = 'p_title right_title'>skills employed</div>
-			<p class = 'right_info'>Python</p>
-			<p class = 'right_info'>HTML/CSS</p>
-			<p class = 'right_info'>Javascript</p>
+			<p class = 'right_info'>C++</p>
+			<p class = 'right_info'>MATLAB</p>
 		</div>
 
 
