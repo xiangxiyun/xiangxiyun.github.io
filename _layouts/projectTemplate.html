@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title> Heidi Xiang's Portoflio</title>
-    
+
     <link rel="stylesheet" type="text/css" href="/stylesheets/sideBar.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/project.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome-ie7.min.css"/>
@@ -40,7 +40,7 @@
                 <i class="icon icon-pencil"></i> Blog
               </a> 
             </li>
-        
+
             <li class = 'MenuElement'> 
               <a class="reference" id = "portfolio" href="/portfolio.html">
                 <i class="icon icon-lightbulb"></i> Portfolio
@@ -70,19 +70,39 @@
 
         <div class="st-content"><!-- this is the wrapper for the content -->
           <div class="st-content-inner">
-            
+
             <div id="st-trigger-effects" class="button_column">
               <button data-effect="st-effect-3"><i class="icon icon-reorder"></i></button>
-              <div class = 'headline'>Xiyun Xiang's portolio</div>
             </div>
+
+
+            <!-- **************************   header  ****************************** -->
+            <header id = "pfl-header">
+              <div id = 'headline'>
+                <span>Xiyun Xiang's portfolio</span>
+                <img id = "logo" src = "../images/bloglogo.png"></img>
+              </div>
+            </header>
+            <!-- **************************   header  ****************************** -->
+
 
             {{ content }}
 
-          </div><!-- /st-content -->
+            <!-- **************************   footer  ****************************** -->
+            <footer id = "pfl-footer">&copy; 2015-2016 by Xiyun Xiang. All Rights Reserved.</footer>
+            <!-- **************************   footer  ****************************** -->
 
-      </div><!-- /st-pusher -->
+          </div><!-- /st-content-inner -->
+
+
+        </div><!-- st-content -->
+        
+      </div>  <!-- /st-pusher -->
     </div><!-- /st-container -->
+
+    <!-- Javascript -->
     <script src="/javascripts/classie.js"></script>
     <script src="/javascripts/sidebarEffects.js"></script>
+    <!-- Javascript -->
   </body>
 </html>

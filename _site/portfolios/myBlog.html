@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title> Heidi Xiang's Portoflio</title>
-    
+
     <link rel="stylesheet" type="text/css" href="/stylesheets/sideBar.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/project.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome-ie7.min.css"/>
@@ -40,7 +40,7 @@
                 <i class="icon icon-pencil"></i> Blog
               </a> 
             </li>
-        
+
             <li class = 'MenuElement'> 
               <a class="reference" id = "portfolio" href="/portfolio.html">
                 <i class="icon icon-lightbulb"></i> Portfolio
@@ -70,11 +70,21 @@
 
         <div class="st-content"><!-- this is the wrapper for the content -->
           <div class="st-content-inner">
-            
+
             <div id="st-trigger-effects" class="button_column">
               <button data-effect="st-effect-3"><i class="icon icon-reorder"></i></button>
-              <div class = 'headline'>Xiyun Xiang's portolio</div>
             </div>
+
+
+            <!-- **************************   header  ****************************** -->
+            <header id = "pfl-header">
+              <div id = 'headline'>
+                <span>Xiyun Xiang's portfolio</span>
+                <img id = "logo" src = "../images/bloglogo.png"></img>
+              </div>
+            </header>
+            <!-- **************************   header  ****************************** -->
+
 
             <div id = 'project'>
 	<section id = 'left_side'>
@@ -88,7 +98,7 @@
 			<p class = 'content_text'>
 				During my internship, I was told by many friends that a personal website would bring help to my job. Thus, I began to construct my website. XIYUN'S BLOG is used to display and show my blogs as well as projects.
 			</p>
-		
+
 			<div id = "gallery_section">
 				<div id = 'gallery'>
 					<img src = "../images/projectImage/p2/w1.jpg"> </img>
@@ -147,7 +157,7 @@
 			<img class = "project_image" src = "../images/projectImage/p2/h1.jpg"> </img>
 			<img class = "project_image" src = "../images/projectImage/p2/h2.jpg"> </img>
 
-            <p class = 'p_title left_title'> 
+			<p class = 'p_title left_title'> 
 				<i class = "icon-quote-left"> </i>
 				THE END
 				<i class = "icon-quote-right"> </i>
@@ -159,6 +169,7 @@
 			</a>
 		</div>
 	</section>
+	
 	<section id = 'right_side'>
 		<div class = 'p_information'>
 			<div class = 'p_title right_title'>project info</div>
@@ -182,7 +193,7 @@
 		<div id = "back-to-top">
 			<i class = 'icon icon-circle-arrow-up'></i> 
 			BACK TO TOP
-        </div>
+		</div>
 	</section>
 </div>
 
@@ -198,7 +209,7 @@ $(document).ready(function(){
 		var n = $(this).index();
 		$("#gallery img").hide();
 		$($("#gallery img").get(n)).fadeIn("slow");
-	 });
+	});
 
 	$("#back-to-top").click(function(){
 		$(".st-content").scrollTop(0);
@@ -207,11 +218,21 @@ $(document).ready(function(){
 });
 </script>
 
-          </div><!-- /st-content -->
+            <!-- **************************   footer  ****************************** -->
+            <footer id = "pfl-footer">&copy; 2015-2016 by Xiyun Xiang. All Rights Reserved.</footer>
+            <!-- **************************   footer  ****************************** -->
 
-      </div><!-- /st-pusher -->
+          </div><!-- /st-content-inner -->
+
+
+        </div><!-- st-content -->
+        
+      </div>  <!-- /st-pusher -->
     </div><!-- /st-container -->
+
+    <!-- Javascript -->
     <script src="/javascripts/classie.js"></script>
     <script src="/javascripts/sidebarEffects.js"></script>
+    <!-- Javascript -->
   </body>
 </html>

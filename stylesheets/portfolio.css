@@ -17,21 +17,46 @@ button:hover {
 	color: rgb(21,22,27);
 }
 
-/* portfolio comtent */
-#pfl-content{
-	margin-left: 100px;
-	position: relative;
-	float: left;
+/* header */
+#pfl-header{
+	height: 60px;
 }
 
+#headline{
+	color: rgba(255,255,255, 0.9);
+	float: right;
+	margin: 12px 20px 0 0;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-family: 'Futura';
+}
+
+#logo{
+	width: 40px;
+}
+
+/* footer */
+#pfl-footer{
+	height:60px;
+	line-height:60px;
+	clear: both; /* clear the float*/
+	color: rgba(255,255,255, 0.8);
+	text-align: center;
+	font-size: 13px;
+	font-family: 'Futura';
+
+}
+
+/* portfolio comtent */
+
 .block{
-	width: 250px;
 	float: left;
+	width: 250px;
 	margin: 1px;
 	position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 #pfl-element1{
@@ -47,11 +72,11 @@ button:hover {
 	background-image:url(../images/ImagePortfolio/4.jpg);
 }
 
-.pfl-element{
+.pfl-shadow{
 	width: 100%;
 	height: 100%;
 	background: rgb(31,32,37);
-	opacity: 0.65;
+	opacity: 0.55;
 	position: absolute;
 	z-index: 50;
 }
@@ -73,8 +98,8 @@ button:hover {
 	left: 0;
 	right: 0;
 	margin: auto;
-    cursor: pointer;
-    z-index: 60;
+	cursor: pointer;
+	z-index: 60;
 }
 
 time{
@@ -88,14 +113,35 @@ time{
 
 @media screen and (max-width: 600px){
 	button {
-		width: 40px;
-    	height: 40px;
+		width: 42px;
+		height: 42px;
 		margin-top: 20px;
-    	margin-left: 5px;
+		margin-left: 10px;
 	}
-	#pfl-content{
-		margin-left: 50px;
+	/* header */
+	#pfl-header{
+		height: 45px;
 	}
+
+	#headline{
+		color: rgba(255,255,255, 0.9);
+		float: right;
+		margin: 10px 15px 0 0;
+		font-size: 15px;
+		text-transform: uppercase;
+		font-family: 'Futura';
+	}
+
+	#logo{
+		width: 30px;
+	}
+
+	#pfl-footer{
+		height:40px;
+		line-height: 40px;
+		font-size: 10px;
+	}
+
 	.circle {
 		width: 110px;
 		height: 110px;

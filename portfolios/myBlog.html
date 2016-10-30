@@ -14,7 +14,7 @@ layout: projectTemplate
 			<p class = 'content_text'>
 				During my internship, I was told by many friends that a personal website would bring help to my job. Thus, I began to construct my website. XIYUN'S BLOG is used to display and show my blogs as well as projects.
 			</p>
-		
+
 			<div id = "gallery_section">
 				<div id = 'gallery'>
 					<img src = "../images/projectImage/p2/w1.jpg"> </img>
@@ -73,7 +73,7 @@ layout: projectTemplate
 			<img class = "project_image" src = "../images/projectImage/p2/h1.jpg"> </img>
 			<img class = "project_image" src = "../images/projectImage/p2/h2.jpg"> </img>
 
-            <p class = 'p_title left_title'> 
+			<p class = 'p_title left_title'> 
 				<i class = "icon-quote-left"> </i>
 				THE END
 				<i class = "icon-quote-right"> </i>
@@ -85,6 +85,7 @@ layout: projectTemplate
 			</a>
 		</div>
 	</section>
+	
 	<section id = 'right_side'>
 		<div class = 'p_information'>
 			<div class = 'p_title right_title'>project info</div>
@@ -108,7 +109,7 @@ layout: projectTemplate
 		<div id = "back-to-top">
 			<i class = 'icon icon-circle-arrow-up'></i> 
 			BACK TO TOP
-        </div>
+		</div>
 	</section>
 </div>
 
@@ -124,7 +125,7 @@ $(document).ready(function(){
 		var n = $(this).index();
 		$("#gallery img").hide();
 		$($("#gallery img").get(n)).fadeIn("slow");
-	 });
+	});
 
 	$("#back-to-top").click(function(){
 		$(".st-content").scrollTop(0);

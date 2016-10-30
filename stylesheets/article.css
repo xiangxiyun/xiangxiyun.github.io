@@ -26,6 +26,10 @@
         text-transform: uppercase;
         font-family: 'Futura';
       }
+      #logo{
+        width: 35px;
+      }
+
 
 
 /* section: blog article */

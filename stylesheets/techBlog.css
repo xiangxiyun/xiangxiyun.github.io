@@ -42,6 +42,9 @@
       text-transform: uppercase;
       font-family: 'Futura';
     }
+    #logo{
+     width: 35px;
+   }
 
 
     .article_header{
