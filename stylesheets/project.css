@@ -18,7 +18,6 @@ button{
 }
 
 /* header */
-
 #pfl-header{
 	width: 100%;
 	height: 60px;
@@ -47,10 +46,10 @@ button{
 	clear: both; /* clear the float*/
 	color: rgba(0,0,0, 0.6);
 	text-align: center;
-	font-size: 13px;
+	font-size: 14px;
 	font-family: 'Futura';
-
 }
+
 /************************* project content stylesheet ***************************/
 
 #project{
@@ -63,7 +62,7 @@ button{
 }
 
 #left_side{
-	width: 70%;
+	width: 75%;
 	min-height: 700px;
 	padding-right: 100px;
 	margin-bottom: 50px;
@@ -136,10 +135,9 @@ button{
 	float: right;
     position: fixed;
     top: 160px;
-    right: 6%;
+    right: 4%;
     padding-left: 20px;
     border-left: 1px solid rgba(105,105,105,0.5);
-
 }
 
 .p_information{
@@ -208,15 +206,17 @@ button{
 
 	#project{
 		padding-left:50px;
+
 		width: 100%;
 	}
 
     #right_side{
     	display: none;
+    	
     }
     #left_side{
     	width: 100%;
-    	/*padding-left: 50px;*/
+    	padding-right: 50px;
     }
 
 }
