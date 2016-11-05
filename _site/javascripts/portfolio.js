@@ -2,21 +2,17 @@ $(document).ready(function(){
 
 	var width = $(document.body).width();
 
-	// if( width > 1280){
-	// 		$(".block").css("height", $(document.body).height()-$("#pfl-header").height()-$("#pfl-footer").height());
-	// 		$(".block").css("width", $(document.body).width()/4);
-	// 		$("#pfl-content").css("width", $(".block").width()*4+50);
-	// }
-	// else 
 	if( width >= 600){
 			$(".block").css("height", $(document.body).height()-$("#pfl-header").height()-$("#pfl-footer").height());
 			$(".block").css("width", $(document.body).width()/4);
 			$("#pfl-content").css("width", $(".block").width()*4+10);
+			$("#pfl-content").css("height", $(".block").height()+30);
 	}
 	else{
 			$(".block").css("height", ($(document.body).height()-$("#pfl-header").height()-$("#pfl-footer").height())/4);
 			$(".block").css("width", $(document.body).width());
-			$("#pfl-content").css("width", $(document.body).width());
+			$("#pfl-content").css("width", $(".block").width()*4+10);
+			$("#pfl-content").css("height", $(".block").height()+30);
 	}
 
 	var l = window.location.href.split('/');

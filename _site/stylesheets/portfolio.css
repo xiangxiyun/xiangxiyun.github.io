@@ -8,18 +8,18 @@ body{
 	font-family: 'Helvetica', Calibri, Arial, sans-serif;
 }
 
-.button_column {
+/*.button_column {
 	width: auto;
-}
+}*/
 
-button:hover {
+/*button:hover {
 	background: rgba(255,255,255,0.95);
 	color: rgb(21,22,27);
-}
+}*/
 
 /* header */
 #pfl-header{
-	height: 60px;
+	height: 80px;
 }
 
 .navbar{
@@ -38,22 +38,34 @@ button:hover {
 	color: rgb(128, 166, 204);
 }
 
-#headtext{
+/*#headtext{
 	color: rgba(255,255,255, 0.9);
 	float: right;
 	margin: 12px 20px 0 0;
 	font-size: 20px;
 	text-transform: uppercase;
 	font-family: 'Futura';
-}
+}*/
 
 #logo{
-	width: 40px;
+	width: 160px;
+	padding-left: 50px;
+	padding-top: 10px;
+
 }
+
 .pfl-intro{
 	clear: both; /* clear the float*/
 	height: 1000px;
 	color: white;
+	
+}
+
+#pfl-intro1{
+	background-color: white;
+}
+#pfl-intro2{
+	background-color: rgb(21,22,27);
 }
 
 /* footer */
