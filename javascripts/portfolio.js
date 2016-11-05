@@ -10,15 +10,23 @@ $(document).ready(function(){
 	// else 
 	if( width >= 600){
 			$(".block").css("height", $(document.body).height()-$("#pfl-header").height()-$("#pfl-footer").height());
-			$(".block").css("width", ($(document.body).width()-30)/4);
-			$("#pfl-content").css("width", $(".block").width()*4+50);
+			$(".block").css("width", $(document.body).width()/4);
+			$("#pfl-content").css("width", $(".block").width()*4+10);
 	}
 	else{
 			$(".block").css("height", ($(document.body).height()-$("#pfl-header").height()-$("#pfl-footer").height())/4);
 			$(".block").css("width", $(document.body).width());
 			$("#pfl-content").css("width", $(document.body).width());
 	}
-	
+
+	var l = window.location.href.split('/');
+
+	if(l[l.length-1] == 'index.html'){
+		$("#home").css('color', 'rgb(255,255,255)');
+		$("#home").css('font-size', '22px');
+	}
+
+
 	window.onresize=function(){
 		var width = $(document.body).width();
 		// if( width > 1280){
@@ -29,8 +37,8 @@ $(document).ready(function(){
 		// else 
 		if( width >= 600){
 			$(".block").css("height", $(document.body).height()-$("#pfl-header").height()-$("#pfl-footer").height());
-			$(".block").css("width", ($(document.body).width()-30)/4);
-			$("#pfl-content").css("width", $(".block").width()*4+50);
+			$(".block").css("width", $(document.body).width()/4);
+			$("#pfl-content").css("width", $(".block").width()*4+10);
 		}
 		else{
 			$(".block").css("height", ($(document.body).height()-$("#pfl-header").height()-$("#pfl-footer").height())/4);
