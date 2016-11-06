@@ -91,8 +91,8 @@ body{
 
 /******************* footer *******************/
 #pfl-footer{
-	height:100px;
-	line-height:100px;
+	height:80px;
+	line-height:80px;
 	clear: both; /* clear the float*/
 	color: rgba(255,255,255, 0.8);
 	text-align: center;

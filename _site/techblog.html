@@ -7,7 +7,7 @@
     <title>Heidi Xiang's Blog</title>
     
     <link rel="stylesheet" type="text/css" href="stylesheets/sideBar.css" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/about.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/about.css" /> -->
     <link rel="stylesheet" type="text/css" href="stylesheets/techBlog.css" />
     <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-ie7.min.css"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.min.css"/>
@@ -20,64 +20,71 @@
 
 
   <body>
-    <div id="st-container" class="st-container">
-      
-      <div class="st-pusher">
+   <div id="st-container" class="st-container">
 
+      <div class="st-pusher">
         <nav class="st-menu st-effect-3" id="menu-3">
           <h2 >Index</h2>
 
           <ul class = 'MenuList'>
-                  <li class = 'MenuElement'> 
-                    <a class="reference" href="index.html">
-                      <i class="icon icon-home"></i> Home
-                    </a>  
-                  </li>
+            <li class = 'MenuElement'> 
+              <a class="reference" href="/index.html">
+                <i class="icon icon-home"></i> Home
+              </a>  
+            </li>
 
-                  <li class = 'MenuElement'> 
-                    <a class="reference" href="techblog.html">
-                      <i class="icon icon-pencil"></i> Blog
-                    </a> 
-                  </li>
-        
-                  <li class = 'MenuElement'> 
-                    <a class="reference" id = "portfolio" href="portfolio.html">
-                      <i class="icon icon-lightbulb"></i> Portfolio
-                    </a> 
-                  </li>
 
-                  <li class = 'MenuElement'> 
-                    <a class="reference" href="#"> 
-                      <i class="icon icon-plus"></i> About
-                    </a> 
-                      <ul class = 'SubMenu'>
-                        <li id = "about"> 
-                          <a href = "about.html" >
-                            <i class="icon icon-user"></i> Me
-                          </a>
-                        </li> 
-                        <li id = "resume"> 
-                          <a href = "resume.pdf" target="_blank" name = "xiyun xiang's resume"> 
-                            <i class="icon icon-file-alt"></i> Resume
-                          </a>
-                        </li> 
-                      </ul>
-                  </li>
+            <li class = 'MenuElement'> 
+              <a class="reference" href = "/techblog.html">
+                <i class="icon icon-pencil"></i> Blog
+              </a> 
+            </li>
+
+            <li class = 'MenuElement'> 
+              <a class="reference" id = "portfolio" href="/portfolio.html">
+                <i class="icon icon-lightbulb"></i> Portfolio
+              </a> 
+            </li>
+
+            <li class = 'MenuElement'> 
+              <a class="reference" href="#"> 
+                <i class="icon icon-plus"></i> About
+              </a> 
+              <ul class = 'SubMenu'>
+                <li id = "about"> 
+                  <a href = "/about.html" >
+                    <i class="icon icon-user"></i> Me
+                  </a>
+                </li> 
+                <li id = "resume"> 
+                  <a href = "/resume.pdf" target="_blank" name = "xiyun xiang's resume"> 
+                    <i class="icon icon-file-alt"></i> Resume
+                  </a>
+                </li> 
+              </ul>
+            </li>
 
           </ul>
-        </nav>
-        
+        </nav>  
 
         <div class="st-content"><!-- this is the wrapper for the content -->
           <div class="st-content-inner">
 
             <div id="st-trigger-effects" class="button_column">
               <button data-effect="st-effect-3"><i class="icon icon-reorder"></i></button>
-              <header class = 'headline'>
-                <span>Xiyun Xiang's blog</span>
-                <img id = "logo" src = "../images/bloglogo.png"></img>
-              </header>
-            </div>
+            </div> 
+
+            <!-- **************************   header  ****************************** -->
+            <header id = "pfl-header">
+              <img id = "logo" src = "../images/bloglogo.png"></img>
+              <div id = "headline">
+                <a class = "navbar" href = "/index.html"> <span id = "home"> Home <span></a>
+                <a class = "navbar" href = "/techblog.html"> <span id = "blog"> Blog </span></a>
+                <a class = "navbar" href = "/about.html"> <span id = "about"> About </span></a>
+                <a class = "navbar" href = "#"><span id = "photo"> Photo </span></a>
+              </div>
+            </header>
+            <!-- **************************   header  ****************************** -->
 
             <div id = "blog">
 

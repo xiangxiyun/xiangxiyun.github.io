@@ -1,10 +1,148 @@
-#about_content{
-  float: left;
-  margin-top: 120px;
-  margin-bottom: 70px;
+*{ margin:0; padding:0; }
+
+html{ height:100%; }
+
+body{ 
+  min-height:100%;
+  font-family: 'Helvetica', Calibri, Arial, sans-serif;
+  position:relative;
+  background: rgb(246,246,246);
+}
+
+.button_column {
+  width: auto;
+}
+button{
+  z-index: 90;
+}
+a{
+  text-decoration: none;
+  color: #333333;
+}
+
+
+/******************** header *********************/
+#pfl-header{
+  height: 90px;
+  width: 100%;
+  background-color: rgb(21,22,27);
+}
+
+#headline{
+  float: right;
+  height: 100%;
+  line-height: 90px;
+  padding-right: 20px;
+}
+
+.navbar{
+  display: inline-block;
+  width: 100px;
+  color: rgba(255,255,255, 0.7);
+  text-decoration: none;
+  text-align: center;
+  font-family: Calibri;
+}
+
+.navbar:hover{
+  color:rgb(255,255,255);
+  font-weight: bold;
+  font-size: 22px;
+
+}
+
+#about{
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  border-bottom: 2px solid rgb(105,105,105);
+}
+#about:hover{
+  font-size: 22px;
+}
+
+#logo{
+  width: 160px;
+  padding-left: 50px;
+  padding-top: 20px;
+
+}
+
+/******************* footer *******************/
+#pfl-footer{
+  height:80px;
+  line-height:80px;
+  clear: both; /* clear the float*/
+  color: rgba(255,255,255, 0.8);
+  background-color: rgb(21,22,27);
+  text-align: center;
+  font-size: 13px;
+  font-family: 'Futura';
+
+}
+
+/***************** about content *****************/
+
+/* section: blog article */
+#about_frame{
   width: 80%;
+  margin: 0 auto;
+  padding-top: 160px;
+  padding-bottom: 50px;
+
+}
+#about_content{
+
   background: rgb(255,255,255);
 }
+
+.blog_article{
+  height: auto;
+  padding-bottom: 40px;
+  background: rgb(255,255,255);
+  color: rgb(105,105,105);
+}
+
+
+.headline{
+  color: rgb(255,255,255);
+  float: right;
+  padding: 15px 50px 0 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Futura';
+}
+
+
+
+.article_header{
+  width: 100%;
+  height: auto;
+  border-left: 6px solid rgb(128, 166, 204);
+}
+
+.ah{
+  padding: 0 40px 0 20px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+time{
+  float: right;
+  font-size: 20px;
+  font-weight: 1px;
+  color: #cccccc;
+  font-family: 'Futura';
+}
+
+
+
+
+
+
 
 .about_article{
   color: rgb(105,105,105);
@@ -19,7 +157,7 @@
   font-size: 17px;
   font-weight: 100;
   line-height: 30px;
-  margin: 20px 40px 10px 40px;
+  padding: 20px 40px 10px 40px;
 }
 
 #about_left_side{
@@ -30,7 +168,7 @@
 #myphoto{
   width: 100%;
   text-align: center;
-  margin-left: 40px;
+  padding-left: 40px;
 }
 
 #myphoto img{
@@ -40,7 +178,7 @@
 }
 
 #skill_list{
-  margin: 20px 0 0 0;
+  padding: 20px 0 0 0;
   font-size: 16px;
   min-width: 300px;
 }
@@ -74,7 +212,7 @@
 
 #myintro{
   float: left;
-  margin-left: 5%;
+  padding-left: 5%;
   width: 65%;
 }
 
@@ -108,31 +246,107 @@
 
 .blog_tag{
   height: 60px;
-  margin: 0 40px 10px 0px;
-}
-
- /* width >= 1280px */
-@media screen and ( min-width: 1280px ){
-
-}
-
-    /* 960px <= width < 1280px */
-@media screen and ( min-width: 1024px ) and ( max-width: 1280px){
-
-}
-
-@media screen and ( min-width: 961px ) and ( max-width: 1023px){
-
-
+  padding: 0 40px 10px 0px;
 }
 
 
-@media screen and (max-width: 960px){
-  #myintro{
-    margin-top: 20px;
-    width: 100%;
+
+
+/******************* responsive desgin *******************/
+
+@media screen and (min-width: 1025px){
+  #pfl-header{
+    position: fixed;
+    z-index: 100;
   }
-}
-  
 
-   
+  .button_column{
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px){
+  .button_column{
+    display: none;
+  }
+
+  #pfl-header{
+    height: 70px;
+    position: fixed;
+    z-index: 100;
+  }
+
+  #headline{
+    line-height: 70px;
+    padding-right: 15px;
+  }
+
+
+  .navbar{
+    width: 80px;
+  }
+
+  .navbar:hover{
+    font-size: 20px;
+  }
+
+  #home{
+    font-size: 18px;
+  }
+
+  #home:hover{
+    font-size: 20px;
+  }
+
+  #logo{
+    width: 140px;
+    padding-left: 50px;
+    padding-top: 18px;
+
+  }
+
+  #about_frame{
+    padding-top: 100px;
+  }
+
+}
+
+@media only screen and (max-width: 600px){
+
+  button {
+    width: 42px;
+    height: 42px;
+    margin-top: 15px;
+    margin-left: 10px;
+    background:rgb(21,22,27);
+    z-index: 150;
+  }
+
+  /* header */
+  #pfl-header{
+    height: 65px;
+  }
+  #headline{
+    display: none;
+  }
+  #logo{
+    float: right;
+    padding: 10px 30px 0 0;
+    width: 120px;
+  }
+
+  #pfl-footer{
+    height:50px;
+    line-height: 50px;
+    font-size: 10px;
+  }
+  #about_frame{
+    padding-top: 40px;
+  }
+
+}
+
+
+
+
