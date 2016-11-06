@@ -8,70 +8,91 @@ body{
 	font-family: 'Helvetica', Calibri, Arial, sans-serif;
 }
 
-/*.button_column {
+.button_column {
 	width: auto;
-}*/
+}
 
-/*button:hover {
-	background: rgba(255,255,255,0.95);
-	color: rgb(21,22,27);
-}*/
-
-/* header */
+/******************** header *********************/
 #pfl-header{
-	height: 80px;
+	height: 90px;
+	width: 100%;
+	background-color: rgb(21,22,27);
+}
+
+#headline{
+	float: right;
+	height: 100%;
+	line-height: 90px;
+	padding-right: 20px;
 }
 
 .navbar{
 	display: inline-block;
-	padding-left: 50px;
+	width: 100px;
 	color: rgba(255,255,255, 0.7);
 	text-decoration: none;
+	text-align: center;
 	font-family: Calibri;
 }
 
 .navbar:hover{
-	color:rgb(128, 166, 204);
+	color:rgb(255,255,255);
+	font-weight: bold;
+	font-size: 22px;
+
 }
 
 #home{
-	color: rgb(128, 166, 204);
+	font-weight: bold;
+	text-transform: uppercase;
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+	border-bottom: 2px solid rgb(105,105,105);
 }
 
-/*#headtext{
-	color: rgba(255,255,255, 0.9);
-	float: right;
-	margin: 12px 20px 0 0;
-	font-size: 20px;
-	text-transform: uppercase;
-	font-family: 'Futura';
-}*/
+#home:hover{
+	font-size: 22px;
+}
+
 
 #logo{
 	width: 160px;
 	padding-left: 50px;
-	padding-top: 10px;
+	padding-top: 20px;
 
 }
 
-.pfl-intro{
+/***************** intro ******************/
+
+.pfl-section{
 	clear: both; /* clear the float*/
-	height: 1000px;
+	height: 650px;
 	color: white;
-	
+	padding: 50px 0 50px 0;
 }
 
-#pfl-intro1{
+#pfl-section1{
 	background-color: white;
-}
-#pfl-intro2{
-	background-color: rgb(21,22,27);
+	color: rgba(21,22,27, 0.8);
+	text-align: center;
+	font-family: Calibri;
+	font-size: 30px;
 }
 
-/* footer */
+
+#myphoto{
+	display: block;
+	height: 150px;
+	width: 145px;
+	border-radius: 100%;
+	margin: 0 auto;
+}
+
+
+/******************* footer *******************/
 #pfl-footer{
-	height:60px;
-	line-height:60px;
+	height:100px;
+	line-height:100px;
 	clear: both; /* clear the float*/
 	color: rgba(255,255,255, 0.8);
 	text-align: center;
@@ -80,11 +101,17 @@ body{
 
 }
 
-/* portfolio comtent */
+/******************* portfolio comtent *******************/
+#pfl-content{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	margin: 0 auto;
+}
 
 .block{
 	float: left;
 	width: 250px;
+	height: 630px;
 	margin: 1px;
 	position: relative;
 	background-repeat: no-repeat;
@@ -144,35 +171,125 @@ time{
 	text-transform: uppercase;
 }
 
-@media screen and (max-width: 600px){
-	button {
-		width: 42px;
-		height: 42px;
-		margin-top: 20px;
-		margin-left: 10px;
+/******************* responsive desgin *******************/
+@media screen and (min-width: 1500px){
+	.pfl-section{
+		height: 850px;
 	}
-	/* header */
+	.block{
+		height: 800px;
+	}
+
+}
+
+@media screen and (min-width: 1025px){
 	#pfl-header{
-		height: 45px;
+		position: fixed;
+		z-index: 100;
+	}
+
+	.button_column{
+		display: none;
+	}
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px){
+	.button_column{
+		display: none;
+	}
+
+	#pfl-header{
+		height: 70px;
+		position: fixed;
+		z-index: 100;
 	}
 
 	#headline{
-		color: rgba(255,255,255, 0.9);
-		float: right;
-		margin: 10px 15px 0 0;
-		font-size: 15px;
-		text-transform: uppercase;
-		font-family: 'Futura';
+		line-height: 70px;
+		padding-right: 15px;
+	}
+
+
+	.navbar{
+		width: 80px;
+	}
+
+	#pfl-content{
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	.block{
+		height: 550px;
+	}
+
+	.navbar:hover{
+		font-size: 20px;
+	}
+
+	#home{
+		font-size: 18px;
+	}
+
+	#home:hover{
+		font-size: 20px;
 	}
 
 	#logo{
-		width: 30px;
+		width: 140px;
+		padding-left: 50px;
+		padding-top: 18px;
+
 	}
 
+
+}
+
+@media only screen and (max-width: 600px){
+
+	button {
+		width: 42px;
+		height: 42px;
+		margin-top: 15px;
+		margin-left: 10px;
+	    background:rgb(21,22,27);
+	    z-index: 150;
+	}
+
+	/* header */
+	#pfl-header{
+		height: 65px;
+	}
+	#headline{
+		display: none;
+	}
+	#logo{
+		float: right;
+		padding: 10px 30px 0 0;
+		width: 120px;
+	}
+
+
+	#pfl-content{
+		padding-top: 0px;
+	}
+
+	.pfl-shadow{
+		visibility:hidden;
+	}
+
+
 	#pfl-footer{
-		height:40px;
-		line-height: 40px;
+		height:50px;
+		line-height: 50px;
 		font-size: 10px;
+	}
+	.block{
+		width: 100%;
+		height: 400px;
+		float: none;
+		padding-bottom: 30px;
 	}
 
 	.circle {
@@ -186,5 +303,4 @@ time{
 	}
 
 }
-
 

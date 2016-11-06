@@ -70,7 +70,7 @@ body,
 	left: 0;
 	z-index: 100;
 	visibility: hidden;
-	width: 300px;
+	width: 200px;
 	height: 100%;
 	background: #fff;
 	-webkit-transition: all 0.5s;
@@ -100,8 +100,8 @@ body,
 
 
 .st-effect-3.st-menu-open .st-pusher {
-	-webkit-transform: translate3d(300px, 0, 0);
-	transform: translate3d(300px, 0, 0);
+	-webkit-transform: translate3d(200px, 0, 0);
+	transform: translate3d(200px, 0, 0);
 }
 
 .st-effect-3.st-menu {
