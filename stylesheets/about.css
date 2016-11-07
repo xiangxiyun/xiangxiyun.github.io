@@ -19,7 +19,9 @@ a{
   text-decoration: none;
   color: #333333;
 }
-
+#i-about{
+  background-color: rgba(63,148,221, 0.7);
+}
 
 /******************** header *********************/
 #pfl-header{
@@ -86,7 +88,7 @@ a{
 
 /* section: blog article */
 #about_frame{
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   padding-top: 160px;
   padding-bottom: 50px;
@@ -142,8 +144,6 @@ time{
 
 
 
-
-
 .about_article{
   color: rgb(105,105,105);
 }
@@ -157,18 +157,18 @@ time{
   font-size: 17px;
   font-weight: 100;
   line-height: 30px;
-  padding: 20px 40px 10px 40px;
+  padding: 20px 10px 10px 10px;
 }
 
 #about_left_side{
   float: left;
-  width: 30%;
+  width: 40%;
 }
 
 #myphoto{
-  width: 100%;
   text-align: center;
-  padding-left: 40px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #myphoto img{
@@ -180,6 +180,8 @@ time{
 #skill_list{
   padding: 20px 0 0 0;
   font-size: 16px;
+  width: 100%;
+  margin: 0 auto;
   min-width: 300px;
 }
 
@@ -211,9 +213,9 @@ time{
 }
 
 #myintro{
-  float: left;
-  padding-left: 5%;
-  width: 65%;
+  /*float: left;*/
+  /*padding-left: 50px;*/
+  width: auto;
 }
 
 #disqus_thread{
@@ -246,11 +248,70 @@ time{
 
 .blog_tag{
   height: 60px;
-  padding: 0 40px 10px 0px;
+  padding: 0 40px 10px 30px;
 }
 
+/***************** about responsive desgin ********************/
+@media screen and (min-width: 601px) and (max-width: 1024px){
+  #about_left_side{
+    float: none;
+    display: block;
+    width: 100%;
+    padding-bottom: 50px;
 
+  }
 
+  #myphoto{
+    width: 40%;
+    display: inline-block;
+  }
+  #skill_list{
+    width: 45%;
+    display: inline-block;
+  }
+
+  #myintro{
+    float: none;
+    display: block;
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+  }
+  .blog_tag{
+    padding: 0 40px 10px 10px;
+  }
+}
+
+@media only screen and (max-width: 600px){
+
+  #about_left_side{
+    float: none;
+    display: block;
+    width: 100%;
+    padding-bottom: 50px;
+
+  }
+  #myphoto{
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+
+  }
+  #skill_list{
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  #myintro{
+    float: none;
+    display: block;
+    width: 100%;
+    padding: 10px 10px 10px 8px;
+  }
+  .blog_tag{
+    padding: 0 40px 10px 5px;
+  }
+}
 
 /******************* responsive desgin *******************/
 

@@ -19,7 +19,9 @@
         text-decoration: none;
         color: #333333;
       }
-
+      #i-blog{
+        background-color: rgba(63,148,221, 0.7);
+      }
 
       /******************** header *********************/
       #pfl-header{
@@ -82,14 +84,17 @@
       }
 
       /***************** about content *****************/
-      #blog{
+      #blog-section{
         width: 100%;
-        margin: 0 auto;
       }
 
       /* section: blog article */
 
       #blog_content{
+        width: 70%;
+        padding: 100px 60px 50px 40px;
+        /*margin: 0 auto;*/
+        display: inline-block;
         padding-top: 120px;
         padding-bottom: 50px;
       }
@@ -124,6 +129,7 @@
         line-height: 70px;
         font-size: 24px;
         font-weight: 400;
+        display: inline-block;
       }
 
       time{
@@ -131,6 +137,7 @@
         font-size: 20px;
         font-weight: 1px;
         color: #cccccc;
+        padding: 10px 25px 0 10px;
         font-family: 'Futura';
       }
 
@@ -139,24 +146,27 @@
         font-size: 17px;
         font-weight: 100;
         line-height: 30px;
-        margin: 20px 40px 10px 40px;
+        padding: 20px 40px 10px 30px;
         
       }
 
-
-
+      .article_tag{
+          font-size: 16px;
+          padding: 5px 20px 10px 25px;
+      }
       /* section: blog category */
 
       #right_sider{
-        float: right;
+        width: 30%;
+        right: 0;
         top: 130px;
-        right: 6%;
-        height: auto;
         position: fixed;
 
       }
 
       #blog_category{
+        width: 80%;
+        margin: 0 auto;
         border-left: 1px solid rgb(105,105,105);
       }
 
@@ -202,76 +212,97 @@
       }
 
 
-      @media screen and ( min-width: 1280px ){
-        #blog{
-          margin-left: 8%;
-        }
-        #blog_content{
-          width: 60%;
-        }
-        #blog_category{
-          width: 300px;
-        }
-        .subtab{
-          width: 150px;
+     /******************* blog responsive desgin *******************/
+
+      @media screen and ( min-width: 1300px ) {
+        #blog-section{
+          width: 80%;
+          margin: 0 auto;
         }
       }
 
-      @media screen and ( min-width: 1024px ) and ( max-width: 1280px){
-        #blog{
-          margin-left: 5%;
-        }
-        #blog_category{
-          width: 260px;
-        } 
-        .subtab{
-          width: 130px;
-        }
-        #blog_content{
-          width: 60%;
-        }
-      }
+      @media screen and ( min-width: 601px ) and ( max-width: 1024px){
 
-      @media screen and ( min-width: 961px ) and ( max-width: 1023px){
-
-        #blog{
-          margin-left: 3%;
+        #blog-section{
+          width: 100%;
         }
-        #blog_category{
-          width: 240px;
-        } 
-        .subtab{
-          width: 120px;
-        }
-        #blog_content{
-          width: 55%;
-        }
-
-      }
-
-
-      @media screen and (max-width: 960px){
-        #blog{
-          margin-left: 3%;
-        }
-        #blog_category{
+        #right_sider{
           display: none;
-        }
+        } 
         #blog_content{
-          margin-left: 5%;
-          width:90%;
+          width: 100%;
+          margin: 0 auto;
         }
+        .article_header{
+          border-left: 3px solid rgb(128, 166, 204);
+        }
+        .ah{
+          padding-left: 15px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 20px;
+
+        }
+        time{
+          float: right;
+          padding: 10px 10px 0 10px;
+          font-size: 17px;
+        }
+        .article_description {
+          font-size: 16px;
+          line-height: 30px;
+          padding: 15px 30px 10px 30px;
+        }
+        .article_tag{
+          font-size: 16px;
+          padding: 5px 20px 10px 25px;
+        }
+      }
+
+
+      @media screen and (max-width: 600px){
+        #blog-section{
+          width: 100%;
+        }
+        #right_sider{
+          display: none;
+        } 
+        #blog_content{
+          width: 100%;
+          padding: 50px 15px 30px 15px;
+          margin: 0 auto;
+        }
+        .article_header{
+          border-left: 3px solid rgb(128, 166, 204);
+        }
+        .ah{
+          padding: 5px 10px 0 10px;
+          height: 30px;
+          line-height: 30px;
+          font-size: 16px;
+        }
+        time{
+          float: none;
+          display: block;
+          padding: 0 10px 0 10px;
+          font-size: 12px;
+        }
+        .article_description {
+          font-size: 14px;
+          line-height: 30px;
+          padding: 10px 20px 10px 20px;
+        }
+        .article_tag{
+          font-size: 13px;
+          padding: 5px 20px 10px 25px;
+        }
+
       }
 
 
 
 
-
-
-
-
-
-      /******************* responsive desgin *******************/
+      /******************* general responsive desgin *******************/
 
       @media screen and (min-width: 1025px){
         #pfl-header{
@@ -310,11 +341,11 @@
           font-size: 20px;
         }
 
-        #home{
+        #blog{
           font-size: 18px;
         }
 
-        #home:hover{
+        #blog:hover{
           font-size: 20px;
         }
 

@@ -1,129 +1,312 @@
-  *{margin: 0;padding: 0;}
+*{
+	margin: 0;
+	padding: 0;
+}
 
-  body{
-    font-family: 'Helvetica', Calibri, Arial, sans-serif;
-    background-image:url(../images/coverImage.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;  
-    background-attachment:fixed;
-    background-position: center center;
-    background-color: rgb(14,14,14);
-    text-align: center;
-  }
+body{
+	background: rgb(21,22,27);
+	font-family: 'Helvetica', Calibri, Arial, sans-serif;
+}
 
-  #covering{
-    width: 100%;
-    height: 100%;
-    background: rgb(14,14,14);
-    opacity: 0.4;
-    position: absolute;
-    z-index: 50;
-  }
+.button_column {
+	width: auto;
+}
+#i-home{
+	background-color: rgba(63,148,221, 0.7);
+}
+/******************** header *********************/
+#pfl-header{
+	height: 90px;
+	width: 100%;
+	background-color: rgb(21,22,27);
+}
 
-  .toggle:hover{
-    background: rgb(127,127,127);
-    cursor: pointer;
-    color: #fff;
-  }
+#headline{
+	float: right;
+	height: 100%;
+	line-height: 90px;
+	padding-right: 20px;
+}
 
-  a{
-    display: block;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-  }
+.navbar{
+	display: inline-block;
+	width: 100px;
+	color: rgba(255,255,255, 0.7);
+	text-decoration: none;
+	text-align: center;
+	font-family: Calibri;
+}
 
-  #intro{
-    width: 150px;
-    height: 100px;
-    color: #fff;
-    text-align: left;
-    position: absolute;
-    z-index: 100;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .toggle{
-    border-radius: 5%;
-    position: absolute;
-    border: solid 2px #fff;
-    text-align: center;
-    position: absolute;
-    z-index: 100;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-
-@media screen and (min-width :701px){
-  #intro{
-    top: 35%;
-    right: 60%;
-  }
-  #intro1{
-    font-size: 18px;
-  }
-  #intro2{
-    font-size: 34px;
-  }
-
-  .toggle{
-    width: 150px;
-    height: 50px;
-    top: 65%;
-  }
-
-  #button1{
-    left: 60%;
-  }
-  #button3{
-    right: 60%;
-  }
-
-  a{
-    line-height: 50px;
-    font-size: 18px;
-  }
+.navbar:hover{
+	color:rgb(255,255,255);
+	font-weight: bold;
+	font-size: 22px;
 
 }
 
-@media screen and (max-width: 700px){
+#home{
+	font-weight: bold;
+	text-transform: uppercase;
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+	border-bottom: 2px solid rgb(105,105,105);
+}
 
-  #intro{
-    text-align: center;
-    top: 100%;
-  }
-  #intro1{
-    font-size: 12px;
-  }
-  #intro2{
-    font-size: 18px;
-  }
+#home:hover{
+	font-size: 22px;
+}
 
-  .toggle{
-      width: 130px;
-      height: 40px;
-  }
 
-  #button1{
-    top: 30%;
-  }
+#logo{
+	width: 160px;
+	padding-left: 50px;
+	padding-top: 20px;
 
-  #button3{
-    bottom: 30%;
-  }
+}
 
-  a{
-    line-height: 40px;
-    font-size: 15px;
-  }
+/***************** intro ******************/
+
+.pfl-section{
+	clear: both; /* clear the float*/
+	height: 650px;
+	color: white;
+	padding: 50px 0 50px 0;
+}
+
+#pfl-section1{
+	background-color: white;
+	color: rgba(21,22,27, 0.8);
+	text-align: center;
+	font-family: Calibri;
+	font-size: 30px;
+}
+
+
+#myphoto{
+	display: block;
+	height: 150px;
+	width: 145px;
+	border-radius: 100%;
+	margin: 0 auto;
+}
+
+#para1{
+	padding-top: 70px;
+}
+
+
+/******************* footer *******************/
+#pfl-footer{
+	height:80px;
+	line-height:80px;
+	clear: both; /* clear the float*/
+	color: rgba(255,255,255, 0.8);
+	text-align: center;
+	font-size: 13px;
+	font-family: 'Futura';
+
+}
+
+/******************* portfolio comtent *******************/
+#pfl-content{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	margin: 0 auto;
+}
+
+.block{
+	float: left;
+	width: 250px;
+	height: 630px;
+	margin: 1px;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#pfl-element1{
+	background-image:url(../images/ImagePortfolio/1.jpg);
+}
+#pfl-element2{
+	background-image:url(../images/ImagePortfolio/2.jpg);
+}
+#pfl-element3{
+	background-image:url(../images/ImagePortfolio/3.jpg);
+}
+#pfl-element4{
+	background-image:url(../images/ImagePortfolio/4.jpg);
+}
+
+.pfl-shadow{
+	width: 100%;
+	height: 100%;
+	background: rgb(31,32,37);
+	opacity: 0.55;
+	position: absolute;
+	z-index: 50;
+}
+
+
+.link{
+	color: #fff;
+}
+
+.circle {
+	width: 160px;
+	height: 160px;
+	border-radius: 100%;
+	background: rgb(14,14,14);
+	position: absolute;
+	text-align: center;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	cursor: pointer;
+	z-index: 60;
+}
+
+time{
+	font-size: 12px;
+}
+
+.pfl-title{
+	padding-top: 65px;
+	text-transform: uppercase;
+}
+
+/******************* responsive desgin *******************/
+@media screen and (min-width: 1500px){
+	.pfl-section{
+		height: 850px;
+	}
+	.block{
+		height: 800px;
+	}
+
+}
+
+@media screen and (min-width: 1025px){
+	#pfl-header{
+		position: fixed;
+		z-index: 100;
+	}
+
+	.button_column{
+		display: none;
+	}
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px){
+	.button_column{
+		display: none;
+	}
+
+	#pfl-header{
+		height: 70px;
+		position: fixed;
+		z-index: 100;
+	}
+
+	#headline{
+		line-height: 70px;
+		padding-right: 15px;
+	}
+
+
+	.navbar{
+		width: 80px;
+	}
+
+	#pfl-content{
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	.block{
+		height: 550px;
+	}
+
+	.navbar:hover{
+		font-size: 20px;
+	}
+
+	#home{
+		font-size: 18px;
+	}
+
+	#home:hover{
+		font-size: 20px;
+	}
+
+	#logo{
+		width: 140px;
+		padding-left: 50px;
+		padding-top: 18px;
+
+	}
+
+
+}
+
+@media only screen and (max-width: 600px){
+
+	button {
+		width: 42px;
+		height: 42px;
+		margin-top: 15px;
+		margin-left: 10px;
+	    background:rgb(21,22,27);
+	    z-index: 150;
+	}
+
+	/* header */
+	#pfl-header{
+		height: 65px;
+	}
+	#headline{
+		display: none;
+	}
+	#logo{
+		float: right;
+		padding: 10px 30px 0 0;
+		width: 120px;
+	}
+
+
+	#pfl-content{
+		padding-top: 0px;
+	}
+
+	.pfl-shadow{
+		visibility:hidden;
+	}
+
+
+	#pfl-footer{
+		height:50px;
+		line-height: 50px;
+		font-size: 10px;
+	}
+	.block{
+		width: 100%;
+		height: 400px;
+		float: none;
+		padding-bottom: 30px;
+	}
+
+	.circle {
+		width: 110px;
+		height: 110px;
+	}
+	.pfl-title{
+		font-size: 12px;
+		padding-top: 45px;
+		text-transform: uppercase;
+	}
 
 }
 

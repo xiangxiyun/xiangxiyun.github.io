@@ -5,40 +5,89 @@
       body{ 
         min-height:100%;
         font-family: 'Helvetica', Calibri, Arial, sans-serif;
-        position:relative; 
+        position:relative;
         background: rgb(246,246,246);
       }
 
+      .button_column {
+        width: auto;
+      }
+      button{
+        z-index: 90;
+      }
       a{
         text-decoration: none;
         color: #333333;
       }
+      #i-blog{
+        background-color: rgba(63,148,221, 0.7);
+      }
 
-      #blog{
+     /******************** header *********************/
+      #pfl-header{
+        height: 90px;
         width: 100%;
+        background-color: rgb(21,22,27);
       }
 
-      .headline{
-        color: rgb(255,255,255);
+      #headline{
         float: right;
-        padding: 15px 50px 0 0;
-        font-size: 20px;
-        text-transform: uppercase;
-        font-family: 'Futura';
-      }
-      #logo{
-        width: 35px;
+        height: 100%;
+        line-height: 90px;
+        padding-right: 20px;
       }
 
+      .navbar{
+        display: inline-block;
+        width: 100px;
+        color: rgba(255,255,255, 0.7);
+        text-decoration: none;
+        text-align: center;
+        font-family: Calibri;
+      }
+
+      .navbar:hover{
+        color:rgb(255,255,255);
+        font-weight: bold;
+        font-size: 22px;
+
+      }
+      #blog{
+        font-weight: bold;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        border-bottom: 2px solid rgb(105,105,105);
+      }
+      #blog:hover{
+        font-size: 22px;
+      }
+
+      #logo{
+        width: 160px;
+        padding-left: 50px;
+        padding-top: 20px;
+
+      }
+
+      /******************* footer *******************/
+      #pfl-footer{
+        height:80px;
+        line-height:80px;
+        clear: both; /* clear the float*/
+        color: rgba(255,255,255, 0.8);
+        background-color: rgb(21,22,27);
+        text-align: center;
+        font-size: 13px;
+        font-family: 'Futura';
+
+      }
 
 
 /* section: blog article */
-
-    #blog_content{
-      float: left;
-      margin-top: 120px;
-      margin-bottom: 100px;
-    }
+      #blog-section{
+        width: 100%;
+      }
 
     .blog_article{
       height: auto;
@@ -76,10 +125,8 @@
     /* article content */
 
     .article_content {
-      text-align: left;
-      margin: 40px 40px 0 40px;
+      padding: 40px 40px 0 40px;
       color: rgb(105,105,105);
-      position: relative;
     }
 
     .article_content h1{
@@ -87,16 +134,16 @@
     }
     
     .article_content h2, h3, h4, h5, h6{
-      font-weight: 500;
-      margin: 20px 0 10px 0;
+      padding: 30px 0 10px 0;
     }
 
     .anchor:before{
       content:"";
       display:block;
-      height:70px; /* fixed header height*/
-      margin:-70px 0 0; /* negative fixed header height */
+      height:90px; /* fixed header height*/
+      margin:-90px 0 0; /* negative fixed header height */
     }
+    
 
     .article_content a{
       color: rgb(128, 166, 204);
@@ -225,63 +272,285 @@
       padding:60px 10px 10px 20px;
     }
 
-    /* width >= 1280px */
-    @media screen and ( min-width: 1280px ){
-      #blog{
-        margin-left: 10%;
-      }
-      #blog_content{
-        width: 60%;
-      }
-      #blog_category{
-        width: 300px;
-      }
-      .subtab{
-        width: 300px;
-      }
-    }
 
-    /* 960px <= width < 1280px */
-    @media screen and ( min-width: 1024px ) and ( max-width: 1280px){
-      #blog{
-        margin-left: 5%;
+      @media screen and ( min-width: 1300px ) {
+        #blog-section{
+          width: 80%;
+          margin: 0 auto;
+        }
       }
-      #blog_category{
-        width: 260px;
+
+    @media screen and ( min-width: 1024px ){
+      /* section: blog article */
+
+      #blog_content{
+        width: 70%;
+        padding: 100px 60px 50px 40px;
+        display: inline-block;
+        padding-top: 120px;
+        padding-bottom: 50px;
+      }
+
+      .blog_article{
+        height: auto;
+        margin-bottom: 40px;
+        background: rgb(255,255,255);
+        color: rgb(105,105,105);
+      }
+      .article_header{
+        border-left: 5px solid rgb(128, 166, 204);
+      }
+      .ah{
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        display: inline-block;
+      }
+
+      time{
+        float: right;
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        padding-right: 20px;
+        font-size: 18px;
       } 
-      .subtab{
-        width: 260px;
-      }
-      #blog_content{
-        width: 60%;
-      }
     }
 
-    @media screen and ( min-width: 961px ) and ( max-width: 1023px){
+    @media screen and ( min-width: 601px ) and ( max-width: 1024px){
 
-      #blog{
-        margin-left: 3%;
-      }
-      #blog_category{
-        width: 240px;
-      } 
-      .subtab{
-        width: 240px;
-      }
-      #blog_content{
-        width: 55%;
-      }
-
-    }
-
-
-    @media screen and (max-width: 960px){
       #blog_category{
         display: none;
       }
+      #blog-section{
+        padding: 100px 0 100px 0;
+      }
       #blog_content{
-        margin-left: 5%;
         width:90%;
+        margin: 0 auto;
+      }
+      .article_header{
+        border-left: 5px solid rgb(128, 166, 204);
+      }
+      .ah{
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        display: inline-block;
+      }
+
+      time{
+        float: right;
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        padding-right: 20px;
+        font-size: 18px;
+      }        
+
+      .article_content {
+        padding: 20px 20px 10px 20px;
+      }
+    
+      .article_content h2, h3, h4, h5, h6{
+        padding: 10px 0 10px 0;
+      }
+
+      h2{
+        font-size: 20px;
+      }
+      h3{
+        font-size: 19px;
+      }
+      h4{
+        font-size: 18px;
+      }
+
+      .article_content ul{
+          font-size: 16px;
+          line-height: 30px;
+          padding-left: 15px;
+      }
+      .article_content ol{
+          font-size: 16px;
+          line-height: 30px;
+          padding-left: 15px;
+      }
+
+      .article_content p{
+          padding-top: 10px;
+          font-size: 16px;
+          font-weight: 100;
+          line-height: 30px;
+      }
+      .article_tag {
+          font-size: 15px;
+          padding: 0 0 30px 0;
+      }
+
+    }
+
+
+    @media screen and (max-width: 600px){
+      #blog_category{
+        display: none;
+      }
+      #blog-section{
+        padding: 20px 0 100px 0;
+      }
+      #blog_content{
+        width:95%;
+        margin: 0 auto;
+      }
+      .article_header{
+        border-left: 3px solid rgb(128, 166, 204);
+      }
+      .ah{
+        padding: 5px 10px 0 10px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 17px;
+      }
+      time{
+        float: none;
+        display: block;
+        padding: 0 10px 0 10px;
+        font-size: 12px;
+      }        
+      .article_content {
+        padding: 30px 20px 10px 20px;
+      }
+    
+      .article_content h2, h3, h4, h5, h6{
+        padding: 10px 0 10px 0;
+      }
+
+      h2{
+        font-size: 17px;
+      }
+      h3{
+        font-size: 16px;
+      }
+      h4{
+        font-size: 15px;
+      }
+
+      .article_content ul{
+          font-size: 14px;
+          line-height: 25px;
+          padding-left: 10px;
+      }
+      .article_content ol{
+          font-size: 14px;
+          line-height: 25px;
+          padding-left: 10px;
+      }
+
+      .article_content p{
+          padding-top: 5px;
+          font-size: 14px;
+          font-weight: 100;
+          line-height: 30px;
+      }
+      .article_tag {
+          font-size: 13px;
+          padding: 0 0 30px 0;
       }
     }
+ /******************* general responsive desgin *******************/
+
+      @media screen and (min-width: 1025px){
+        #pfl-header{
+          position: fixed;
+          z-index: 100;
+        }
+
+        .button_column{
+          display: none;
+        }
+
+      }
+
+      @media screen and (min-width: 601px) and (max-width: 1024px){
+        .button_column{
+          display: none;
+        }
+
+        #pfl-header{
+          height: 70px;
+          position: fixed;
+          z-index: 100;
+        }
+
+        #headline{
+          line-height: 70px;
+          padding-right: 15px;
+        }
+
+
+        .navbar{
+          width: 80px;
+        }
+
+        .navbar:hover{
+          font-size: 20px;
+        }
+
+        #blog{
+          font-size: 18px;
+        }
+
+        #blog:hover{
+          font-size: 20px;
+        }
+
+        #logo{
+          width: 140px;
+          padding-left: 50px;
+          padding-top: 18px;
+
+        }
+
+
+
+      }
+
+      @media only screen and (max-width: 600px){
+
+        button {
+          width: 42px;
+          height: 42px;
+          margin-top: 15px;
+          margin-left: 10px;
+          background:rgb(21,22,27);
+          z-index: 150;
+        }
+
+        /* header */
+        #pfl-header{
+          height: 65px;
+        }
+        #headline{
+          display: none;
+        }
+        #logo{
+          float: right;
+          padding: 10px 30px 0 0;
+          width: 120px;
+        }
+
+        #pfl-footer{
+          height:50px;
+          line-height: 50px;
+          font-size: 10px;
+        }
+
+      }
+
+
+
+
+
+
+
   

@@ -19,7 +19,9 @@
         text-decoration: none;
         color: #333333;
       }
-
+      #i-photo{
+        background-color: rgba(63,148,221, 0.7);
+      }
 
       /******************** header *********************/
       #pfl-header{

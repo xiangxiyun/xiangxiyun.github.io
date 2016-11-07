@@ -1,84 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>jekyll的代码高亮设置 | Heidi Xiang's blog</title>
-  
-  <link rel="stylesheet" type="text/css" href="../../stylesheets/sideBar.css" />
-  <link rel="stylesheet" type="text/css" href="../../stylesheets/article.css" />
-  <link rel="stylesheet" type="text/css" href="../../stylesheets/pygments.css" />
-  <link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome-ie7.min.css"/>
-  <link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome.min.css"/>
-  
-  <script src="../../javascripts/modernizr.custom.js"></script>
-  <script src="../../javascripts/jquery-1.11.2.min.js"></script>
-  <script src="../../javascripts/article.js"></script>
-  <script src="../../javascripts/sidebar.js"></script>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>jekyll的代码高亮设置 | Heidi Xiang's blog</title>
+
+<link rel="stylesheet" type="text/css" href="../../stylesheets/sideBar.css" />
+<link rel="stylesheet" type="text/css" href="../../stylesheets/article.css" />
+<link rel="stylesheet" type="text/css" href="../../stylesheets/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome-ie7.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome.min.css"/>
+
+<script src="../../javascripts/modernizr.custom.js"></script>
+<script src="../../javascripts/jquery-1.11.2.min.js"></script>
+<script src="../../javascripts/article.js"></script>
+<script src="../../javascripts/sidebar.js"></script>
 </head>
 
 
 <body>
-  <div id="st-container" class="st-container">
-    
-    <div class="st-pusher">
+<div id="st-container" class="st-container">
+  
+  <div class="st-pusher">
 
         <nav class="st-menu st-effect-3" id="menu-3">
           <h2 >Index</h2>
 
           <ul class = 'MenuList'>
             <li class = 'MenuElement'> 
-              <a class="reference" href="/index.html">
+              <a class="reference" id = "i-home" href="/index.html">
                 <i class="icon icon-home"></i> Home
               </a>  
             </li>
 
 
             <li class = 'MenuElement'> 
-              <a class="reference" href = "/techblog.html">
+              <a class="reference" id = "i-blog" href = "/techblog.html">
                 <i class="icon icon-pencil"></i> Blog
               </a> 
             </li>
 
             <li class = 'MenuElement'> 
-              <a class="reference" href="/about.html"> 
+              <a class="reference" id = "i-about" href="/about.html"> 
                 <i class="icon icon-plus"></i> About
               </a> 
             </li>
 
             <li class = 'MenuElement'> 
-              <a class="reference" id = "portfolio" href="/photo.html">
+              <a class="reference" id = "i-photo" href="/photo.html">
                 <i class="icon icon-lightbulb"></i> Photo
               </a> 
             </li>
 
           </ul>
         </nav> 
-      
 
       <div class="st-content"><!-- this is the wrapper for the content -->
         <div class="st-content-inner">
 
           <div id="st-trigger-effects" class="button_column">
             <button data-effect="st-effect-3"><i class="icon icon-reorder"></i></button>
-            <div class = 'headline'>
-              <span>Xiyun Xiang's blog</span>
-              <img id = "logo" src = "../../images/bloglogo.png"></img>
-            </div>
-          </div>
-
-          <div id = "blog">
-
-           <section id = "blog_content">
-            <article class = "blog_article">
-             <header class = "article_header">
-              <h2 class = "ah"> jekyll的代码高亮设置
-                <time> 15 November 2015 </time>
-              </h2>
+          </div> 
+            <!-- **************************   header  ****************************** -->
+            <header id = "pfl-header">
+              <img id = "logo" src = "../../images/bloglogo.png" alt = "logo">
+              <div id = "headline">
+                <a class = "navbar" href = "/index.html"> <span id = "home"> Home </span></a>
+                <a class = "navbar" href = "/techblog.html"> <span id = "blog"> Blog </span></a>
+                <a class = "navbar" href = "/about.html"> <span id = "about"> About </span></a>
+                <a class = "navbar" href = "/photo.html"><span id = "photo"> Photo </span></a>
+              </div>
             </header>
-            <div class = "article_content">
-              <h1 id="jekyll">2015-11-15-jekyll的代码高亮设置</h1>
+            <!-- **************************   header  ****************************** -->
+
+            <div id = "blog-section">
+
+              <section id = "blog_content">
+                <article class = "blog_article">
+                  <header class = "article_header">
+                    <h2 class = "ah"> jekyll的代码高亮设置</h2>
+                    <time> 15 November 2015 </time>
+                  </header>
+                  <div class = "article_content">
+                    <h1 id="jekyll">2015-11-15-jekyll的代码高亮设置</h1>
 
 <h2 id="section">写在前面</h2>
 
@@ -209,67 +214,72 @@ Liquid Exception: pygments in _layouts/articleTemplate.html
 
 
 
-            </div>      
-            <footer class = "article_tag">
+                  <footer class = "article_tag">
+                    
+                    <a id = "next_page" href = "/blog/HTTP%E5%88%9D%E8%A7%A3">
+                      <i class = "icon icon-hand-left"></i> 
+                      HTTP初解
+                    </a>
+                    
+                    
+                    <a id = "previous_page" href = "/blog/mac%E4%B8%8Bjekyll%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"> 
+                      mac下jekyll的安装与简单使用 
+                      <i class = "icon icon-hand-right"></i> 
+                    </a>
+                    
+                  </footer>
+                  </div>      
+
+                </article>
+
+                <div id="disqus_thread"></div>
+                <script>
+                        /**
+                        * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                        * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                        */
+                        /*
+                        var disqus_config = function () {
+                        this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                        */
+                        (function() { // DON'T EDIT BELOW THIS LINE
+                          var d = document, s = d.createElement('script');
+
+                          s.src = '//heidixiang.disqus.com/embed.js';
+
+                          s.setAttribute('data-timestamp', +new Date());
+                          (d.head || d.body).appendChild(s);
+                        })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+              </section>
+
+              <section id = "blog_category">
+
+                <p>TABLE OF CONTENTS</p>
+                <div id = "toc"></div>
+                <div id = "back-to-top">
+                  <i class = 'icon icon-circle-arrow-up'></i> 
+                      BACK TO TOP
+                </div>
+              </section>
+
+
+            </div>
               
-              <a id = "next_page" href = "/blog/HTTP%E5%88%9D%E8%A7%A3">
-                <i class = "icon icon-hand-left"></i> 
-                HTTP初解
-              </a>
-              
-              
-              <a id = "previous_page" href = "/blog/mac%E4%B8%8Bjekyll%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"> 
-                mac下jekyll的安装与简单使用 
-                <i class = "icon icon-hand-right"></i> 
-              </a>
-              
-            </footer>
-          </article>
+            <!-- **************************   footer  ****************************** -->
+            <footer id = "pfl-footer">&copy; 2015-2016 by Xiyun Xiang. All Rights Reserved.</footer>
+            <!-- **************************   footer  ****************************** -->
 
-          <div id="disqus_thread"></div>
-          <script>
-                  /**
-                  * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                  * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                  */
-                  /*
-                  var disqus_config = function () {
-                  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                  };
-                  */
-                  (function() { // DON'T EDIT BELOW THIS LINE
-                    var d = document, s = d.createElement('script');
-
-                    s.src = '//heidixiang.disqus.com/embed.js';
-
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                  })();
-                  </script>
-                  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-                </section>
-
-                <section id = "blog_category">
-                  <!--header class = "tabin"> CATEGORY </header-->
-                  <!--div class = "category_content"-->
-                  <p>TABLE OF CONTENTS</p>
-                  <div id = "toc"></div>
-                  <div id = "back-to-top">
-                    <i class = 'icon icon-circle-arrow-up'></i> 
-                    BACK TO TOP
-                  </div>
-                </section>
-
-
-              </div>
-
-            </div><!-- /st-content-inner -->
-          </div><!-- /st-content -->
-        </div><!-- /st-pusher -->
-      </div><!-- /st-container -->
-      <script src="../../javascripts/classie.js"></script>
-      <script src="../../javascripts/sidebarEffects.js"></script>
-    </body>
-    </html>
+          </div>
+        </div><!-- /st-content-inner -->
+      </div><!-- /st-content -->
+  </div><!-- /st-pusher -->
+</div><!-- /st-container -->
+<script src="../../javascripts/classie.js"></script>
+<script src="../../javascripts/sidebarEffects.js"></script>
+</body>
+</html>
