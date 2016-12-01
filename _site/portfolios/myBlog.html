@@ -7,21 +7,15 @@
     <title> Heidi Xiang's Portoflio</title>
 
     <link rel="stylesheet" type="text/css" href="/stylesheets/sideBar.css" />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/project.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome-ie7.min.css"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.min.css"/>
 
-    <script src="/javascripts/modernizr.custom.js"></script>
-    <script src="/javascripts/jquery-1.11.2.min.js"></script>
-    <script src="/javascripts/jquery.easing.1.3.min.js"></script>
-    <script src="/javascripts/transit.js"></script>
-    <script src="/javascripts/sidebar.js"></script>
-    <script src="/javascripts/portfolio.js"></script>
+
   </head>
 
 
   <body>
-   <div id="st-container" class="st-container">
+    <div id="st-container" class="st-container">
 
       <div class="st-pusher">
         <nav class="st-menu st-effect-3" id="menu-3">
@@ -65,9 +59,9 @@
 
             <!-- **************************   header  ****************************** -->
             <header id = "pfl-header">
-              <img id = "logo" src = "../images/bloglogo.png" alt = "logo">
+              <img id = "logo" src = "../images/bloglogo.png" alt= "logo">
               <div id = "headline">
-                <a class = "navbar" href = "/index.html"> <span id = "home"> Home <span></a>
+                <a class = "navbar" href = "/index.html"> <span id = "home"> Home </span></a>
                 <a class = "navbar" href = "/techblog.html"> <span id = "blog"> Blog </span></a>
                 <a class = "navbar" href = "/about.html"> <span id = "about"> About </span></a>
                 <a class = "navbar" href = "/photo.html"><span id = "photo"> Photo </span></a>
@@ -75,7 +69,10 @@
             </header>
             <!-- **************************   header  ****************************** -->
 
-            <div id = 'project'>
+            
+            <link rel="stylesheet" type="text/css" href="/stylesheets/project.css" />
+
+<div id = 'project'>
 	<section id = 'left_side'>
 		<div id = 'project_title' class = 'p_title'>Xiyun's Blog</div>
 		<section id = 'right_side'>
@@ -186,42 +183,52 @@
 
 </div>
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-	$("#gallery img:not(:first-child)").hide();
-	$("#index li").css("color", "rgba(0,0,0, 1)");
-	$($("#index li").get(0)).css("color", "rgba(0, 0, 0, 0.5)");
 
-	$("#index li").mouseenter(function() {
-		$("#index li").css("color", "rgba(0,0,0, 1)");
-		$(this).css("color", "rgba(0, 0, 0, 0.5)");
-		var n = $(this).index();
-		$("#gallery img").hide();
-		$($("#gallery img").get(n)).fadeIn("slow");
-	});
 
-	$("#back-to-top").click(function(){
-		$(".st-content").scrollTop(0);
-	});
-
-});
-</script>
 
             <!-- **************************   footer  ****************************** -->
             <footer id = "pfl-footer">&copy; 2015-2016 by Xiyun Xiang. All Rights Reserved.</footer>
             <!-- **************************   footer  ****************************** -->
 
-          </div><!-- /st-content-inner -->
+          </div> <!--/st-content-inner-->
 
+        </div> <!--/st-content-->
 
-        </div><!-- st-content -->
-        
-      </div>  <!-- /st-pusher -->
-    </div><!-- /st-container -->
+      </div> <!--/st-pusher-->
+    </div>   <!--/st-container -->
 
-    <!-- Javascript -->
     <script src="/javascripts/classie.js"></script>
     <script src="/javascripts/sidebarEffects.js"></script>
-    <!-- Javascript -->
+    <script src="/javascripts/modernizr.custom.js"></script>
+    <script src="/javascripts/jquery-1.11.2.min.js"></script>
+    <script src="/javascripts/jquery.easing.1.3.min.js"></script>
+    <script src="/javascripts/transit.js"></script>
+    <script src="/javascripts/sidebar.js"></script>
+    <script src="/javascripts/portfolio.js"></script>
+    <script src="/javascripts/lightbox.js"></script>
+    <!-- javascript -->
+
+    <!-- javascript  for  portfolio page -->
+    <script type="text/javascript">
+    $(document).ready(function(){ 
+      $("#gallery img:not(:first-child)").hide();
+      $("#index li").css("color", "rgba(0,0,0, 1)");
+      $($("#index li").get(0)).css("color", "rgba(0, 0, 0, 0.5)");
+
+      $("#index li").mouseenter(function() {
+        $("#index li").css("color", "rgba(0,0,0, 1)");
+        $(this).css("color", "rgba(0, 0, 0, 0.5)");
+        var n = $(this).index();
+        $("#gallery img").hide();
+        $($("#gallery img").get(n)).fadeIn("slow");
+      });
+
+      $("#back-to-top").click(function(){
+        $(".st-content").scrollTop(0);
+      });
+
+    });
+</script>
+
   </body>
 </html>

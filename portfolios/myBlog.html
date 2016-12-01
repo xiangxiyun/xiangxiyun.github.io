@@ -1,6 +1,8 @@
 ---
-layout: projectTemplate
----     
+layout: generalTemplate
+--- 
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/project.css" />
 
 <div id = 'project'>
 	<section id = 'left_side'>
@@ -113,23 +115,4 @@ layout: projectTemplate
 
 </div>
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-	$("#gallery img:not(:first-child)").hide();
-	$("#index li").css("color", "rgba(0,0,0, 1)");
-	$($("#index li").get(0)).css("color", "rgba(0, 0, 0, 0.5)");
 
-	$("#index li").mouseenter(function() {
-		$("#index li").css("color", "rgba(0,0,0, 1)");
-		$(this).css("color", "rgba(0, 0, 0, 0.5)");
-		var n = $(this).index();
-		$("#gallery img").hide();
-		$($("#gallery img").get(n)).fadeIn("slow");
-	});
-
-	$("#back-to-top").click(function(){
-		$(".st-content").scrollTop(0);
-	});
-
-});
-</script>
