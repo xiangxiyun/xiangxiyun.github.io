@@ -23,8 +23,10 @@ Chinese version:
 
 I think the most important point is the usage of parentheses. Sometimes it can be used for matching and creating a new group. Other times, if you add '?:' , it is only used for matching and cannot be retrieved.
 
+    {% highlight bash %}
     (?:...) A non-capturing version of regular parentheses. Matches whatever regular expression is inside the parentheses, but the substring matched by the group cannot be retrieved after performing a match or referenced later in the pattern.
      --(https://docs.python.org/2/library/re.html)
+     {% endhighlight %}
 
 This character is useful when we create pattern with `|`.
 
