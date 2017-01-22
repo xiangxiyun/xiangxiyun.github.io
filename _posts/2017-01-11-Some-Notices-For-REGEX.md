@@ -33,7 +33,7 @@ I think the most important point is the usage of parentheses. Sometimes it can b
 
 This character is useful when we create pattern with `|`.
 
-##Delete List Item via Traversal (PYTHON) ##
+## Delete List Item via Traversal (PYTHON) ##
 
 ----------
 
