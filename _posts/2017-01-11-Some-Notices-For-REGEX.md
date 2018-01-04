@@ -75,4 +75,10 @@ There are three solution to deal with this kind of problem:
  1. copy the original list,  traverse the new list, use `remove()` method to remove items in original list.(This method require extra room for new list)
  2. track the list indices of all items that you want to remove from the list and then remove them outside your for-loop
  3. traverse the list in the reversed direction and remove the element required. Since the decrease of length will influence the index of elements which are behind the deleted element,  previous elements will never be influenced.
+
+
+## 3 ##
+
+----------
+
  
