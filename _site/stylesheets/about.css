@@ -1,6 +1,3 @@
-*{ margin:0; padding:0; }
-
-html{ height:100%; }
 
 body{ 
   min-height:100%;
@@ -9,86 +6,14 @@ body{
   background: rgb(246,246,246);
 }
 
-.button_column {
-  width: auto;
-}
-button{
-  z-index: 90;
-}
-a{
-  text-decoration: none;
-  color: #333333;
-}
-#i-about{
-  background-color: rgba(63,148,221, 0.7);
-}
 
-/******************** header *********************/
-#pfl-header{
-  height: 90px;
-  width: 100%;
-  background-color: rgb(21,22,27);
-}
 
-#headline{
-  float: right;
-  height: 100%;
-  line-height: 90px;
-  padding-right: 20px;
-}
-
-.navbar{
-  display: inline-block;
-  width: 100px;
-  color: rgba(255,255,255, 0.7);
-  text-decoration: none;
-  text-align: center;
-  font-family: Calibri;
-}
-
-.navbar:hover{
-  color:rgb(255,255,255);
-  font-weight: bold;
-  font-size: 22px;
-
-}
-
-#about{
-  font-weight: bold;
-  text-transform: uppercase;
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  border-bottom: 2px solid rgb(105,105,105);
-}
-#about:hover{
-  font-size: 22px;
-}
-
-#logo{
-  width: 160px;
-  padding-left: 50px;
-  padding-top: 20px;
-
-}
-
-/******************* footer *******************/
-#pfl-footer{
-  height:80px;
-  line-height:80px;
-  clear: both; /* clear the float*/
-  color: rgba(255,255,255, 0.8);
-  background-color: rgb(21,22,27);
-  text-align: center;
-  font-size: 13px;
-  font-family: 'Futura';
-
-}
 
 /***************** about content *****************/
 
 /* section: blog article */
 #about_frame{
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   padding-top: 160px;
   padding-bottom: 50px;
@@ -157,7 +82,8 @@ time{
   font-size: 17px;
   font-weight: 100;
   line-height: 30px;
-  padding: 20px 10px 10px 10px;
+  padding: 40px 10px 10px 10px;
+  margin-bottom: 30px;
 }
 
 #about_left_side{
@@ -178,19 +104,17 @@ time{
 }
 
 #skill_list{
-  padding: 20px 0 0 0;
+  padding: 20px 0 0 30px;
   font-size: 16px;
-  width: 100%;
+  width: 70%;
   margin: 0 auto;
   min-width: 300px;
 }
 
 .name{
-  width: 40%;
-  float: left;
   font-weight: 400;
   color: rgb(105,105,105);
-  text-align: right;
+  text-align: left;
   padding: 3px 5px 5px 0;
   font-family: 'Futura';
 }
@@ -212,14 +136,24 @@ time{
   color: rgba(105,105,105,0.8);
 }
 
+#about_right_side{
+    width: 90%;
+}
 #myintro{
   /*float: left;*/
-  /*padding-left: 50px;*/
-  width: auto;
+  margin-bottom: 50px;
+
+}
+
+#contact{
+
+  padding-right: 20px;
+  text-align: right;
 }
 
 #disqus_thread{
   padding: 30px;
+
 }
 
 
@@ -230,26 +164,11 @@ time{
 }
 
 
-#my_link{
-  bottom: 100px;
-  margin-left: 20px;
-  font-size: 15px;
-  font-family: 'Futura';
-  position: fixed;
-}
 
-.link_element{
-  padding: 10px;
-}
 
-.link_element .icon{
-  font-size: 25px;
-}
 
-.blog_tag{
-  height: 60px;
-  padding: 0 40px 10px 30px;
-}
+
+
 
 /***************** about responsive desgin ********************/
 @media screen and (min-width: 601px) and (max-width: 1024px){
@@ -312,102 +231,6 @@ time{
     padding: 0 40px 10px 5px;
   }
 }
-
-/******************* responsive desgin *******************/
-
-@media screen and (min-width: 1025px){
-  #pfl-header{
-    position: fixed;
-    z-index: 100;
-  }
-
-  .button_column{
-    display: none;
-  }
-
-}
-
-@media screen and (min-width: 601px) and (max-width: 1024px){
-  .button_column{
-    display: none;
-  }
-
-  #pfl-header{
-    height: 70px;
-    position: fixed;
-    z-index: 100;
-  }
-
-  #headline{
-    line-height: 70px;
-    padding-right: 15px;
-  }
-
-
-  .navbar{
-    width: 80px;
-  }
-
-  .navbar:hover{
-    font-size: 20px;
-  }
-
-  #home{
-    font-size: 18px;
-  }
-
-  #home:hover{
-    font-size: 20px;
-  }
-
-  #logo{
-    width: 140px;
-    padding-left: 50px;
-    padding-top: 18px;
-
-  }
-
-  #about_frame{
-    padding-top: 100px;
-  }
-
-}
-
-@media only screen and (max-width: 600px){
-
-  button {
-    width: 42px;
-    height: 42px;
-    margin-top: 15px;
-    margin-left: 10px;
-    background:rgb(21,22,27);
-    z-index: 150;
-  }
-
-  /* header */
-  #pfl-header{
-    height: 65px;
-  }
-  #headline{
-    display: none;
-  }
-  #logo{
-    float: right;
-    padding: 10px 30px 0 0;
-    width: 120px;
-  }
-
-  #pfl-footer{
-    height:50px;
-    line-height: 50px;
-    font-size: 10px;
-  }
-  #about_frame{
-    padding-top: 40px;
-  }
-
-}
-
 
 
 

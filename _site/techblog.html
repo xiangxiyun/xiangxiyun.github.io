@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-cn" class="no-js">
   <head>
@@ -9,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/sideBar.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome-ie7.min.css"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.min.css"/>
-
-
+    <link rel="stylesheet" type="text/css" href="/stylesheets/generalTemplate.css" />
+    
   </head>
 
 
@@ -41,12 +42,6 @@
               </a> 
             </li>
 
-<!--             <li class = 'MenuElement'> 
-              <a class="reference" id = "i-photo" href="/photo.html">
-                <i class="icon icon-lightbulb"></i> Photo
-              </a> 
-            </li> -->
-
           </ul>
         </nav>  
 
@@ -59,204 +54,382 @@
 
             <!-- **************************   header  ****************************** -->
             <header id = "pfl-header">
-              <img id = "logo" src = "../images/bloglogo.png" alt= "logo">
+              <img id = "logo" src = "/../images/bloglogo.png" alt= "logo">
+
               <div id = "headline">
                 <a class = "navbar" href = "/index.html"> <span id = "home"> Home </span></a>
                 <a class = "navbar" href = "/techblog.html"> <span id = "blog"> Blog </span></a>
                 <a class = "navbar" href = "/about.html"> <span id = "about"> About </span></a>
-<!--                 <a class = "navbar" href = "/photo.html"><span id = "photo"> Photo </span></a> -->
               </div>
             </header>
             <!-- **************************   header  ****************************** -->
 
             
-            <link rel="stylesheet" type="text/css" href="stylesheets/techBlog.css" />
+            <style>
+	#blog{
+		font-weight: bold;
+		text-transform: uppercase;
+		color: rgb(255, 255, 255);
+		font-size: 20px;
+		border-bottom: 2px solid rgb(105,105,105);
+	}
+	#blog:hover{
+		font-size: 22px;
+	}
+
+	#i-blog{
+		background-color: rgba(63,148,221, 0.7);
+	}
+
+</style>
+<link rel="stylesheet" type="text/css" href="stylesheets/techBlog.css" />
 
 <div id = "blog-section">
 
-  <section id = "blog_content">        
+	<section id = "blog_content">
+		<div post-cate = "all">
+			
+			<a class = "blog_reference" href = "/blog/Some-Notices-For-REGEX">
+			  <article class = "blog_article">
+			    <header class = "article_header">
+			      <h2 class = "ah">
+			      	SOME NOTICES FOR REGEX AND PYTHON
+			      </h2>
+			      <time> 11 January 2017 </time>
+			    </header>
+				<!--  <div class = "article_description">
+			    	<p> In the first class of SI 618,  Professor began to talk about regular expression.... Unfortunately, I almost forgot all the things about regex that I learned in university and met countless problems while doing the homework. So I tend to write them down! In case I forget again!!! </p>
+			    </div>  -->     
+				<!-- <footer class = "article_tag">
+			    	<i class = "icon icon-tags"></i>
+			    	python
+			    </footer> -->
+			  </article>
+			</a>
+			
+			<a class = "blog_reference" href = "/blog/%E6%96%B0%E5%B9%B4%E5%88%B0">
+			  <article class = "blog_article">
+			    <header class = "article_header">
+			      <h2 class = "ah">
+			      	新年到 :-)
+			      </h2>
+			      <time> 01 January 2016 </time>
+			    </header>
+				<!--  <div class = "article_description">
+			    	<p> 没想到2015年还是用它飞快的步伐离开了我，这一年里的确收获良多。 </p>
+			    </div>  -->     
+				<!-- <footer class = "article_tag">
+			    	<i class = "icon icon-tags"></i>
+			    	essay
+			    </footer> -->
+			  </article>
+			</a>
+			
+			<a class = "blog_reference" href = "/blog/python3-urllib">
+			  <article class = "blog_article">
+			    <header class = "article_header">
+			      <h2 class = "ah">
+			      	python3 urllib
+			      </h2>
+			      <time> 28 November 2015 </time>
+			    </header>
+				<!--  <div class = "article_description">
+			    	<p> 之前写了篇总结HTTP协议的文章，今天来总结pyhton3的urllib库，我只挑了些我已经用到的来介绍。实习boss要求项目用python3，所以开始了python3的学习。而网上大多都是python2的教程，所以我就艰难的从官方文档开始学习了。这篇文章有点官方文档译文的性质。话说，虽然已经考过了托福和GRE，怎么感觉看个英文文档还是这么吃力呢…… </p>
+			    </div>  -->     
+				<!-- <footer class = "article_tag">
+			    	<i class = "icon icon-tags"></i>
+			    	python
+			    </footer> -->
+			  </article>
+			</a>
+			
+			<a class = "blog_reference" href = "/blog/HTTP%E5%88%9D%E8%A7%A3">
+			  <article class = "blog_article">
+			    <header class = "article_header">
+			      <h2 class = "ah">
+			      	HTTP初解
+			      </h2>
+			      <time> 25 November 2015 </time>
+			    </header>
+				<!--  <div class = "article_description">
+			    	<p> 这几天在公司写爬虫，一直都在和bug做斗争，所以停了几天没管blog。今天爬虫终于基本调好了，回头想想，困扰我最多的就是http网络协议了。想要爬数据，必须懂http，而以前学的计算机网络只为了应试，基本都忘光了。这几天实战，慢慢觉得有些理解原来学的那些协议，于是颇有“纸上得来终觉浅，得知此事要躬行”的感慨，所以在这篇博客里面总结一下。 </p>
+			    </div>  -->     
+				<!-- <footer class = "article_tag">
+			    	<i class = "icon icon-tags"></i>
+			    	网络协议
+			    </footer> -->
+			  </article>
+			</a>
+			
+			<a class = "blog_reference" href = "/blog/jekyll%E7%9A%84%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E8%AE%BE%E7%BD%AE">
+			  <article class = "blog_article">
+			    <header class = "article_header">
+			      <h2 class = "ah">
+			      	jekyll的代码高亮设置
+			      </h2>
+			      <time> 15 November 2015 </time>
+			    </header>
+				<!--  <div class = "article_description">
+			    	<p> 昨天弄了一天，终于将代highlight给搞定了，不过还存留了一个缩进的问题，看看之后能不能解决。网上设置github＋jekyll代码高亮的教程大多说的不是很详细，所以我写下这篇教程主要记录如何设置jekyll中的代码高亮。 </p>
+			    </div>  -->     
+				<!-- <footer class = "article_tag">
+			    	<i class = "icon icon-tags"></i>
+			    	jekyll
+			    </footer> -->
+			  </article>
+			</a>
+			
+			<a class = "blog_reference" href = "/blog/mac%E4%B8%8Bjekyll%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8">
+			  <article class = "blog_article">
+			    <header class = "article_header">
+			      <h2 class = "ah">
+			      	mac下jekyll的安装与简单使用
+			      </h2>
+			      <time> 13 November 2015 </time>
+			    </header>
+				<!--  <div class = "article_description">
+			    	<p> 前天调通blog在了github上的jekyll设置，然后我一直傻傻的用提交刷新网页的方式来调试……直到今天到了办公室才醒悟过来应该在本机上搭一个jekyll。于是我先在办公室的iMac上按照教程轻松搭好了，然后回到宿舍又准备再搭一次，结果就遇到很多问题。这篇文章记录了我在安装过程中遇到的一系列问题，供大家参考。 </p>
+			    </div>  -->     
+				<!-- <footer class = "article_tag">
+			    	<i class = "icon icon-tags"></i>
+			    	jekyll
+			    </footer> -->
+			  </article>
+			</a>
+			
+			<a class = "blog_reference" href = "/blog/hello-world">
+			  <article class = "blog_article">
+			    <header class = "article_header">
+			      <h2 class = "ah">
+			      	Hello World
+			      </h2>
+			      <time> 11 November 2015 </time>
+			    </header>
+				<!--  <div class = "article_description">
+			    	<p> “hello world” 应该是每个准程序员和程序员与PC交流的第一句话吧。还记得高中稀里糊涂地开始学C语言，当我看到屏幕上弹出我敲进去的这么一句话时，真的觉得自己进入了一个新的世界。所以，从一开始我就毫不犹豫地决定了，一旦博客搭好，我第一篇文章的名字一定要是 “hello world”。这是我第一篇文章，留作纪念。 </p>
+			    </div>  -->     
+				<!-- <footer class = "article_tag">
+			    	<i class = "icon icon-tags"></i>
+			    	essay
+			    </footer> -->
+			  </article>
+			</a>
+			
+		</div>
 	
-	<a class = "blog_reference" href = "/blog/Some-Notices-For-REGEX">
-	  <article class = "blog_article">
-	    <header class = "article_header">
-	      <h2 class = "ah">
-	      	SOME NOTICES FOR REGEX AND PYTHON
-	      </h2>
-	      <time> 11 January 2017 </time>
-	    </header>
-	    <div class = "article_description">
-	    	<p> In the first class of SI 618,  Professor began to talk about regular expression.... Unfortunately, I almost forgot all the things about regex that I learned in university and met countless problems while doing the homework. So I tend to write them down! In case I forget again!!! </p>
-	    </div>      
-	    <footer class = "article_tag">
-	    	<i class = "icon icon-tags"></i>
-	    	python
-	    </footer>
-	  </article>
-	</a>
+		
+		<div post-cate = "essay">
+			
+				<a class = "blog_reference" href = "/blog/%E6%96%B0%E5%B9%B4%E5%88%B0">
+				  <article class = "blog_article">
+				    <header class = "article_header">
+				      <h2 class = "ah">
+				      	新年到 :-)
+				      </h2>
+				      <time> 01 January 2016 </time>
+				    </header>
+				<!-- <div class = "article_description">
+				    	<p> 没想到2015年还是用它飞快的步伐离开了我，这一年里的确收获良多。 </p>
+				    </div>  -->     
+				<!-- <footer class = "article_tag">
+				    	<i class = "icon icon-tags"></i>
+				    	essay
+				    </footer> -->
+				  </article>
+				</a>
+			
+				<a class = "blog_reference" href = "/blog/hello-world">
+				  <article class = "blog_article">
+				    <header class = "article_header">
+				      <h2 class = "ah">
+				      	Hello World
+				      </h2>
+				      <time> 11 November 2015 </time>
+				    </header>
+				<!-- <div class = "article_description">
+				    	<p> “hello world” 应该是每个准程序员和程序员与PC交流的第一句话吧。还记得高中稀里糊涂地开始学C语言，当我看到屏幕上弹出我敲进去的这么一句话时，真的觉得自己进入了一个新的世界。所以，从一开始我就毫不犹豫地决定了，一旦博客搭好，我第一篇文章的名字一定要是 “hello world”。这是我第一篇文章，留作纪念。 </p>
+				    </div>  -->     
+				<!-- <footer class = "article_tag">
+				    	<i class = "icon icon-tags"></i>
+				    	essay
+				    </footer> -->
+				  </article>
+				</a>
+			
+		</div>
 	
-	<a class = "blog_reference" href = "/blog/%E6%96%B0%E5%B9%B4%E5%88%B0">
-	  <article class = "blog_article">
-	    <header class = "article_header">
-	      <h2 class = "ah">
-	      	新年到 :-)
-	      </h2>
-	      <time> 01 January 2016 </time>
-	    </header>
-	    <div class = "article_description">
-	    	<p> 没想到2015年还是用它飞快的步伐离开了我，这一年里的确收获良多。 </p>
-	    </div>      
-	    <footer class = "article_tag">
-	    	<i class = "icon icon-tags"></i>
-	    	essay
-	    </footer>
-	  </article>
-	</a>
+		
+		<div post-cate = "jekyll">
+			
+				<a class = "blog_reference" href = "/blog/jekyll%E7%9A%84%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E8%AE%BE%E7%BD%AE">
+				  <article class = "blog_article">
+				    <header class = "article_header">
+				      <h2 class = "ah">
+				      	jekyll的代码高亮设置
+				      </h2>
+				      <time> 15 November 2015 </time>
+				    </header>
+				<!-- <div class = "article_description">
+				    	<p> 昨天弄了一天，终于将代highlight给搞定了，不过还存留了一个缩进的问题，看看之后能不能解决。网上设置github＋jekyll代码高亮的教程大多说的不是很详细，所以我写下这篇教程主要记录如何设置jekyll中的代码高亮。 </p>
+				    </div>  -->     
+				<!-- <footer class = "article_tag">
+				    	<i class = "icon icon-tags"></i>
+				    	jekyll
+				    </footer> -->
+				  </article>
+				</a>
+			
+				<a class = "blog_reference" href = "/blog/mac%E4%B8%8Bjekyll%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8">
+				  <article class = "blog_article">
+				    <header class = "article_header">
+				      <h2 class = "ah">
+				      	mac下jekyll的安装与简单使用
+				      </h2>
+				      <time> 13 November 2015 </time>
+				    </header>
+				<!-- <div class = "article_description">
+				    	<p> 前天调通blog在了github上的jekyll设置，然后我一直傻傻的用提交刷新网页的方式来调试……直到今天到了办公室才醒悟过来应该在本机上搭一个jekyll。于是我先在办公室的iMac上按照教程轻松搭好了，然后回到宿舍又准备再搭一次，结果就遇到很多问题。这篇文章记录了我在安装过程中遇到的一系列问题，供大家参考。 </p>
+				    </div>  -->     
+				<!-- <footer class = "article_tag">
+				    	<i class = "icon icon-tags"></i>
+				    	jekyll
+				    </footer> -->
+				  </article>
+				</a>
+			
+		</div>
 	
-	<a class = "blog_reference" href = "/blog/python3-urllib">
-	  <article class = "blog_article">
-	    <header class = "article_header">
-	      <h2 class = "ah">
-	      	python3 urllib
-	      </h2>
-	      <time> 28 November 2015 </time>
-	    </header>
-	    <div class = "article_description">
-	    	<p> 之前写了篇总结HTTP协议的文章，今天来总结pyhton3的urllib库，我只挑了些我已经用到的来介绍。实习boss要求项目用python3，所以开始了python3的学习。而网上大多都是python2的教程，所以我就艰难的从官方文档开始学习了。这篇文章有点官方文档译文的性质。话说，虽然已经考过了托福和GRE，怎么感觉看个英文文档还是这么吃力呢…… </p>
-	    </div>      
-	    <footer class = "article_tag">
-	    	<i class = "icon icon-tags"></i>
-	    	python
-	    </footer>
-	  </article>
-	</a>
+		
+		<div post-cate = "网络协议">
+			
+				<a class = "blog_reference" href = "/blog/HTTP%E5%88%9D%E8%A7%A3">
+				  <article class = "blog_article">
+				    <header class = "article_header">
+				      <h2 class = "ah">
+				      	HTTP初解
+				      </h2>
+				      <time> 25 November 2015 </time>
+				    </header>
+				<!-- <div class = "article_description">
+				    	<p> 这几天在公司写爬虫，一直都在和bug做斗争，所以停了几天没管blog。今天爬虫终于基本调好了，回头想想，困扰我最多的就是http网络协议了。想要爬数据，必须懂http，而以前学的计算机网络只为了应试，基本都忘光了。这几天实战，慢慢觉得有些理解原来学的那些协议，于是颇有“纸上得来终觉浅，得知此事要躬行”的感慨，所以在这篇博客里面总结一下。 </p>
+				    </div>  -->     
+				<!-- <footer class = "article_tag">
+				    	<i class = "icon icon-tags"></i>
+				    	网络协议
+				    </footer> -->
+				  </article>
+				</a>
+			
+		</div>
 	
-	<a class = "blog_reference" href = "/blog/HTTP%E5%88%9D%E8%A7%A3">
-	  <article class = "blog_article">
-	    <header class = "article_header">
-	      <h2 class = "ah">
-	      	HTTP初解
-	      </h2>
-	      <time> 25 November 2015 </time>
-	    </header>
-	    <div class = "article_description">
-	    	<p> 这几天在公司写爬虫，一直都在和bug做斗争，所以停了几天没管blog。今天爬虫终于基本调好了，回头想想，困扰我最多的就是http网络协议了。想要爬数据，必须懂http，而以前学的计算机网络只为了应试，基本都忘光了。这几天实战，慢慢觉得有些理解原来学的那些协议，于是颇有“纸上得来终觉浅，得知此事要躬行”的感慨，所以在这篇博客里面总结一下。 </p>
-	    </div>      
-	    <footer class = "article_tag">
-	    	<i class = "icon icon-tags"></i>
-	    	网络协议
-	    </footer>
-	  </article>
-	</a>
+		
+		<div post-cate = "python">
+			
+				<a class = "blog_reference" href = "/blog/Some-Notices-For-REGEX">
+				  <article class = "blog_article">
+				    <header class = "article_header">
+				      <h2 class = "ah">
+				      	SOME NOTICES FOR REGEX AND PYTHON
+				      </h2>
+				      <time> 11 January 2017 </time>
+				    </header>
+				<!-- <div class = "article_description">
+				    	<p> In the first class of SI 618,  Professor began to talk about regular expression.... Unfortunately, I almost forgot all the things about regex that I learned in university and met countless problems while doing the homework. So I tend to write them down! In case I forget again!!! </p>
+				    </div>  -->     
+				<!-- <footer class = "article_tag">
+				    	<i class = "icon icon-tags"></i>
+				    	python
+				    </footer> -->
+				  </article>
+				</a>
+			
+				<a class = "blog_reference" href = "/blog/python3-urllib">
+				  <article class = "blog_article">
+				    <header class = "article_header">
+				      <h2 class = "ah">
+				      	python3 urllib
+				      </h2>
+				      <time> 28 November 2015 </time>
+				    </header>
+				<!-- <div class = "article_description">
+				    	<p> 之前写了篇总结HTTP协议的文章，今天来总结pyhton3的urllib库，我只挑了些我已经用到的来介绍。实习boss要求项目用python3，所以开始了python3的学习。而网上大多都是python2的教程，所以我就艰难的从官方文档开始学习了。这篇文章有点官方文档译文的性质。话说，虽然已经考过了托福和GRE，怎么感觉看个英文文档还是这么吃力呢…… </p>
+				    </div>  -->     
+				<!-- <footer class = "article_tag">
+				    	<i class = "icon icon-tags"></i>
+				    	python
+				    </footer> -->
+				  </article>
+				</a>
+			
+		</div>
 	
-	<a class = "blog_reference" href = "/blog/jekyll%E7%9A%84%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E8%AE%BE%E7%BD%AE">
-	  <article class = "blog_article">
-	    <header class = "article_header">
-	      <h2 class = "ah">
-	      	jekyll的代码高亮设置
-	      </h2>
-	      <time> 15 November 2015 </time>
-	    </header>
-	    <div class = "article_description">
-	    	<p> 昨天弄了一天，终于将代highlight给搞定了，不过还存留了一个缩进的问题，看看之后能不能解决。网上设置github＋jekyll代码高亮的教程大多说的不是很详细，所以我写下这篇教程主要记录如何设置jekyll中的代码高亮。 </p>
-	    </div>      
-	    <footer class = "article_tag">
-	    	<i class = "icon icon-tags"></i>
-	    	jekyll
-	    </footer>
-	  </article>
-	</a>
-	
-	<a class = "blog_reference" href = "/blog/mac%E4%B8%8Bjekyll%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8">
-	  <article class = "blog_article">
-	    <header class = "article_header">
-	      <h2 class = "ah">
-	      	mac下jekyll的安装与简单使用
-	      </h2>
-	      <time> 13 November 2015 </time>
-	    </header>
-	    <div class = "article_description">
-	    	<p> 前天调通blog在了github上的jekyll设置，然后我一直傻傻的用提交刷新网页的方式来调试……直到今天到了办公室才醒悟过来应该在本机上搭一个jekyll。于是我先在办公室的iMac上按照教程轻松搭好了，然后回到宿舍又准备再搭一次，结果就遇到很多问题。这篇文章记录了我在安装过程中遇到的一系列问题，供大家参考。 </p>
-	    </div>      
-	    <footer class = "article_tag">
-	    	<i class = "icon icon-tags"></i>
-	    	jekyll
-	    </footer>
-	  </article>
-	</a>
-	
-	<a class = "blog_reference" href = "/blog/hello-world">
-	  <article class = "blog_article">
-	    <header class = "article_header">
-	      <h2 class = "ah">
-	      	Hello World
-	      </h2>
-	      <time> 11 November 2015 </time>
-	    </header>
-	    <div class = "article_description">
-	    	<p> “hello world” 应该是每个准程序员和程序员与PC交流的第一句话吧。还记得高中稀里糊涂地开始学C语言，当我看到屏幕上弹出我敲进去的这么一句话时，真的觉得自己进入了一个新的世界。所以，从一开始我就毫不犹豫地决定了，一旦博客搭好，我第一篇文章的名字一定要是 “hello world”。这是我第一篇文章，留作纪念。 </p>
-	    </div>      
-	    <footer class = "article_tag">
-	    	<i class = "icon icon-tags"></i>
-	    	essay
-	    </footer>
-	  </article>
-	</a>
-	
-</section>
 
-<section id = "right_sider">
-	<section id = "blog_category">
-		<p>CATEGORY</p>
-		<div id = "category_cloud">
-	    	<div class = "category_element"> 
-		        <a href="javascript:;" onclick="showCategory('ALL')"> all (7)</a>
+	</section>
+
+	<section id = "right_sider">
+		<section id = "blog_category">
+			<p>CATEGORY</p>
+			<div id = "category_cloud">
+		    	<div class = "category_element"> 
+			        <a class = "ce" cate = 'all' href="javascript:;"> all (7)</a>
+			    </div>
+				 
+			       	<div class = "category_element"> 
+			        	<a class = "ce" cate = 'essay' href="javascript:;"> essay (2)</a>
+			       	</div>
+			     
+			       	<div class = "category_element"> 
+			        	<a class = "ce" cate = 'jekyll' href="javascript:;"> jekyll (2)</a>
+			       	</div>
+			     
+			       	<div class = "category_element"> 
+			        	<a class = "ce" cate = '网络协议' href="javascript:;"> 网络协议 (1)</a>
+			       	</div>
+			     
+			       	<div class = "category_element"> 
+			        	<a class = "ce" cate = 'python' href="javascript:;"> python (2)</a>
+			       	</div>
+			    
 		    </div>
-			 
-		       	<div class = "category_element"> 
-		        	<a href="javascript:;" onclick="showCategory('essay')"> essay (2)</a>
-		       	</div>
-		     
-		       	<div class = "category_element"> 
-		        	<a href="javascript:;" onclick="showCategory('jekyll')"> jekyll (2)</a>
-		       	</div>
-		     
-		       	<div class = "category_element"> 
-		        	<a href="javascript:;" onclick="showCategory('网络协议')"> 网络协议 (1)</a>
-		       	</div>
-		     
-		       	<div class = "category_element"> 
-		        	<a href="javascript:;" onclick="showCategory('python')"> python (2)</a>
-		       	</div>
-		    
-	    </div>
+		</section>
+
+		<section id = "friends_link">
+		</section>
 	</section>
 
-	<section id = "friends_link">
-	</section>
-</section>
 
 </div>
 
+          <!-- **************************   footer  ****************************** -->
+          <footer id = "pfl-footer">&copy; 2017-2018 by Xiyun Xiang. All Rights Reserved. 
+            <a href = "https://github.com/xiangxiyun">
+              <img class = "footlink" src = "/images/GitHub-Mark-Light-32px.png" alt = "github">
+            </a>
+            <a href = "https://linkedin.com/in/xiyunxiang">
+              <img class = "footlink" src = "/images/Logo-White-34px-R.png" alt = "linkin">
+            </a>
+          </footer>
+          <!-- **************************   footer  ****************************** -->
 
-
-            <!-- **************************   footer  ****************************** -->
-            <footer id = "pfl-footer">&copy; 2015-2016 by Xiyun Xiang. All Rights Reserved.</footer>
-            <!-- **************************   footer  ****************************** -->
 
           </div> <!--/st-content-inner-->
 
         </div> <!--/st-content-->
 
       </div> <!--/st-pusher-->
+
     </div>   <!--/st-container -->
 
     <script src="/javascripts/classie.js"></script>
-    <script src="/javascripts/sidebarEffects.js"></script>
+
     <script src="/javascripts/modernizr.custom.js"></script>
     <script src="/javascripts/jquery-1.11.2.min.js"></script>
     <script src="/javascripts/jquery.easing.1.3.min.js"></script>
     <script src="/javascripts/transit.js"></script>
+    <script src="/javascripts/sidebarEffects.js"></script>
     <script src="/javascripts/sidebar.js"></script>
+    <script src="/javascripts/article.js"></script>
+    <script src="/javascripts/techBlog.js"></script>
     <script src="/javascripts/portfolio.js"></script>
     <script src="/javascripts/lightbox.js"></script>
     <!-- javascript -->
@@ -280,7 +453,10 @@
         $(".st-content").scrollTop(0);
       });
 
+
+
     });
+
 </script>
 
   </body>

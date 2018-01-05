@@ -1,400 +1,226 @@
-      *{ margin:0; padding:0; }
-      
-      html{ height:100%; }
-
-      body{ 
-        min-height:100%;
-        font-family: 'Helvetica', Calibri, Arial, sans-serif;
-        position:relative;
-        background: rgb(246,246,246);
-      }
-
-      .button_column {
-        width: auto;
-      }
-      button{
-        z-index: 90;
-      }
-      a{
-        text-decoration: none;
-        color: #333333;
-      }
-      #i-blog{
-        background-color: rgba(63,148,221, 0.7);
-      }
-
-      /******************** header *********************/
-      #pfl-header{
-        height: 90px;
-        width: 100%;
-        background-color: rgb(21,22,27);
-      }
-
-      #headline{
-        float: right;
-        height: 100%;
-        line-height: 90px;
-        padding-right: 20px;
-      }
-
-      .navbar{
-        display: inline-block;
-        width: 100px;
-        color: rgba(255,255,255, 0.7);
-        text-decoration: none;
-        text-align: center;
-        font-family: Calibri;
-      }
-
-      .navbar:hover{
-        color:rgb(255,255,255);
-        font-weight: bold;
-        font-size: 22px;
-
-      }
-      #blog{
-        font-weight: bold;
-        text-transform: uppercase;
-        color: rgb(255, 255, 255);
-        font-size: 20px;
-        border-bottom: 2px solid rgb(105,105,105);
-      }
-      #blog:hover{
-        font-size: 22px;
-      }
-
-      #logo{
-        width: 160px;
-        padding-left: 50px;
-        padding-top: 20px;
-
-      }
-
-      /******************* footer *******************/
-      #pfl-footer{
-        height:80px;
-        line-height:80px;
-        clear: both; /* clear the float*/
-        color: rgba(255,255,255, 0.8);
-        background-color: rgb(21,22,27);
-        text-align: center;
-        font-size: 13px;
-        font-family: 'Futura';
-
-      }
-
-      /***************** about content *****************/
-      #blog-section{
-        width: 100%;
-      }
-
-      /* section: blog article */
-
-      #blog_content{
-        width: 70%;
-        padding: 100px 60px 50px 40px;
-        /*margin: 0 auto;*/
-        display: inline-block;
-        padding-top: 120px;
-        padding-bottom: 50px;
-      }
-
-      .blog_article{
-        height: auto;
-        margin-bottom: 40px;
-        background: rgb(255,255,255);
-        color: rgb(105,105,105);
-      }
-
-      .headline{
-        color: rgb(255,255,255);
-        float: right;
-        padding: 15px 50px 0 0;
-        font-size: 20px;
-        text-transform: uppercase;
-        font-family: 'Futura';
-      }
-
-
-
-      .article_header{
-        width: 100%;
-        height: auto;
-        border-left: 6px solid rgb(128, 166, 204);
-      }
-
-      .ah{
-        padding: 0 40px 0 20px;
-        height: 70px;
-        line-height: 70px;
-        font-size: 24px;
-        font-weight: 400;
-        display: inline-block;
-      }
-
-      time{
-        float: right;
-        font-size: 20px;
-        font-weight: 1px;
-        color: #cccccc;
-        padding: 10px 25px 0 10px;
-        font-family: 'Futura';
-      }
-
-      .article_description {
-        text-align: left;
-        font-size: 17px;
-        font-weight: 100;
-        line-height: 30px;
-        padding: 20px 40px 10px 30px;
-        
-      }
-
-      .article_tag{
-          font-size: 16px;
-          padding: 5px 20px 10px 25px;
-      }
-      /* section: blog category */
-
-      #right_sider{
-        width: 30%;
-        right: 0;
-        top: 130px;
-        position: fixed;
-
-      }
-
-      #blog_category{
-        width: 80%;
-        margin: 0 auto;
-        border-left: 1px solid rgb(105,105,105);
-      }
-
-      #blog_category p{
-        font-size: 20px;
-        font-weight: 400;
-        margin:5px 10px 10px 20px;
-        color: rgb(105,105,105);
-        text-align: left;
-        padding: 5px 10px 10px 10px;
-        font-family: 'Futura';
-
-      }
-
-
-      #category_cloud{
-        margin: 20px 20px 20px 30px;
-        overflow: auto;
-        max-height: 500px;
-      }
-
-      .category_element{
-        width: auto;
-        margin: 4px 2px 6px 2px;
-        padding: 1px 6px 1px 6px;
-        border-radius: 4px; 
-        float: left; 
-        background: rgb(128, 166, 204);
-
-      }
-      .category_element:hover{
-        background: rgba(128, 166, 204, 0.8);
-      }
-
-      .category_element a{
-        font-size: 14px;
-        display: block;
-        height: 30px;
-        line-height: 30px;
-        font-family: 'Futura';
-        color: rgb(255, 255, 255);
-        text-transform: uppercase;
-      }
-
-
-     /******************* blog responsive desgin *******************/
-
-      @media screen and ( min-width: 1300px ) {
-        #blog-section{
-          width: 80%;
-          margin: 0 auto;
-        }
-      }
-
-      @media screen and ( min-width: 601px ) and ( max-width: 1024px){
-
-        #blog-section{
-          width: 100%;
-        }
-        #right_sider{
-          display: none;
-        } 
-        #blog_content{
-          width: 100%;
-          margin: 0 auto;
-        }
-        .article_header{
-          border-left: 3px solid rgb(128, 166, 204);
-        }
-        .ah{
-          padding-left: 15px;
-          height: 40px;
-          line-height: 40px;
-          font-size: 20px;
-
-        }
-        time{
-          float: right;
-          padding: 10px 10px 0 10px;
-          font-size: 17px;
-        }
-        .article_description {
-          font-size: 16px;
-          line-height: 30px;
-          padding: 15px 30px 10px 30px;
-        }
-        .article_tag{
-          font-size: 16px;
-          padding: 5px 20px 10px 25px;
-        }
-      }
-
-
-      @media screen and (max-width: 600px){
-        #blog-section{
-          width: 100%;
-        }
-        #right_sider{
-          display: none;
-        } 
-        #blog_content{
-          width: 100%;
-          padding: 50px 15px 30px 15px;
-          margin: 0 auto;
-        }
-        .article_header{
-          border-left: 3px solid rgb(128, 166, 204);
-        }
-        .ah{
-          padding: 5px 10px 0 10px;
-          height: 30px;
-          line-height: 30px;
-          font-size: 16px;
-        }
-        time{
-          float: none;
-          display: block;
-          padding: 0 10px 0 10px;
-          font-size: 12px;
-        }
-        .article_description {
-          font-size: 14px;
-          line-height: 30px;
-          padding: 10px 20px 10px 20px;
-        }
-        .article_tag{
-          font-size: 13px;
-          padding: 5px 20px 10px 25px;
-        }
-
-      }
-
-
-
-
-      /******************* general responsive desgin *******************/
-
-      @media screen and (min-width: 1025px){
-        #pfl-header{
-          position: fixed;
-          z-index: 100;
-        }
-
-        .button_column{
-          display: none;
-        }
-
-      }
-
-      @media screen and (min-width: 601px) and (max-width: 1024px){
-        .button_column{
-          display: none;
-        }
-
-        #pfl-header{
-          height: 70px;
-          position: fixed;
-          z-index: 100;
-        }
-
-        #headline{
-          line-height: 70px;
-          padding-right: 15px;
-        }
-
-
-        .navbar{
-          width: 80px;
-        }
-
-        .navbar:hover{
-          font-size: 20px;
-        }
-
-        #blog{
-          font-size: 18px;
-        }
-
-        #blog:hover{
-          font-size: 20px;
-        }
-
-        #logo{
-          width: 140px;
-          padding-left: 50px;
-          padding-top: 18px;
-
-        }
-
-
-
-      }
-
-      @media only screen and (max-width: 600px){
-
-        button {
-          width: 42px;
-          height: 42px;
-          margin-top: 15px;
-          margin-left: 10px;
-          background:rgb(21,22,27);
-          z-index: 150;
-        }
-
-        /* header */
-        #pfl-header{
-          height: 65px;
-        }
-        #headline{
-          display: none;
-        }
-        #logo{
-          float: right;
-          padding: 10px 30px 0 0;
-          width: 120px;
-        }
-
-        #pfl-footer{
-          height:50px;
-          line-height: 50px;
-          font-size: 10px;
-        }
-
-        #blog_content{
-          padding-top: 50px;
-        }
-
-      }
+
+body{ 
+  min-height:100%;
+  font-family: 'Helvetica', Calibri, Arial, sans-serif;
+  position:relative;
+  background: rgb(246,246,246);
+}
+
+/***************** blog list *****************/
+#blog-section{
+  /*height: 100%;*/
+  width: 100%;
+}
+
+/* section: blog article */
+
+#blog_content{
+  width: 70%;
+  padding: 100px 60px 50px 40px;
+  /*margin: 0 auto;*/
+  display: inline-block;
+  padding-top: 120px;
+  padding-bottom: 50px;
+}
+
+.blog_article{
+  height: auto;
+  margin-bottom: 15px;
+  background: rgb(255,255,255);
+  color: rgb(105,105,105);
+}
+
+.headline{
+  color: rgb(255,255,255);
+  float: right;
+  padding: 15px 50px 0 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Futura';
+}
+
+
+
+.article_header{
+  width: 100%;
+  height: auto;
+  border-left: 6px solid rgb(128, 166, 204);
+}
+
+.ah{
+  padding: 0 40px 0 15px;
+  height: auto;
+  line-height: 50px;
+  font-size: 17px;
+  font-weight: 400;
+  display: inline-block;
+}
+
+time{
+  float: right;
+  font-size: 15px;
+  font-weight: 1px;
+  /*color: #fccccf;*/
+  padding: 10px 25px 0 10px;
+  font-family: 'Futura';
+}
+
+.article_description {
+  text-align: left;
+  font-size: 17px;
+  font-weight: 100;
+  line-height: 30px;
+  padding: 20px 40px 10px 30px;
+  
+}
+
+.article_tag{
+    font-size: 16px;
+    padding: 5px 20px 10px 25px;
+}
+/* section: blog category */
+
+#right_sider{
+  width: 30%;
+  right: 0;
+  top: 130px;
+  position: fixed;
+
+}
+
+#blog_category{
+  width: 80%;
+  margin: 0 auto;
+  border-left: 2px solid rgb(105,105,105);
+}
+
+#blog_category p{
+  font-size: 20px;
+  font-weight: 400;
+  margin:5px 10px 10px 20px;
+  color: rgb(105,105,105);
+  text-align: left;
+  padding: 5px 10px 10px 10px;
+  font-family: 'Futura';
+
+}
+
+#category_cloud{
+  margin: 20px 20px 20px 30px;
+  overflow: auto;
+  max-height: 500px;
+}
+
+.category_element{
+  width: auto;
+  margin: 4px 2px 6px 2px;
+  padding: 1px 6px 1px 6px;
+  border-radius: 4px; 
+  float: left; 
+  background: rgb(128, 166, 204);
+
+}
+.category_element:hover{
+  background: rgba(128, 166, 204, 0.8);
+}
+
+.category_element a{
+  font-size: 14px;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  font-family: 'Futura';
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+
+
+/******************* responsive desgin *******************/
+
+@media screen and ( min-width: 1300px ) {
+  #blog-section{
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and ( min-width: 601px ) and ( max-width: 1024px){
+
+  #blog-section{
+    width: 100%;
+  }
+  #right_sider{
+    display: none;
+  } 
+  #blog_content{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .article_header{
+    border-left: 6px solid rgb(128, 166, 204);
+  }
+  .ah{
+    padding-left: 15px;
+    height: auto;
+    line-height: auto;
+    font-size: 17px;
+
+  }
+  time{
+    float: right;
+    padding: 10px 10px 0 10px;
+    font-size: 15px;
+  }
+  .article_description {
+    font-size: 16px;
+    line-height: 30px;
+    padding: 15px 30px 10px 30px;
+  }
+  .article_tag{
+    font-size: 16px;
+    padding: 5px 20px 10px 25px;
+  }
+}
+
+
+@media screen and (max-width: 600px){
+  #blog-section{
+    width: 100%;
+  }
+  #right_sider{
+    display: none;
+  } 
+  #blog_content{
+    width: 100%;
+    padding: 50px 15px 30px 15px;
+    margin: 0 auto;
+  }
+  .article_header{
+    border-left: 6px solid rgb(128, 166, 204);
+  }
+  .ah{
+    padding: 5px 10px 0 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+  }
+  time{
+    float: none;
+    display: block;
+    padding: 0 10px 0 10px;
+    font-size: 12px;
+  }
+  .article_description {
+    font-size: 14px;
+    line-height: 30px;
+    padding: 10px 20px 10px 20px;
+  }
+  .article_tag{
+    font-size: 13px;
+    padding: 5px 20px 10px 25px;
+  }
+
+}
 
 
 

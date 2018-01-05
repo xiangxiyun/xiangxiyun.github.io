@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-cn" class="no-js">
   <head>
@@ -9,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/sideBar.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome-ie7.min.css"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.min.css"/>
-
-
+    <link rel="stylesheet" type="text/css" href="/stylesheets/generalTemplate.css" />
+    
   </head>
 
 
@@ -41,12 +42,6 @@
               </a> 
             </li>
 
-<!--             <li class = 'MenuElement'> 
-              <a class="reference" id = "i-photo" href="/photo.html">
-                <i class="icon icon-lightbulb"></i> Photo
-              </a> 
-            </li> -->
-
           </ul>
         </nav>  
 
@@ -59,18 +54,37 @@
 
             <!-- **************************   header  ****************************** -->
             <header id = "pfl-header">
-              <img id = "logo" src = "../images/bloglogo.png" alt= "logo">
+              <img id = "logo" src = "/../images/bloglogo.png" alt= "logo">
+
               <div id = "headline">
                 <a class = "navbar" href = "/index.html"> <span id = "home"> Home </span></a>
                 <a class = "navbar" href = "/techblog.html"> <span id = "blog"> Blog </span></a>
                 <a class = "navbar" href = "/about.html"> <span id = "about"> About </span></a>
-<!--                 <a class = "navbar" href = "/photo.html"><span id = "photo"> Photo </span></a> -->
               </div>
             </header>
             <!-- **************************   header  ****************************** -->
 
             
-            <link rel="stylesheet" type="text/css" href="stylesheets/about.css" />
+            <style>
+
+      #about{
+        font-weight: bold;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        border-bottom: 2px solid rgb(105,105,105);
+      }
+      #about:hover{
+        font-size: 22px;
+      }
+
+      #i-about{
+        background-color: rgba(63,148,221, 0.7);
+      }
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/about.css" />
 
 <div id = "about_frame">
   <section id = "about_content">        
@@ -78,7 +92,7 @@
       <header class = "article_header">
         <h2 class = "ah">
           About Me
-          <time> 2016/11/05 </time>
+          <time> 2018/01/04 </time>
         </h2>
       </header>
       <div class = "blog_description">
@@ -89,74 +103,37 @@
           </div>
 
           <div id = "skill_list">
+            
+            <span class = 'name'> SKILLS: </span>
             <div class = 'skill_element'> 
-              <div class = 'name'> SKILL </div> 
-              <div class = 'progress-bar'> </div> 
+              <span class = 'name'> Python, </span> 
+              <span class = 'name'> Java, </span> 
+              <span class = 'name'> Machine Learning, </span> 
+              <span class = 'name'> NLP, </span> 
+              <span class = 'name'> Data Science,</span> 
+              <span class = 'name'> HTML/CSS </span> 
             </div>
-            <div class = 'skill_element'> 
-              <div class = 'name'> Python </div> 
-              <div class = 'progress-bar'> 
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star-empty'> </i>
-              </div> 
-            </div>
-            <div class = 'skill_element'> 
-              <div class = 'name'> HTML/CSS </div> 
-              <div class = 'progress-bar'> 
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star-empty'> </i>
-              </div> 
-            </div>
-            <div class = 'skill_element'> 
-              <div class = 'name'> Javascript </div> 
-              <div class = 'progress-bar'>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star-empty'> </i>
-                <i class = 'icon icon-star-empty'> </i>
-              </div> 
-            </div>
-            <div class = 'skill_element'> 
-              <div class = 'name'> C++ </div> 
-              <div class = 'progress-bar'>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star-empty'> </i>
-                <i class = 'icon icon-star-empty'> </i>
-              </div> 
-            </div>
+            
+
           </div>
         </div>
 
-        <div id = "myintro">
-          <p>
-            Hello, I'm Xiang Xiyun. Call me Heidi is OK <br> <br>
-            I grew up in ShenZhen, China. <br><br>
-            I received my B.E. in Computer Science
-            from the Sun Yet-sen University. I'm excited to be a 
-            programmer after graduate.<br><br>
-
-            I like watching movies and singing if I have spare time.
-
-            <br><br><br><br>
-          </p>
-
-
+        <div id ="about_right_side" >
+          <div id = "myintro">
+            <p>
+              Hi, I'm Xiyun Xiang.<br>
+              A second year master student from University of Michigan, School of Information. 
+              I received my B.E. degree in Software Engineering from the Sun Yet-sen University. 
+              Now, I'm interested in data science and machine learning. I hope this blog can help
+              me to keep the treasure I met.
+            </p>
+          </div>    
           <div id = "contact">
-            <footer class = "blog_tag">
-              <i class = "icon icon-tags"></i>
-              about me
-            </footer>
+              <a href = "https://github.com/xiangxiyun"><img src = "../images/GitHub-Mark-32px.png" alt = "github"></a>
+              <a href = "https://linkedin.com/in/xiyunxiang"><img src = "../images/Logo-Black-34px-R.png" alt = "linkin"></a>
           </div>
-        </div>      
+        </div>
+
       </div>
 
       <div id="disqus_thread"></div>
@@ -189,24 +166,36 @@
 
 
 
-            <!-- **************************   footer  ****************************** -->
-            <footer id = "pfl-footer">&copy; 2015-2016 by Xiyun Xiang. All Rights Reserved.</footer>
-            <!-- **************************   footer  ****************************** -->
+          <!-- **************************   footer  ****************************** -->
+          <footer id = "pfl-footer">&copy; 2017-2018 by Xiyun Xiang. All Rights Reserved. 
+            <a href = "https://github.com/xiangxiyun">
+              <img class = "footlink" src = "/images/GitHub-Mark-Light-32px.png" alt = "github">
+            </a>
+            <a href = "https://linkedin.com/in/xiyunxiang">
+              <img class = "footlink" src = "/images/Logo-White-34px-R.png" alt = "linkin">
+            </a>
+          </footer>
+          <!-- **************************   footer  ****************************** -->
+
 
           </div> <!--/st-content-inner-->
 
         </div> <!--/st-content-->
 
       </div> <!--/st-pusher-->
+
     </div>   <!--/st-container -->
 
     <script src="/javascripts/classie.js"></script>
-    <script src="/javascripts/sidebarEffects.js"></script>
+
     <script src="/javascripts/modernizr.custom.js"></script>
     <script src="/javascripts/jquery-1.11.2.min.js"></script>
     <script src="/javascripts/jquery.easing.1.3.min.js"></script>
     <script src="/javascripts/transit.js"></script>
+    <script src="/javascripts/sidebarEffects.js"></script>
     <script src="/javascripts/sidebar.js"></script>
+    <script src="/javascripts/article.js"></script>
+    <script src="/javascripts/techBlog.js"></script>
     <script src="/javascripts/portfolio.js"></script>
     <script src="/javascripts/lightbox.js"></script>
     <!-- javascript -->
@@ -230,7 +219,10 @@
         $(".st-content").scrollTop(0);
       });
 
+
+
     });
+
 </script>
 
   </body>

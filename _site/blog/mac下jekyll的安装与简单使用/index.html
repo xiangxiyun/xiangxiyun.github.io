@@ -1,29 +1,24 @@
+
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>mac下jekyll的安装与简单使用 | Heidi Xiang's blog</title>
+<html lang="zh-cn" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title> Heidi Xiang's Portoflio</title>
 
-<link rel="stylesheet" type="text/css" href="../../stylesheets/sideBar.css" />
-<link rel="stylesheet" type="text/css" href="../../stylesheets/article.css" />
-<link rel="stylesheet" type="text/css" href="../../stylesheets/pygments.css" />
-<link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome-ie7.min.css"/>
-<link rel="stylesheet" type="text/css" href="../../stylesheets/font-awesome.min.css"/>
-
-<script src="../../javascripts/modernizr.custom.js"></script>
-<script src="../../javascripts/jquery-1.11.2.min.js"></script>
-<script src="../../javascripts/article.js"></script>
-<script src="../../javascripts/sidebar.js"></script>
-</head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/sideBar.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome-ie7.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/generalTemplate.css" />
+    
+  </head>
 
 
-<body>
-<div id="st-container" class="st-container">
-  
-  <div class="st-pusher">
+  <body>
+    <div id="st-container" class="st-container">
 
+      <div class="st-pusher">
         <nav class="st-menu st-effect-3" id="menu-3">
           <h2 >Index</h2>
 
@@ -47,43 +42,43 @@
               </a> 
             </li>
 
-<!--             <li class = 'MenuElement'> 
-              <a class="reference" id = "i-photo" href="/photo.html">
-                <i class="icon icon-lightbulb"></i> Photo
-              </a> 
-            </li> -->
-
           </ul>
-        </nav> 
+        </nav>  
 
-      <div class="st-content"><!-- this is the wrapper for the content -->
-        <div class="st-content-inner">
+        <div class="st-content"><!-- this is the wrapper for the content -->
+          <div class="st-content-inner">
 
-          <div id="st-trigger-effects" class="button_column">
-            <button data-effect="st-effect-3"><i class="icon icon-reorder"></i></button>
-          </div> 
+            <div id="st-trigger-effects" class="button_column">
+              <button data-effect="st-effect-3"><i class="icon icon-reorder"></i></button>
+            </div> 
+
             <!-- **************************   header  ****************************** -->
             <header id = "pfl-header">
-              <img id = "logo" src = "../../images/bloglogo.png" alt = "logo">
+              <img id = "logo" src = "/../images/bloglogo.png" alt= "logo">
+
               <div id = "headline">
                 <a class = "navbar" href = "/index.html"> <span id = "home"> Home </span></a>
                 <a class = "navbar" href = "/techblog.html"> <span id = "blog"> Blog </span></a>
                 <a class = "navbar" href = "/about.html"> <span id = "about"> About </span></a>
-<!--                 <a class = "navbar" href = "/photo.html"><span id = "photo"> Photo </span></a> -->
               </div>
             </header>
             <!-- **************************   header  ****************************** -->
 
-            <div id = "blog-section">
+            
+            <link rel="stylesheet" type="text/css" href="/../stylesheets/article.css" />
+<link rel="stylesheet" type="text/css" href="/../stylesheets/pygments.css" />
 
-              <section id = "blog_content">
-                <article class = "blog_article">
-                  <header class = "article_header">
-                    <h2 class = "ah"> mac下jekyll的安装与简单使用</h2>
-                    <time> 13 November 2015 </time>
-                  </header>
-                  <div class = "article_content">
-                    <h1 id="macjekyll">mac下jekyll的安装与简单使用</h1>
+
+  <div id = "blog-section">
+
+    <section id = "blog_content">
+      <article class = "blog_article">
+        <header class = "article_header">
+          <h2 class = "ah"> mac下jekyll的安装与简单使用</h2>
+          <time> 13 November 2015 </time>
+        </header>
+        <div class = "article_content">
+          <h1 id="macjekyll">mac下jekyll的安装与简单使用</h1>
 
 <h2 id="section">写在前面</h2>
 
@@ -240,72 +235,123 @@ Server running... press ctrl-c to stop.</code></pre></div>
 <p>这时我们就已经在本地跑起来了一个服务器了，在浏览器地址栏中输入 http://127.0.0.1:4000/ ，你就能看到一个模版blog啦～</p>
 
 
-                  <footer class = "article_tag">
-                    
-                    <a id = "next_page" href = "/blog/jekyll%E7%9A%84%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E8%AE%BE%E7%BD%AE">
-                      <i class = "icon icon-hand-left"></i> 
-                      jekyll的代码高亮设置
-                    </a>
-                    
-                    
-                    <a id = "previous_page" href = "/blog/hello-world"> 
-                      Hello World 
-                      <i class = "icon icon-hand-right"></i> 
-                    </a>
-                    
-                  </footer>
-                  </div>      
+        <footer class = "article_tag">
+          
+          <a id = "next_page" href = "/blog/jekyll%E7%9A%84%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E8%AE%BE%E7%BD%AE">
+            <i class = "icon icon-hand-left"></i> 
+            jekyll的代码高亮设置
+          </a>
+          
+          
+          <a id = "previous_page" href = "/blog/hello-world"> 
+            Hello World 
+            <i class = "icon icon-hand-right"></i> 
+          </a>
+          
+        </footer>
+        </div>      
 
-                </article>
+      </article>
 
-                <div id="disqus_thread"></div>
-                <script>
-                        /**
-                        * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                        * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                        */
-                        /*
-                        var disqus_config = function () {
-                        this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                        };
-                        */
-                        (function() { // DON'T EDIT BELOW THIS LINE
-                          var d = document, s = d.createElement('script');
+      <div id="disqus_thread"></div>
+      <script>
+              /**
+              * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+              * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+              */
+              /*
+              var disqus_config = function () {
+              this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+              };
+              */
+              (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
 
-                          s.src = '//heidixiang.disqus.com/embed.js';
+                s.src = '//heidixiang.disqus.com/embed.js';
 
-                          s.setAttribute('data-timestamp', +new Date());
-                          (d.head || d.body).appendChild(s);
-                        })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+              })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
-              </section>
+    </section>
 
-              <section id = "blog_category">
+    <section id = "blog_category">
 
-                <p>TABLE OF CONTENTS</p>
-                <div id = "toc"></div>
-                <div id = "back-to-top">
-                  <i class = 'icon icon-circle-arrow-up'></i> 
-                      BACK TO TOP
-                </div>
-              </section>
+      <p>TABLE OF CONTENTS</p>
+      <div id = "toc"></div>
+      <div id = "back-to-top">
+        <i class = 'icon icon-circle-arrow-up'></i> 
+            BACK TO TOP
+      </div>
+    </section>
 
 
-            </div>
-              
-            <!-- **************************   footer  ****************************** -->
-            <footer id = "pfl-footer">&copy; 2015-2016 by Xiyun Xiang. All Rights Reserved.</footer>
-            <!-- **************************   footer  ****************************** -->
+  </div>
+    
 
-          </div>
-        </div><!-- /st-content-inner -->
-      </div><!-- /st-content -->
-  </div><!-- /st-pusher -->
-</div><!-- /st-container -->
-<script src="../../javascripts/classie.js"></script>
-<script src="../../javascripts/sidebarEffects.js"></script>
-</body>
+
+
+          <!-- **************************   footer  ****************************** -->
+          <footer id = "pfl-footer">&copy; 2017-2018 by Xiyun Xiang. All Rights Reserved. 
+            <a href = "https://github.com/xiangxiyun">
+              <img class = "footlink" src = "/images/GitHub-Mark-Light-32px.png" alt = "github">
+            </a>
+            <a href = "https://linkedin.com/in/xiyunxiang">
+              <img class = "footlink" src = "/images/Logo-White-34px-R.png" alt = "linkin">
+            </a>
+          </footer>
+          <!-- **************************   footer  ****************************** -->
+
+
+          </div> <!--/st-content-inner-->
+
+        </div> <!--/st-content-->
+
+      </div> <!--/st-pusher-->
+
+    </div>   <!--/st-container -->
+
+    <script src="/javascripts/classie.js"></script>
+
+    <script src="/javascripts/modernizr.custom.js"></script>
+    <script src="/javascripts/jquery-1.11.2.min.js"></script>
+    <script src="/javascripts/jquery.easing.1.3.min.js"></script>
+    <script src="/javascripts/transit.js"></script>
+    <script src="/javascripts/sidebarEffects.js"></script>
+    <script src="/javascripts/sidebar.js"></script>
+    <script src="/javascripts/article.js"></script>
+    <script src="/javascripts/techBlog.js"></script>
+    <script src="/javascripts/portfolio.js"></script>
+    <script src="/javascripts/lightbox.js"></script>
+    <!-- javascript -->
+
+    <!-- javascript  for  portfolio page -->
+    <script type="text/javascript">
+    $(document).ready(function(){ 
+      $("#gallery img:not(:first-child)").hide();
+      $("#index li").css("color", "rgba(0,0,0, 1)");
+      $($("#index li").get(0)).css("color", "rgba(0, 0, 0, 0.5)");
+
+      $("#index li").mouseenter(function() {
+        $("#index li").css("color", "rgba(0,0,0, 1)");
+        $(this).css("color", "rgba(0, 0, 0, 0.5)");
+        var n = $(this).index();
+        $("#gallery img").hide();
+        $($("#gallery img").get(n)).fadeIn("slow");
+      });
+
+      $("#back-to-top").click(function(){
+        $(".st-content").scrollTop(0);
+      });
+
+
+
+    });
+
+</script>
+
+  </body>
 </html>

@@ -1,43 +1,95 @@
 ---
-layout: blogTemplate
----
-<section id = "blog_content">        
-	{% for article in site.posts %}
-	<a class = "blog_reference" href = "{{ article.url }}">
-	  <article class = "blog_article">
-	    <header class = "article_header">
-	      <h2 class = "ah">
-	      	{{ article.title }}
-	      </h2>
-	      <time> {{ article.date | date_to_long_string}} </time>
-	    </header>
-	    <div class = "article_description">
-	    	<p> {{ article.description}} </p>
-	    </div>      
-	    <footer class = "article_tag">
-	    	<i class = "icon icon-tags"></i>
-	    	{{ article.category}}
-	    </footer>
-	  </article>
-	</a>
+layout: generalTemplate
+---  
+
+<style>
+	#blog{
+		font-weight: bold;
+		text-transform: uppercase;
+		color: rgb(255, 255, 255);
+		font-size: 20px;
+		border-bottom: 2px solid rgb(105,105,105);
+	}
+	#blog:hover{
+		font-size: 22px;
+	}
+
+	#i-blog{
+		background-color: rgba(63,148,221, 0.7);
+	}
+
+</style>
+<link rel="stylesheet" type="text/css" href="stylesheets/techBlog.css" />
+
+<div id = "blog-section">
+
+	<section id = "blog_content">
+		<div post-cate = "all">
+			{% for article in site.posts %}
+			<a class = "blog_reference" href = "{{ article.url }}">
+			  <article class = "blog_article">
+			    <header class = "article_header">
+			      <h2 class = "ah">
+			      	{{ article.title }}
+			      </h2>
+			      <time> {{ article.date | date_to_long_string}} </time>
+			    </header>
+				<!--  <div class = "article_description">
+			    	<p> {{ article.description}} </p>
+			    </div>  -->     
+				<!-- <footer class = "article_tag">
+			    	<i class = "icon icon-tags"></i>
+			    	{{ article.category}}
+			    </footer> -->
+			  </article>
+			</a>
+			{% endfor %}
+		</div>
+	{% for category in site.categories %}
+		{% assign cat = category | first %}
+		<div post-cate = "{{ cat }}">
+			{% for article in site.categories.[cat] %}
+				<a class = "blog_reference" href = "{{ article.url }}">
+				  <article class = "blog_article">
+				    <header class = "article_header">
+				      <h2 class = "ah">
+				      	{{ article.title }}
+				      </h2>
+				      <time> {{ article.date | date_to_long_string}} </time>
+				    </header>
+				<!-- <div class = "article_description">
+				    	<p> {{ article.description}} </p>
+				    </div>  -->     
+				<!-- <footer class = "article_tag">
+				    	<i class = "icon icon-tags"></i>
+				    	{{ article.category}}
+				    </footer> -->
+				  </article>
+				</a>
+			{% endfor %}
+		</div>
 	{% endfor %}
-</section>
 
-<section id = "right_sider">
-	<section id = "blog_category">
-		<p>CATEGORY</p>
-		<div id = "category_cloud">
-	    	<div class = "category_element"> 
-		        <a href="javascript:;" onclick="showCategory('ALL')"> all ({{ site.posts.size }})</a>
+	</section>
+
+	<section id = "right_sider">
+		<section id = "blog_category">
+			<p>CATEGORY</p>
+			<div id = "category_cloud">
+		    	<div class = "category_element"> 
+			        <a class = "ce" cate = 'all' href="javascript:;"> all ({{ site.posts.size }})</a>
+			    </div>
+				{% for category in site.categories %} 
+			       	<div class = "category_element"> 
+			        	<a class = "ce" cate = '{{ category | first }}' href="javascript:;"> {{ category | first }} ({{ category | last | size }})</a>
+			       	</div>
+			    {% endfor %}
 		    </div>
-			{% for category in site.categories %} 
-		       	<div class = "category_element"> 
-		        	<a href="javascript:;" onclick="showCategory('{{ category | first }}')"> {{ category | first }} ({{ category | last | size }})</a>
-		       	</div>
-		    {% endfor %}
-	    </div>
+		</section>
+
+		<section id = "friends_link">
+		</section>
 	</section>
 
-	<section id = "friends_link">
-	</section>
-</section>
+
+</div>

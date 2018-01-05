@@ -1,8 +1,27 @@
 ---
 layout: generalTemplate
---- 
 
-<link rel="stylesheet" type="text/css" href="stylesheets/about.css" />
+--- 
+<style>
+
+      #about{
+        font-weight: bold;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        border-bottom: 2px solid rgb(105,105,105);
+      }
+      #about:hover{
+        font-size: 22px;
+      }
+
+      #i-about{
+        background-color: rgba(63,148,221, 0.7);
+      }
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/about.css" />
 
 <div id = "about_frame">
   <section id = "about_content">        
@@ -10,7 +29,7 @@ layout: generalTemplate
       <header class = "article_header">
         <h2 class = "ah">
           About Me
-          <time> 2016/11/05 </time>
+          <time> 2018/01/04 </time>
         </h2>
       </header>
       <div class = "blog_description">
@@ -21,74 +40,37 @@ layout: generalTemplate
           </div>
 
           <div id = "skill_list">
+            
+            <span class = 'name'> SKILLS: </span>
             <div class = 'skill_element'> 
-              <div class = 'name'> SKILL </div> 
-              <div class = 'progress-bar'> </div> 
+              <span class = 'name'> Python, </span> 
+              <span class = 'name'> Java, </span> 
+              <span class = 'name'> Machine Learning, </span> 
+              <span class = 'name'> NLP, </span> 
+              <span class = 'name'> Data Science,</span> 
+              <span class = 'name'> HTML/CSS </span> 
             </div>
-            <div class = 'skill_element'> 
-              <div class = 'name'> Python </div> 
-              <div class = 'progress-bar'> 
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star-empty'> </i>
-              </div> 
-            </div>
-            <div class = 'skill_element'> 
-              <div class = 'name'> HTML/CSS </div> 
-              <div class = 'progress-bar'> 
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star-empty'> </i>
-              </div> 
-            </div>
-            <div class = 'skill_element'> 
-              <div class = 'name'> Javascript </div> 
-              <div class = 'progress-bar'>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star-empty'> </i>
-                <i class = 'icon icon-star-empty'> </i>
-              </div> 
-            </div>
-            <div class = 'skill_element'> 
-              <div class = 'name'> C++ </div> 
-              <div class = 'progress-bar'>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star'> </i>
-                <i class = 'icon icon-star-empty'> </i>
-                <i class = 'icon icon-star-empty'> </i>
-              </div> 
-            </div>
+            
+
           </div>
         </div>
 
-        <div id = "myintro">
-          <p>
-            Hello, I'm Xiang Xiyun. Call me Heidi is OK <br> <br>
-            I grew up in ShenZhen, China. <br><br>
-            I received my B.E. in Computer Science
-            from the Sun Yet-sen University. I'm excited to be a 
-            programmer after graduate.<br><br>
-
-            I like watching movies and singing if I have spare time.
-
-            <br><br><br><br>
-          </p>
-
-
+        <div id ="about_right_side" >
+          <div id = "myintro">
+            <p>
+              Hi, I'm Xiyun Xiang.<br>
+              A second year master student from University of Michigan, School of Information. 
+              I received my B.E. degree in Software Engineering from the Sun Yet-sen University. 
+              Now, I'm interested in data science and machine learning. I hope this blog can help
+              me to keep the treasure I met.
+            </p>
+          </div>    
           <div id = "contact">
-            <footer class = "blog_tag">
-              <i class = "icon icon-tags"></i>
-              about me
-            </footer>
+              <a href = "https://github.com/xiangxiyun"><img src = "../images/GitHub-Mark-32px.png" alt = "github"></a>
+              <a href = "https://linkedin.com/in/xiyunxiang"><img src = "../images/Logo-Black-34px-R.png" alt = "linkin"></a>
           </div>
-        </div>      
+        </div>
+
       </div>
 
       <div id="disqus_thread"></div>

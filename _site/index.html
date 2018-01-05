@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-cn" class="no-js">
   <head>
@@ -9,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/sideBar.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome-ie7.min.css"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.min.css"/>
-
-
+    <link rel="stylesheet" type="text/css" href="/stylesheets/generalTemplate.css" />
+    
   </head>
 
 
@@ -41,12 +42,6 @@
               </a> 
             </li>
 
-<!--             <li class = 'MenuElement'> 
-              <a class="reference" id = "i-photo" href="/photo.html">
-                <i class="icon icon-lightbulb"></i> Photo
-              </a> 
-            </li> -->
-
           </ul>
         </nav>  
 
@@ -59,18 +54,35 @@
 
             <!-- **************************   header  ****************************** -->
             <header id = "pfl-header">
-              <img id = "logo" src = "../images/bloglogo.png" alt= "logo">
+              <img id = "logo" src = "/../images/bloglogo.png" alt= "logo">
+
               <div id = "headline">
                 <a class = "navbar" href = "/index.html"> <span id = "home"> Home </span></a>
                 <a class = "navbar" href = "/techblog.html"> <span id = "blog"> Blog </span></a>
                 <a class = "navbar" href = "/about.html"> <span id = "about"> About </span></a>
-<!--                 <a class = "navbar" href = "/photo.html"><span id = "photo"> Photo </span></a> -->
               </div>
             </header>
             <!-- **************************   header  ****************************** -->
 
             
-            <link rel="stylesheet" type="text/css" href="/stylesheets/index.css" />
+            <style>
+      #home{
+        font-weight: bold;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        border-bottom: 2px solid rgb(105,105,105);
+      }
+      #home:hover{
+        font-size: 22px;
+      }
+      #i-home{
+        background-color: rgba(63,148,221, 0.7);
+      }
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/index.css" />
 
 <section id = "pfl-content">
 
@@ -127,32 +139,36 @@
 </section><!-- /pfl-content -->
 
 
-<div class = "pfl-section" id = "pfl-section1">
-  <img id = "myphoto" src = "../images/me.jpg" alt="myphoto"> 
-  <div id = "para1">
-    <p >Know what world wants before using technology to change world </p>
-  </div>
-</div>
+          <!-- **************************   footer  ****************************** -->
+          <footer id = "pfl-footer">&copy; 2017-2018 by Xiyun Xiang. All Rights Reserved. 
+            <a href = "https://github.com/xiangxiyun">
+              <img class = "footlink" src = "/images/GitHub-Mark-Light-32px.png" alt = "github">
+            </a>
+            <a href = "https://linkedin.com/in/xiyunxiang">
+              <img class = "footlink" src = "/images/Logo-White-34px-R.png" alt = "linkin">
+            </a>
+          </footer>
+          <!-- **************************   footer  ****************************** -->
 
-
-            <!-- **************************   footer  ****************************** -->
-            <footer id = "pfl-footer">&copy; 2015-2016 by Xiyun Xiang. All Rights Reserved.</footer>
-            <!-- **************************   footer  ****************************** -->
 
           </div> <!--/st-content-inner-->
 
         </div> <!--/st-content-->
 
       </div> <!--/st-pusher-->
+
     </div>   <!--/st-container -->
 
     <script src="/javascripts/classie.js"></script>
-    <script src="/javascripts/sidebarEffects.js"></script>
+
     <script src="/javascripts/modernizr.custom.js"></script>
     <script src="/javascripts/jquery-1.11.2.min.js"></script>
     <script src="/javascripts/jquery.easing.1.3.min.js"></script>
     <script src="/javascripts/transit.js"></script>
+    <script src="/javascripts/sidebarEffects.js"></script>
     <script src="/javascripts/sidebar.js"></script>
+    <script src="/javascripts/article.js"></script>
+    <script src="/javascripts/techBlog.js"></script>
     <script src="/javascripts/portfolio.js"></script>
     <script src="/javascripts/lightbox.js"></script>
     <!-- javascript -->
@@ -176,7 +192,10 @@
         $(".st-content").scrollTop(0);
       });
 
+
+
     });
+
 </script>
 
   </body>
