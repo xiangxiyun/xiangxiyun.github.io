@@ -22,6 +22,24 @@ layout: generalTemplate
 <link rel="stylesheet" type="text/css" href="stylesheets/techBlog.css" />
 
 <div id = "blog-section">
+	<section id = "right_sider">
+		<section id = "blog_category">
+			<p>CATEGORY</p>
+			<div id = "category_cloud">
+		    	<div class = "category_element"> 
+			        <a class = "ce" cate = 'all' href="javascript:;"> all ({{ site.posts.size }})</a>
+			    </div>
+				{% for category in site.categories %} 
+			       	<div class = "category_element"> 
+			        	<a class = "ce" cate = '{{ category | first }}' href="javascript:;"> {{ category | first }} ({{ category | last | size }})</a>
+			       	</div>
+			    {% endfor %}
+		    </div>
+		</section>
+
+		<section id = "friends_link">
+		</section>
+	</section>
 
 	<section id = "blog_content">
 		<div post-cate = "all">
@@ -32,7 +50,7 @@ layout: generalTemplate
 			      <h2 class = "ah">
 			      	{{ article.title }}
 			      </h2>
-			      <time> {{ article.date | date: "%m/%d/%Y" }} </time>
+			      <time> {{ article.date | date: "%m-%d-%Y" }} </time>
 			    </header>
 				<!--  <div class = "article_description">
 			    	<p> {{ article.description}} </p>
@@ -72,24 +90,6 @@ layout: generalTemplate
 
 	</section>
 
-	<section id = "right_sider">
-		<section id = "blog_category">
-			<p>CATEGORY</p>
-			<div id = "category_cloud">
-		    	<div class = "category_element"> 
-			        <a class = "ce" cate = 'all' href="javascript:;"> all ({{ site.posts.size }})</a>
-			    </div>
-				{% for category in site.categories %} 
-			       	<div class = "category_element"> 
-			        	<a class = "ce" cate = '{{ category | first }}' href="javascript:;"> {{ category | first }} ({{ category | last | size }})</a>
-			       	</div>
-			    {% endfor %}
-		    </div>
-		</section>
-
-		<section id = "friends_link">
-		</section>
-	</section>
 
 
 </div>

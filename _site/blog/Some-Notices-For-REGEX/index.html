@@ -91,13 +91,13 @@
     <section id = "blog_content">
       <article class = "blog_article">
         <header class = "article_header">
-          <h2 class = "ah"> SOME NOTICES FOR REGEX AND PYTHON</h2>
+          <h2 class = "ah"> Some Notes for Python</h2>
           <time> 11 January 2017 </time>
         </header>
         <div class = "article_content">
-          <h1 id="some-notices-for-python">SOME NOTICES FOR PYTHON</h1>
+          <h1 id="some-notes-for-python">Some Notes for PYTHON</h1>
 
-<p>In the first class of SI 618,  Professor began to talk about regular expression…. Unfortunately, I almost forgot all the things about regex that I learned in university and met countless problems while doing the homework. So I tend to write them down! In case I forget again!!!</p>
+<p>In the first class of SI 618,  Professor began to talk about regular expression…. Unfortunately, I almost forgot all the things about regex that I learned in university and met countless problems while doing the homework. So I wrote them down in case I forget them again!!!</p>
 
 <h2 id="regular-expression-syntax">Regular Expression Syntax</h2>
 
@@ -121,19 +121,19 @@ match or referenced later in the pattern.
 
 <p>This character is useful when we create pattern with <code>|</code>.</p>
 
-<h2 id="delete-list-item-via-traversal">Delete List Item via Traversal</h2>
+<h2 id="delete-list-item-via-traversal-python">Delete List Item via Traversal (PYTHON)</h2>
 
 <hr />
 
 <p>In a list,  I want to remove elements which equal 3 and there are two adjacent elements that both equals three. I used <code>remove()</code> method to do it. However, the result shows that only one of them have been removed and it skips next element. That’s weird!</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">&gt;&gt;&gt; <span class="nv">ls</span> <span class="o">=</span> <span class="o">[</span>1, 2, 3, 3, 4, 5, 6<span class="o">]</span>
-&gt;&gt;&gt; <span class="k">for</span> ele in ls:
-...     <span class="k">if</span> <span class="nv">ele</span> <span class="o">==</span> 3:
-...             ls.remove<span class="o">(</span>ele<span class="o">)</span>
-... 
-&gt;&gt;&gt; ls
-<span class="o">[</span>1, 2, 3, 4, 5, 6<span class="o">]</span></code></pre></div>
+    &gt;&gt;&gt; <span class="k">for</span> ele in ls:
+    ...     <span class="k">if</span> <span class="nv">ele</span> <span class="o">==</span> 3:
+    ...             ls.remove<span class="o">(</span>ele<span class="o">)</span>
+    ... 
+    &gt;&gt;&gt; ls
+    <span class="o">[</span>1, 2, 3, 4, 5, 6<span class="o">]</span></code></pre></div>
 
 <p>That is because the <code>for</code> statement just visits each item in the list in order: ls[0], then ls[1], then ls[2], and so on until it runs out of ls.</p>
 
@@ -142,15 +142,15 @@ match or referenced later in the pattern.
 <p>And I tried to delete specific item in a list using another kind of method, Python code below, it also has the same problem and the code always threw an exception:</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">&gt;&gt;&gt; <span class="nv">ls</span> <span class="o">=</span> <span class="o">[</span>1, 2, 3, 3, 4, 5, 6<span class="o">]</span>
-&gt;&gt;&gt; <span class="k">for</span> i in range<span class="o">(</span>0, len<span class="o">(</span>ls<span class="o">))</span>:
-...     <span class="k">if</span> ls<span class="o">[</span>i<span class="o">]</span> <span class="o">==</span> 5:
-...             del ls<span class="o">[</span>i<span class="o">]</span>
-... 
-Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+    &gt;&gt;&gt; <span class="k">for</span> i in range<span class="o">(</span>0, len<span class="o">(</span>ls<span class="o">))</span>:
+    ...     <span class="k">if</span> ls<span class="o">[</span>i<span class="o">]</span> <span class="o">==</span> 5:
+    ...             del ls<span class="o">[</span>i<span class="o">]</span>
+    ... 
+    Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
       File <span class="s2">&quot;&lt;stdin&gt;&quot;</span>, line 2, in &lt;module&gt;
-IndexError: list index out of range
-&gt;&gt;&gt; ls
-<span class="o">[</span>1, 2, 3, 4, 5, 6<span class="o">]</span></code></pre></div>
+    IndexError: list index out of range
+    &gt;&gt;&gt; ls
+    <span class="o">[</span>1, 2, 3, 4, 5, 6<span class="o">]</span></code></pre></div>
 
 <p>After debugging,  I found that when I deleted the item in that list, the length of that list would decrease one. However, in the for loop, the range of index didn’t change after list length changed. In the last loop, i equaled to 10, but the actual length of ls was 9,  so list index out of range.</p>
 
@@ -161,12 +161,6 @@ IndexError: list index out of range
   <li>track the list indices of all items that you want to remove from the list and then remove them outside your for-loop</li>
   <li>traverse the list in the reversed direction and remove the element required. Since the decrease of length will influence the index of elements which are behind the deleted element,  previous elements will never be influenced.</li>
 </ol>
-
-<h2 id="more">More</h2>
-
-<hr />
-
-<p>waiting</p>
 
 
 
