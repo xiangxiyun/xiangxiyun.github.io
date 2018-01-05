@@ -73,7 +73,7 @@ layout: generalTemplate
 				      <h2 class = "ah">
 				      	{{ article.title }}
 				      </h2>
-				      <time> {{ article.date | date_to_long_string}} </time>
+				      <time> {{ article.date | date: "%m-%d-%Y" }} </time>
 				    </header>
 				<!-- <div class = "article_description">
 				    	<p> {{ article.description}} </p>
