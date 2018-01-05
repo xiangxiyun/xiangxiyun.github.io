@@ -15,12 +15,11 @@ body{
 #about_frame{
   width: 80%;
   margin: 0 auto;
-  padding-top: 160px;
+  padding-top: 130px;
   padding-bottom: 50px;
 
 }
 #about_content{
-
   background: rgb(255,255,255);
 }
 
@@ -201,7 +200,13 @@ time{
 }
 
 @media only screen and (max-width: 600px){
+  #about_frame{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 50px;
 
+  }
   #about_left_side{
     float: none;
     display: block;
@@ -225,7 +230,7 @@ time{
     float: none;
     display: block;
     width: 100%;
-    padding: 10px 10px 10px 8px;
+    padding: 10px 0px 10px 20px;
   }
   .blog_tag{
     padding: 0 40px 10px 5px;
