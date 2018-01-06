@@ -32,7 +32,7 @@ I think the most important point is the usage of parentheses. Sometimes it can b
 
 This character is useful when we create pattern with `|`.
 
-## Delete List Item via Traversal (PYTHON) ##
+## Delete List Item via Traversal ##
 
 ----------
 
@@ -71,7 +71,41 @@ After debugging,  I found that when I deleted the item in that list, the length 
 
 There are three solution to deal with this kind of problem:
 
- 1. copy the original list,  traverse the new list, use `remove()` method to remove items in original list.(This method require extra room for new list)
- 2. track the list indices of all items that you want to remove from the list and then remove them outside your for-loop
- 3. traverse the list in the reversed direction and remove the element required. Since the decrease of length will influence the index of elements which are behind the deleted element,  previous elements will never be influenced.
+ 1. Copy the original list,  traverse the new list, use `remove()` method to remove items in original list.(This method require extra space for new list)
+ 2. Track the list indices of all items that you want to remove from the list and then remove them outside your for-loop
+ 3. Traverse the list in the reversed direction and remove the element required. Since the decrease of length will influence the index of elements which are behind the deleted element,  previous elements will never be influenced.
  
+The last solution is the best one, because it does not need extra space and only traverse the whole list once.
+
+## Initialize a list ##
+
+----------
+
+1D list can be initialized with the following code:
+
+    >>> l1 = [0]*3
+    >>> l1
+    [0, 0, 0]
+    >>> l1[1] = 3  //have no impact on other elements
+    >>> l1
+    [0, 3, 0]
+
+But the same trick won't work for a 2D list:
+
+    >>> l2 = [[0]*3]*3
+    >>> l2
+    [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+    >>> l2[0][1] = 5
+    >>> l2
+    [[0, 5, 0], [0, 5, 0], [0, 5, 0]]
+
+If we change a specific elements in 2D list, it will influence other elements.
+
+The correct way to initialize a list larger than 1D is that:
+
+    >>> l2 = [[0] * 3 for _ in range(3)]
+    >>> l2
+    [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+    >>> l2[0][0] = 5
+    >>> l2
+    [[5, 0, 0], [0, 0, 0], [0, 0, 0]]
