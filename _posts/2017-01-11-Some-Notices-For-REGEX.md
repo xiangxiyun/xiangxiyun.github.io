@@ -77,7 +77,7 @@ There are three solution to deal with this kind of problem:
  
 The last solution is the best one, because it does not need extra space and only traverse the whole list once.
 
-## Initialize a list ##
+## How to Initialize a List ##
 
 ----------
 
