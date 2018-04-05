@@ -20,7 +20,7 @@ HDFS is a data storage, and MapReduce is a program to process the data saved in 
 
 When we login our Hadoop account, we are not in HDFS. In order to enable MapReduce to process a file A, we should first put the local_file into HDFS: 
 
-``` shell    
+``` bash    
 $hdfs dfs -put local_file remote_file
 ```
 
@@ -58,13 +58,13 @@ public class URLCat{
 
 After we finish the code, we want to run it. So do it as the normal way, first use `javac` to compile it.
 
-```shell
+```bash
 $javac URLCat.java -cp $(/usr/bin/hadoop classpath)
 ```
 
 Since we imported multiple `org.apache.hadoop` packages, we need to specify the class path of hadoop to compile it, which is the `/usr/bin/hadoop`. You need to find yours. The most easy way to get the path is to show to hadoop version, it will show a path to the `bin/hadoop`
 
-```shell
+```bash
 $hadoop version
 ```
 
@@ -73,7 +73,7 @@ $hadoop version
 
 After compiling our Java code, we can run it as normal. The most important thing you need to pay attention to is that we should specify the hdfs URL of our data file.
 
-```shell
+```bash
 $hadoop URLCat hdfs:///user/xy/quangle.txt
 ```
 
