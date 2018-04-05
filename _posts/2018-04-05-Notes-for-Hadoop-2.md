@@ -22,6 +22,11 @@ When we login our Hadoop account, we are not in HDFS. In order to enable MapRedu
 
     $hdfs dfs -put local_file remote_file
 
+
+```python
+print(a)
+```
+
 ## Java file to print content ##
 ----------
 
