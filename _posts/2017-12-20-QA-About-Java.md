@@ -2,7 +2,7 @@
 layout: articleTemplate
 title: QA About Java
 date: 2018-01-08
-category: hadoop
+category: Java
 ---
 
 #QA About Java#
