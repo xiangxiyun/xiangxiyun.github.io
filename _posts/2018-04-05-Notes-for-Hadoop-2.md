@@ -20,8 +20,9 @@ HDFS is a data storage, and MapReduce is a program to process the data saved in 
 
 When we login our Hadoop account, we are not in HDFS. In order to enable MapReduce to process a file A, we should first put the local_file into HDFS: 
 
-    $hdfs dfs -put local_file remote_file
-
+``` shell    
+$hdfs dfs -put local_file remote_file
+```
 
 ```python
 print(a)
